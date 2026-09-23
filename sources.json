@@ -25,6 +25,11 @@
       "id": "ai-decisions",
       "title": "AI decision models (Jev)",
       "description": "TypeSafe AI's Jev System One model (launched 2026-09-15): typed, calibrated decisions in 70–500 ms. Official SDKs, games built on it, open/local alternatives, dev tooling, directories."
+    },
+    {
+      "id": "tooling",
+      "title": "MCP servers & CLI tools",
+      "description": "MCP servers and command-line tools for building, debugging and researching: browser/devtools MCPs, code-graph and token savers, Blender/three.js MCPs, document converters for the case files, MCP SDKs, and everyday CLIs."
     }
   ],
   "sources": [
@@ -2360,6 +2365,496 @@
       "sync": "docs",
       "what": "74 demos ranked, 150+ repos, limits, cost, API examples.",
       "use": "Limits and cost reference."
+    },
+    {
+      "repo": "microsoft/playwright-mcp",
+      "category": "tooling",
+      "group": "MCP: build & debug the web app",
+      "stars": 37505,
+      "license": "Apache-2.0",
+      "sync": "docs",
+      "what": "Official Playwright MCP: an agent drives a real browser via accessibility snapshots.",
+      "use": "Let Claude play-test oresth.com and the game, click through flows, verify fixes."
+    },
+    {
+      "repo": "ChromeDevTools/chrome-devtools-mcp",
+      "category": "tooling",
+      "group": "MCP: build & debug the web app",
+      "stars": 52518,
+      "license": "Apache-2.0",
+      "sync": "docs",
+      "what": "Chrome DevTools for coding agents: console, network, performance traces.",
+      "use": "Profile the 3D scene (the STATUS.md 16.7 ms frame gate), read console errors, inspect WebGL."
+    },
+    {
+      "repo": "vercel/next-devtools-mcp",
+      "category": "tooling",
+      "group": "MCP: build & debug the web app",
+      "stars": 824,
+      "license": "MIT",
+      "sync": "docs",
+      "what": "Official Next.js dev MCP: routes, build errors, runtime diagnostics from next dev.",
+      "use": "Next 16 upgrade help and live error context while building oresth.com."
+    },
+    {
+      "repo": "upstash/context7",
+      "category": "tooling",
+      "group": "MCP: build & debug the web app",
+      "stars": 62361,
+      "license": "MIT",
+      "sync": "docs",
+      "what": "Up-to-date library docs served to the agent.",
+      "use": "Current three.js / R3F / Next 16 / Tailwind 4 APIs instead of stale training data."
+    },
+    {
+      "repo": "github/github-mcp-server",
+      "category": "tooling",
+      "group": "MCP: build & debug the web app",
+      "stars": 33149,
+      "license": "MIT",
+      "sync": "none",
+      "what": "GitHub's official MCP server.",
+      "use": "Already connected in our Claude sessions; listed for local setups."
+    },
+    {
+      "repo": "idosal/git-mcp",
+      "category": "tooling",
+      "group": "MCP: build & debug the web app",
+      "stars": 8423,
+      "license": "Apache-2.0",
+      "sync": "docs",
+      "what": "Free remote MCP that serves any GitHub repo's docs and code.",
+      "use": "Point an agent at any catalog repo without cloning (complements sync.mjs)."
+    },
+    {
+      "repo": "cloudflare/mcp-server-cloudflare",
+      "category": "tooling",
+      "group": "MCP: build & debug the web app",
+      "stars": 4277,
+      "license": "Apache-2.0",
+      "sync": "none",
+      "what": "Cloudflare's official MCP servers (Workers, DNS, logs…).",
+      "use": "oresth.com DNS lives on Cloudflare (see devlog); already connected in Claude."
+    },
+    {
+      "repo": "getsentry/sentry-mcp",
+      "category": "tooling",
+      "group": "MCP: build & debug the web app",
+      "stars": 858,
+      "license": "FSL-1.1",
+      "sync": "none",
+      "what": "Sentry's MCP server.",
+      "use": "Only if we add Sentry error tracking to the game. Functional Source License (becomes Apache after 2 years)."
+    },
+    {
+      "repo": "DeusData/codebase-memory-mcp",
+      "category": "tooling",
+      "group": "MCP: code understanding & tokens",
+      "stars": 44417,
+      "license": "MIT",
+      "sync": "docs",
+      "what": "Indexes a codebase into a persistent knowledge graph; single static binary.",
+      "use": "Fast 'where is X used' across oresth.com + vendor/ without burning tokens."
+    },
+    {
+      "repo": "Graphify-Labs/graphify",
+      "category": "tooling",
+      "group": "MCP: code understanding & tokens",
+      "stars": 120822,
+      "license": "Apache-2.0",
+      "sync": "docs",
+      "what": "Turn code, docs, schemas and PDFs into a queryable knowledge graph (Claude Code skill).",
+      "use": "Graph this KB plus the PURSUE PDFs into one queryable map."
+    },
+    {
+      "repo": "headroomlabs-ai/headroom",
+      "category": "tooling",
+      "group": "MCP: code understanding & tokens",
+      "stars": 73618,
+      "license": "Apache-2.0",
+      "sync": "docs",
+      "what": "Compresses tool outputs, logs and JSON before they reach the model.",
+      "use": "Cheaper long agent sessions; big JSON (sources.json, datasets) shrinks 60–95%."
+    },
+    {
+      "repo": "rtk-ai/rtk",
+      "category": "tooling",
+      "group": "MCP: code understanding & tokens",
+      "stars": 81555,
+      "license": "Apache-2.0",
+      "sync": "docs",
+      "what": "CLI proxy cutting tokens on common dev commands; single Rust binary.",
+      "use": "Lower Claude Code cost on npm/git/test output."
+    },
+    {
+      "repo": "ahujasid/mcp-for-blender",
+      "category": "tooling",
+      "group": "MCP: 3D, design & assets",
+      "stars": 29241,
+      "license": "MIT",
+      "sync": "docs",
+      "what": "Community Blender add-on + MCP: drive Blender from Claude.",
+      "use": "Block out crash sites, bunkers and UFO hulls by prompt, then export GLB into the gltfjsx pipeline."
+    },
+    {
+      "repo": "HoldMyBeer-gg/blend-ai",
+      "category": "tooling",
+      "group": "MCP: 3D, design & assets",
+      "stars": 144,
+      "license": "AGPL-3.0",
+      "sync": "none",
+      "what": "Blender MCP with 175 tools (modelling, materials, rendering).",
+      "use": "Bigger toolset than mcp-for-blender. AGPL: fine to run as a tool, don't copy code."
+    },
+    {
+      "repo": "arjun988/blender-skills",
+      "category": "tooling",
+      "group": "MCP: 3D, design & assets",
+      "stars": 209,
+      "license": "MIT",
+      "sync": "docs",
+      "what": "94 Blender agent skills: blockout to engine export via MCP.",
+      "use": "Pairs with mcp-for-blender for a repeatable asset pipeline."
+    },
+    {
+      "repo": "squall01337/mixamo-llm-mocap",
+      "category": "tooling",
+      "group": "MCP: 3D, design & assets",
+      "stars": 310,
+      "license": "MIT",
+      "sync": "docs",
+      "what": "Video to Mixamo-rig animation, applied in Blender via MCP.",
+      "use": "Cheap mocap for witnesses and agents from phone video."
+    },
+    {
+      "repo": "DmitriyGolub/threejs-devtools-mcp",
+      "category": "tooling",
+      "group": "MCP: 3D, design & assets",
+      "stars": 109,
+      "license": "MIT",
+      "sync": "full",
+      "what": "Inspect and edit a running three.js/R3F scene (materials, shaders, lights) from an agent.",
+      "use": "Let Claude tune the sky scene's lights and post effects live instead of guessing."
+    },
+    {
+      "repo": "pascalorg/editor",
+      "category": "tooling",
+      "group": "MCP: 3D, design & assets",
+      "stars": 24269,
+      "license": "MIT",
+      "sync": "docs",
+      "what": "Open 3D architectural editor (Next.js + R3F) with CLI and MCP tools.",
+      "use": "Agent-built floor plans for bases/labs; also an R3F + Next.js codebase to learn from."
+    },
+    {
+      "repo": "GLips/Figma-Context-MCP",
+      "category": "tooling",
+      "group": "MCP: 3D, design & assets",
+      "stars": 15900,
+      "license": "MIT",
+      "sync": "none",
+      "what": "Figma layout data for coding agents.",
+      "use": "Only if designs move to Figma; the official Figma connector is already attached in Claude."
+    },
+    {
+      "repo": "firecrawl/firecrawl-mcp-server",
+      "category": "tooling",
+      "group": "MCP & CLI: research and documents",
+      "stars": 7505,
+      "license": "MIT",
+      "sync": "docs",
+      "what": "Official Firecrawl MCP: scrape and search the web (hosted API).",
+      "use": "Pull war.gov / aaro.mil / congress.gov pages into clean Markdown for notes."
+    },
+    {
+      "repo": "D4Vinci/Scrapling",
+      "category": "tooling",
+      "group": "MCP & CLI: research and documents",
+      "stars": 83143,
+      "license": "BSD-3-Clause",
+      "sync": "docs",
+      "what": "Adaptive Python scraping framework with an MCP server.",
+      "use": "Self-hosted scraping of public government pages; respect robots and ToS (not NUFORC)."
+    },
+    {
+      "repo": "opendatalab/MinerU",
+      "category": "tooling",
+      "group": "MCP & CLI: research and documents",
+      "stars": 80535,
+      "license": "Apache-2.0",
+      "sync": "docs",
+      "what": "PDF/Office to LLM-ready Markdown/JSON with layout analysis.",
+      "use": "Convert PURSUE and Blue Book scans to text. Licence adds commercial-use terms above thresholds: read LICENSE.md."
+    },
+    {
+      "repo": "docling-project/docling",
+      "category": "tooling",
+      "group": "MCP & CLI: research and documents",
+      "stars": 67694,
+      "license": "MIT",
+      "sync": "docs",
+      "what": "IBM's document converter: PDF, DOCX, tables to Markdown/JSON.",
+      "use": "Cleanest licence for converting declassified PDFs into the reading-room text."
+    },
+    {
+      "repo": "datalab-to/marker",
+      "category": "tooling",
+      "group": "MCP & CLI: research and documents",
+      "stars": 39918,
+      "license": "Apache-2.0",
+      "sync": "docs",
+      "what": "Fast, accurate PDF to Markdown/JSON.",
+      "use": "Alternative converter. Code Apache, model weights OpenRAIL-M (check commercial terms)."
+    },
+    {
+      "repo": "ocrmypdf/OCRmyPDF",
+      "category": "tooling",
+      "group": "MCP & CLI: research and documents",
+      "stars": 34857,
+      "license": "MPL-2.0",
+      "sync": "docs",
+      "what": "Adds a searchable OCR text layer to scanned PDFs (Tesseract).",
+      "use": "Make original war.gov scans searchable while keeping the real document look."
+    },
+    {
+      "repo": "xberg-io/xberg",
+      "category": "tooling",
+      "group": "MCP & CLI: research and documents",
+      "stars": 9332,
+      "license": "MIT",
+      "sync": "docs",
+      "what": "Extract text, tables, images and metadata from 106 formats; CLI, API and MCP.",
+      "use": "One tool for mixed document dumps (PDF, images, office files)."
+    },
+    {
+      "repo": "modelcontextprotocol/typescript-sdk",
+      "category": "tooling",
+      "group": "Build our own MCP",
+      "stars": 13444,
+      "license": "MIT",
+      "sync": "docs",
+      "what": "Official MCP TypeScript SDK.",
+      "use": "Build a disclosure-kb MCP: search catalog, notes and vendor/ from any agent."
+    },
+    {
+      "repo": "modelcontextprotocol/python-sdk",
+      "category": "tooling",
+      "group": "Build our own MCP",
+      "stars": 24374,
+      "license": "MIT",
+      "sync": "none",
+      "what": "Official MCP Python SDK.",
+      "use": "Only if the MCP ends up in Python."
+    },
+    {
+      "repo": "PrefectHQ/fastmcp",
+      "category": "tooling",
+      "group": "Build our own MCP",
+      "stars": 27883,
+      "license": "Apache-2.0",
+      "sync": "docs",
+      "what": "Fast, Pythonic MCP server/client framework.",
+      "use": "Quickest route for a Python data MCP over the case files."
+    },
+    {
+      "repo": "mcp-use/mcp-use",
+      "category": "tooling",
+      "group": "Build our own MCP",
+      "stars": 10668,
+      "license": "MIT",
+      "sync": "docs",
+      "what": "Full-stack MCP framework, incl. MCP Apps for ChatGPT/Claude.",
+      "use": "If the KB or the game's case archive becomes an MCP App with UI."
+    },
+    {
+      "repo": "modelcontextprotocol/inspector",
+      "category": "tooling",
+      "group": "Build our own MCP",
+      "stars": 10933,
+      "license": "MIT",
+      "sync": "docs",
+      "what": "Visual testing tool for MCP servers.",
+      "use": "Test our own MCP before wiring it into Claude."
+    },
+    {
+      "repo": "modelcontextprotocol/registry",
+      "category": "tooling",
+      "group": "Build our own MCP",
+      "stars": 7280,
+      "license": "MIT",
+      "sync": "none",
+      "what": "Community registry service for MCP servers.",
+      "use": "Discovery; publish our MCP later if it's public."
+    },
+    {
+      "repo": "punkpeye/awesome-mcp-servers",
+      "category": "tooling",
+      "group": "Build our own MCP",
+      "stars": 95457,
+      "license": "MIT",
+      "sync": "docs",
+      "what": "The big curated list of MCP servers.",
+      "use": "Index for anything not in this catalog."
+    },
+    {
+      "repo": "cli/cli",
+      "category": "tooling",
+      "group": "CLI tools",
+      "stars": 46381,
+      "license": "MIT",
+      "sync": "none",
+      "what": "GitHub's official CLI (gh).",
+      "use": "PRs, issues and Actions from the terminal on your own machine."
+    },
+    {
+      "repo": "BurntSushi/ripgrep",
+      "category": "tooling",
+      "group": "CLI tools",
+      "stars": 68542,
+      "license": "MIT",
+      "sync": "none",
+      "what": "Fast recursive regex search that respects .gitignore.",
+      "use": "Search across vendor/ (hundreds of repos) in seconds."
+    },
+    {
+      "repo": "sharkdp/fd",
+      "category": "tooling",
+      "group": "CLI tools",
+      "stars": 44522,
+      "license": "Apache-2.0",
+      "sync": "none",
+      "what": "Fast, friendly 'find'.",
+      "use": "Find files across vendor/ by name."
+    },
+    {
+      "repo": "junegunn/fzf",
+      "category": "tooling",
+      "group": "CLI tools",
+      "stars": 83217,
+      "license": "MIT",
+      "sync": "none",
+      "what": "Command-line fuzzy finder.",
+      "use": "Pick repos/files interactively; pairs with rg and fd."
+    },
+    {
+      "repo": "jesseduffield/lazygit",
+      "category": "tooling",
+      "group": "CLI tools",
+      "stars": 82611,
+      "license": "MIT",
+      "sync": "none",
+      "what": "Terminal UI for git.",
+      "use": "Review Claude's branches and diffs quickly."
+    },
+    {
+      "repo": "sharkdp/bat",
+      "category": "tooling",
+      "group": "CLI tools",
+      "stars": 60555,
+      "license": "Apache-2.0",
+      "sync": "none",
+      "what": "cat with syntax highlighting and git markers.",
+      "use": "Read source in vendor/ comfortably."
+    },
+    {
+      "repo": "ajeetdsouza/zoxide",
+      "category": "tooling",
+      "group": "CLI tools",
+      "stars": 39660,
+      "license": "MIT",
+      "sync": "none",
+      "what": "Smarter cd.",
+      "use": "Jump between oresth.com, disclosure-kb and vendor repos."
+    },
+    {
+      "repo": "google/zx",
+      "category": "tooling",
+      "group": "CLI tools",
+      "stars": 45763,
+      "license": "Apache-2.0",
+      "sync": "docs",
+      "what": "Write shell scripts in JavaScript.",
+      "use": "Future KB/asset scripts in JS instead of bash (matches sync.mjs)."
+    },
+    {
+      "repo": "httpie/cli",
+      "category": "tooling",
+      "group": "CLI tools",
+      "stars": 38570,
+      "license": "BSD-3-Clause",
+      "sync": "none",
+      "what": "Friendly HTTP client.",
+      "use": "Poke the Jev API, contact route and war.gov endpoints by hand."
+    },
+    {
+      "repo": "yt-dlp/yt-dlp",
+      "category": "tooling",
+      "group": "CLI tools",
+      "stars": 193167,
+      "license": "Unlicense",
+      "sync": "none",
+      "what": "Audio/video downloader for 1,800+ sites.",
+      "use": "Archive public-domain DoD UAP videos (FLIR1, Gimbal, GoFast) and hearing footage for reference."
+    },
+    {
+      "repo": "FFmpeg/FFmpeg",
+      "category": "tooling",
+      "group": "CLI tools",
+      "stars": 64457,
+      "license": "GPL-2.0",
+      "sync": "none",
+      "what": "The audio/video toolkit.",
+      "use": "Trim, compress and transcode UAP clips and game audio. Use as a tool; don't link GPL builds into the game."
+    },
+    {
+      "repo": "ffmpegwasm/ffmpeg.wasm",
+      "category": "tooling",
+      "group": "CLI tools",
+      "stars": 17813,
+      "license": "MIT",
+      "sync": "docs",
+      "what": "FFmpeg in the browser via WebAssembly.",
+      "use": "In-game 'enhance the footage' effects or player-uploaded clips."
+    },
+    {
+      "repo": "heygen-com/hyperframes",
+      "category": "tooling",
+      "group": "CLI tools",
+      "stars": 52618,
+      "license": "Apache-2.0",
+      "sync": "docs",
+      "what": "Write HTML, render video; built for agents.",
+      "use": "Trailers and devlog videos from our own HTML/three.js scenes."
+    },
+    {
+      "repo": "kucherenko/jscpd",
+      "category": "tooling",
+      "group": "CLI tools",
+      "stars": 6259,
+      "license": "MIT",
+      "sync": "none",
+      "what": "Copy/paste detector, 220+ languages, with an MCP server.",
+      "use": "Catch duplicated game logic in oresth.com."
+    },
+    {
+      "repo": "tldr-pages/tldr",
+      "category": "tooling",
+      "group": "CLI tools",
+      "stars": 63722,
+      "license": "CC-BY-4.0",
+      "sync": "none",
+      "what": "Community cheat sheets for console commands.",
+      "use": "Quick reference for all of the above."
+    },
+    {
+      "repo": "ibraheemdev/modern-unix",
+      "category": "tooling",
+      "group": "CLI tools",
+      "stars": 33024,
+      "license": "none",
+      "sync": "docs",
+      "what": "List of modern alternatives to common Unix commands.",
+      "use": "Where to find more tools like these."
     }
   ]
 }
