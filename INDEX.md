@@ -2,7 +2,7 @@
 
 # Index
 
-296 source repos across 6 categories. Stars checked 2026-09-23.
+489 source repos across 9 categories. Stars checked 2026-09-23.
 
 | Category | Repos | Covers |
 |---|---:|---|
@@ -12,3 +12,6 @@
 | [Web starters & frameworks](catalog/web-starters.md) | 16 | Next.js starters, full-stack templates, UI and AI building blocks. |
 | [AI decision models (Jev)](catalog/ai-decisions.md) | 37 | TypeSafe AI's Jev System One model (launched 2026-09-15): typed, calibrated decisions in 70–500 ms. Official SDKs, games built on it, open/local alternatives, dev tooling, directories. |
 | [MCP servers & CLI tools](catalog/tooling.md) | 59 | MCP servers and command-line tools for building, debugging and researching: browser/devtools MCPs, code-graph and token savers, Blender/three.js MCPs, document converters for the case files, MCP SDKs, and everyday CLIs. |
+| [Sky, space & geo data](catalog/sky-geo.md) | 54 | Accurate night skies, satellites and Starlink, air traffic, weather, maps and globes, and timeline/graph visualisation. Data licences (ODbL, OpenSky, ADS-B Exchange) are called out per row. |
+| [Web game engineering](catalog/game-engineering.md) | 83 | WebGPU and performance, procedural environments, multiplayer, playtesting and analytics, testing 3D apps, accessibility/i18n/PWA, and game feel. |
+| [AI asset generation](catalog/ai-assets.md) | 56 | Text/image-to-3D, image generation, audio/SFX/music, NPC voices (TTS), speech-to-text, and ML that runs in the browser. Model weights often carry their own licences; read the notes column. |
