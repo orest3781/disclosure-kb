@@ -17,7 +17,7 @@ What the knowledge base can't vouch for, what nobody has built, and what could b
 
 ## Unproven sources
 
-101 sources have under 100 stars, and 14 are archived or stale. The ones our plans lean on:
+246 sources have under 100 stars, and 24 are archived or stale. The ones our plans lean on:
 - `heist-one` (7★): the NPC architecture pattern. Copy the design, not the code, until we've read it.
 - `starlink-viz` (30★), `skylight` (3.3k★ but new): sky-view projection patterns.
 - `threejs-devtools-mcp` (109★): try before relying on it.

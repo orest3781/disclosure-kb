@@ -67,7 +67,7 @@ export const OVERRIDE = new Map([
 export const TOOL_ONLY_LICENSES = new Set(["GPL-2.0", "GPL-3.0", "AGPL-3.0"]);
 
 const PERMISSIVE = new Set(["MIT", "Apache-2.0", "BSD-2-Clause", "BSD-3-Clause", "ISC", "Zlib", "Unlicense", "CC0-1.0", "0BSD", "BSL-1.0", "WTFPL", "OFL-1.1", "CC-BY-4.0"]);
-const WEAK_COPYLEFT = new Set(["MPL-2.0", "LGPL-3.0", "EUPL-1.2", "CC-BY-SA-4.0"]);
+const WEAK_COPYLEFT = new Set(["MPL-2.0", "LGPL-2.1", "LGPL-3.0", "EUPL-1.2", "CC-BY-SA-4.0", "ODbL-1.0"]);
 
 export const ORDER = ["Adopt", "Adopt (tool)", "Trial", "Tool only", "Reference", "Prototype only", "Avoid"];
 

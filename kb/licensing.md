@@ -1,19 +1,19 @@
 # Licensing policy
 
-What we may copy, bundle, run, or ship, across all 629 sources. The per-source licence is in `catalog/`; the verdict in `REVIEW.md`. This page is the rule book they follow.
+What we may copy, bundle, run, or ship, across all 945 sources. The per-source licence is in `catalog/`; the verdict in `REVIEW.md`. This page is the rule book they follow.
 
 ## Code
 
 | Licence class | Examples in the catalog | Bundle into the game? | Copy code? | Run as a tool or service? |
 |---|---|---|---|---|
-| Permissive (MIT, Apache-2.0, BSD, ISC, Zlib, Unlicense, CC0, 0BSD, OFL) | 474 sources: three.js, R3F, ink, xyflow, kokoro… | Yes, keep the notice | Yes, keep the notice | Yes |
+| Permissive (MIT, Apache-2.0, BSD, ISC, Zlib, Unlicense, CC0, 0BSD, OFL) | 673 sources: three.js, R3F, ink, xyflow, kokoro… | Yes, keep the notice | Yes, keep the notice | Yes |
 | Weak copyleft (MPL-2.0, LGPL, EUPL) | adarkroom, WebGAL, OCRmyPDF, axe-core, bitECS, MapGenerator | Yes, as a dependency; changes to *their* files must stay open | Only into files that stay under their licence | Yes |
 | GPL | ComfyUI, FFmpeg, twinejs, Nominatim, Stellarium, QRemeshify | **No** | **No** | Yes: their output is ours |
 | AGPL | Stellarium web engine, keeptrack, blend-ai, Plausible, LibreTranslate, `internetarchive` lib, Overpass | **No** | **No** | Yes, as a separate service; modified and served over a network means publishing the changes |
 | Source-available (FSL, PolyForm, Elastic, GSAP standard) | sentry-mcp, bugsink, GSAP | Read the terms; GSAP allows commercial use with restrictions | No | Per terms |
 | Hippocratic (react-leaflet) | | Not OSI; review or use MapLibre | | |
-| NOASSERTION (GitHub couldn't classify) | 45 sources | Read LICENSE first. Known: lygia, thebookofshaders, uikit, xr, tar1090 (GPL), readsb (GPL), yjs (MIT), maplibre (BSD), vis-timeline (Apache/MIT) | | |
-| None | 59 sources | **No** | **No** | Read only |
+| NOASSERTION (GitHub couldn't classify) | 75 sources | Read LICENSE first. Known: lygia, thebookofshaders, uikit, xr, tar1090 (GPL), readsb (GPL), yjs (MIT), maplibre (BSD), vis-timeline (Apache/MIT) | | |
+| None | 117 sources | **No** | **No** | Read only |
 
 **Open-core watch list:** PostHog, GrowthBook, OpenReplay and Novu are open except their `ee/` or enterprise directories; Liveblocks' server and CLI are AGPL.
 

@@ -29,20 +29,20 @@ Edit `sources.json` for facts about a source. Edit `notes/` for findings within 
 
 ## The corpus in numbers
 
-629 sources in 11 categories, checked against GitHub on 2026-09-23.
+945 sources in 11 categories, checked against GitHub on 2026-09-23.
 
 | | Count | What it tells us |
 |---|---:|---|
-| Permissive licence (MIT, Apache, BSD, ISC, CC0, OFL…) | 474 (75%) | Most of what we need can go straight into the game |
-| No licence at all | 59 | Read-only: all rights reserved by default |
-| GitHub couldn't classify the licence | 45 | We read the LICENSE file for the ones that matter; the rest need a look before use |
-| GPL / AGPL | 35 | Tools and services to run, never code to bundle |
-| Under 100 stars | 101 | Unproven; a fifth of the sky, Jev and API entries |
-| 10k stars or more | 157 | The mature core of the stack |
-| Archived or stale | 14 | Reference only |
-| Marked "verify" or "unverified" in the notes | 4 | Two model licences, two pricing pages that wouldn't load |
-| Verdict: Adopt | 122 | The recommended pick for each job |
-| Verdict: Avoid / Prototype only | 11 | Region-locked or non-commercial models, and two data dumps |
+| Permissive licence (MIT, Apache, BSD, ISC, CC0, OFL…) | 673 (71%) | Most of what we need can go straight into the game |
+| No licence at all | 117 | Read-only: all rights reserved by default |
+| GitHub couldn't classify the licence | 75 | We read the LICENSE file for the ones that matter; the rest need a look before use |
+| GPL / AGPL | 56 | Tools and services to run, never code to bundle |
+| Under 100 stars | 246 | Unproven; a quarter of the catalogue, mostly gap-fillers, Jev and API entries |
+| 10k stars or more | 168 | The mature core of the stack |
+| Archived or stale | 24 | Reference only |
+| Marked "verify" or "unverified" in the notes | 9 | Model licences, pricing pages that wouldn't load, and licences stated only in a README |
+| Verdict: Adopt | 132 | The recommended pick for each job |
+| Verdict: Avoid / Prototype only | 12 | Region-locked or non-commercial models, two data dumps, and one archive built on a leak set |
 
 Three things the numbers hide:
 

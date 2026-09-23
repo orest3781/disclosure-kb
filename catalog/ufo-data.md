@@ -17,7 +17,7 @@ Stars checked 2026-09-23. Notes: [notes/ufo-data.md](../notes/ufo-data.md). Sync
 | [noahcousins/ufofiles](https://github.com/noahcousins/ufofiles) | 14 | ⚠️ none (all rights reserved — reference only) | Next.js browser/scraper for war.gov/UFO (showmeufos.com). | Reading-room UI reference. | docs |
 | [toor11/ufo](https://github.com/toor11/ufo) | 5 | ⚠️ none (all rights reserved — reference only) | Bulk downloader for war.gov UFO files. | Pull originals ourselves (cleanest provenance). | docs |
 | [Co-Messi/uap-pursue](https://github.com/Co-Messi/uap-pursue) | 2 | ⚠️ none (all rights reserved — reference only) | Archive of PURSUE Releases 01–04. | Later tranches; pull originals from war.gov. | none |
-| [freakynit/nsa-foia-umbra-ufo-markdown](https://github.com/freakynit/nsa-foia-umbra-ufo-markdown) | 1 | unknown | NSA UFO FOIA release (UMBRA-marked) as Markdown. | Late-game 'top secret' pages; source originals from nsa.gov. — _licence not checked_ | docs |
+| [freakynit/nsa-foia-umbra-ufo-markdown](https://github.com/freakynit/nsa-foia-umbra-ufo-markdown) | 1 | ⚠️ none (all rights reserved — reference only) | NSA UFO FOIA release (UMBRA-marked) as Markdown. | Late-game 'top secret' pages; source originals from nsa.gov. — _No licence (GitHub detects none, checked 2026-09-23). The NSA records are US government works; the markdown extraction is 1 star and unverified, so check against the NSA originals_ | docs |
 | [Starmadebydata/pursue-uap-documents-dataset](https://github.com/Starmadebydata/pursue-uap-documents-dataset) | 0 | CC-BY-4.0 | CSV catalog of 207 PURSUE records with Zenodo DOI. | Citable master index for an in-game case-file database (attribute). | full |
 
 ### Historical case files
