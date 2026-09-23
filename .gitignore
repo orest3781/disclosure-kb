@@ -1,0 +1,4 @@
+# Synced source repos: pulled on demand by scripts/sync.mjs, never committed.
+vendor/
+node_modules/
+.DS_Store

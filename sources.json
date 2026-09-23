@@ -1,0 +1,1990 @@
+{
+  "checkedAt": "2026-09-23",
+  "categories": [
+    {
+      "id": "3d-tech",
+      "title": "3D game tech",
+      "description": "Engines, R3F ecosystem, games to learn from, shaders and atmosphere, state/AI/audio, and the asset pipeline."
+    },
+    {
+      "id": "mystery-design",
+      "title": "Mystery game design",
+      "description": "Dialogue engines, mystery and investigation games, evidence-board UI, ARG/document-game UI, procedural mysteries, design reading, saves and quests."
+    },
+    {
+      "id": "ufo-data",
+      "title": "UFO / UAP source data",
+      "description": "Real case files (PURSUE, Blue Book, FOIA), sighting datasets, analysis and evidence UIs, sky reconstruction, and disclosure timelines. Read the data-licensing notes before shipping anything."
+    },
+    {
+      "id": "web-starters",
+      "title": "Web starters & frameworks",
+      "description": "Next.js starters, full-stack templates, UI and AI building blocks."
+    }
+  ],
+  "sources": [
+    {
+      "repo": "mrdoob/three.js",
+      "category": "3d-tech",
+      "group": "Engines & renderers",
+      "stars": 115793,
+      "license": "MIT",
+      "sync": "docs",
+      "what": "The JavaScript 3D library (WebGL/WebGPU/WebXR).",
+      "use": "Base renderer; examples/jsm has Sky, PointerLockControls, water, lens flare, post passes."
+    },
+    {
+      "repo": "pmndrs/react-three-fiber",
+      "category": "3d-tech",
+      "group": "Engines & renderers",
+      "stars": 32431,
+      "license": "MIT",
+      "sync": "docs",
+      "what": "React renderer for three.js.",
+      "use": "Scenes as React 19 components; useFrame game loops; mount in a client component."
+    },
+    {
+      "repo": "BabylonJS/Babylon.js",
+      "category": "3d-tech",
+      "group": "Engines & renderers",
+      "stars": 26096,
+      "license": "Apache-2.0",
+      "sync": "none",
+      "what": "Full web game and rendering engine.",
+      "use": "Comparison only (node materials, GUI); don't mix engines."
+    },
+    {
+      "repo": "playcanvas/engine",
+      "category": "3d-tech",
+      "group": "Engines & renderers",
+      "stars": 16897,
+      "license": "MIT",
+      "sync": "none",
+      "what": "WebGL/WebGPU/WebXR runtime built around glTF.",
+      "use": "Asset streaming and texture-compression pipeline ideas."
+    },
+    {
+      "repo": "CesiumGS/cesium",
+      "category": "3d-tech",
+      "group": "Engines & renderers",
+      "stars": 15767,
+      "license": "Apache-2.0",
+      "sync": "none",
+      "what": "3D globes and maps.",
+      "use": "If we add a sightings-map globe or real-terrain crash sites."
+    },
+    {
+      "repo": "pmndrs/drei",
+      "category": "3d-tech",
+      "group": "Engines & renderers",
+      "stars": 9886,
+      "license": "MIT",
+      "sync": "docs",
+      "what": "Helper components for R3F.",
+      "use": "Stars, Sky, Cloud, Sparkles, Environment, PointerLockControls, KeyboardControls, Html, useGLTF, Detailed, Text."
+    },
+    {
+      "repo": "pmndrs/react-three-next",
+      "category": "3d-tech",
+      "group": "Engines & renderers",
+      "stars": 2877,
+      "license": "MIT",
+      "sync": "full",
+      "what": "R3F + Next.js starter.",
+      "use": "Persistent canvas across App Router routes, SSR-safe dynamic import, tunnel-rat."
+    },
+    {
+      "repo": "pmndrs/threejs-journey",
+      "category": "3d-tech",
+      "group": "Engines & renderers",
+      "stars": 810,
+      "license": "none",
+      "sync": "docs",
+      "what": "Bruno Simon's Journey demos ported to R3F.",
+      "use": "Short recipes: shaders, particles, haunted-house fog. Reference only."
+    },
+    {
+      "repo": "pmndrs/react-spring",
+      "category": "3d-tech",
+      "group": "R3F game ecosystem",
+      "stars": 29159,
+      "license": "MIT",
+      "sync": "docs",
+      "what": "Spring-physics animation (has an R3F target).",
+      "use": "Door/drawer/UI transitions, camera easing, document pick-up animations."
+    },
+    {
+      "repo": "pmndrs/leva",
+      "category": "3d-tech",
+      "group": "R3F game ecosystem",
+      "stars": 6238,
+      "license": "MIT",
+      "sync": "docs",
+      "what": "React tweak GUI.",
+      "use": "Dev panel for fog, bloom, grain and UFO light timing; strip from production."
+    },
+    {
+      "repo": "gkjohnson/three-mesh-bvh",
+      "category": "3d-tech",
+      "group": "R3F game ecosystem",
+      "stars": 3494,
+      "license": "MIT",
+      "sync": "docs",
+      "what": "BVH for fast raycasts and spatial queries.",
+      "use": "Look-at/interact raycasts on detailed interiors; capsule collision without full physics."
+    },
+    {
+      "repo": "pmndrs/uikit",
+      "category": "3d-tech",
+      "group": "R3F game ecosystem",
+      "stars": 3243,
+      "license": "NOASSERTION",
+      "sync": "docs",
+      "what": "UI components rendered inside R3F.",
+      "use": "Diegetic terminals, case files, radar screens."
+    },
+    {
+      "repo": "pmndrs/use-cannon",
+      "category": "3d-tech",
+      "group": "R3F game ecosystem",
+      "stars": 2962,
+      "license": "none",
+      "sync": "none",
+      "what": "cannon-es physics hooks for R3F.",
+      "use": "Older alternative; prefer Rapier."
+    },
+    {
+      "repo": "pmndrs/postprocessing",
+      "category": "3d-tech",
+      "group": "R3F game ecosystem",
+      "stars": 2862,
+      "license": "Zlib",
+      "sync": "docs",
+      "what": "three.js postprocessing library.",
+      "use": "Effect-stack foundation: bloom, noise, vignette, chromatic aberration, scanlines, glitch, god rays."
+    },
+    {
+      "repo": "pmndrs/xr",
+      "category": "3d-tech",
+      "group": "R3F game ecosystem",
+      "stars": 2610,
+      "license": "NOASSERTION",
+      "sync": "none",
+      "what": "VR/AR for R3F.",
+      "use": "Optional later WebXR stargazing mode."
+    },
+    {
+      "repo": "yomotsu/camera-controls",
+      "category": "3d-tech",
+      "group": "R3F game ecosystem",
+      "stars": 2429,
+      "license": "MIT",
+      "sync": "docs",
+      "what": "Camera controls with smooth transitions.",
+      "use": "Cutscene cameras; inspect-evidence zoom and orbit."
+    },
+    {
+      "repo": "pmndrs/react-three-rapier",
+      "category": "3d-tech",
+      "group": "R3F game ecosystem",
+      "stars": 1436,
+      "license": "MIT",
+      "sync": "docs",
+      "what": "Rapier (WASM) physics for R3F.",
+      "use": "Main physics: player capsule, sensors, clue-zone triggers."
+    },
+    {
+      "repo": "pmndrs/react-postprocessing",
+      "category": "3d-tech",
+      "group": "R3F game ecosystem",
+      "stars": 1391,
+      "license": "MIT",
+      "sync": "docs",
+      "what": "JSX wrapper for pmndrs/postprocessing.",
+      "use": "Toggle effect stacks by game state (e.g. night-vision mode)."
+    },
+    {
+      "repo": "pmndrs/three-stdlib",
+      "category": "3d-tech",
+      "group": "R3F game ecosystem",
+      "stars": 858,
+      "license": "MIT",
+      "sync": "none",
+      "what": "three.js examples packaged as a library.",
+      "use": "Typed loaders and controls without examples/ path imports."
+    },
+    {
+      "repo": "pmndrs/ecctrl",
+      "category": "3d-tech",
+      "group": "R3F game ecosystem",
+      "stars": 798,
+      "license": "MIT",
+      "sync": "full",
+      "what": "Character controller for R3F + Rapier.",
+      "use": "Ready first/third-person controller (slopes, jump, floating capsule)."
+    },
+    {
+      "repo": "utsuboco/r3f-perf",
+      "category": "3d-tech",
+      "group": "R3F game ecosystem",
+      "stars": 781,
+      "license": "MIT",
+      "sync": "none",
+      "what": "Performance monitor for R3F.",
+      "use": "Draw-call/GPU/memory overlay in development."
+    },
+    {
+      "repo": "hh-hang/three-player-controller",
+      "category": "3d-tech",
+      "group": "R3F game ecosystem",
+      "stars": 284,
+      "license": "MIT",
+      "sync": "full",
+      "what": "First/third-person controller on three-mesh-bvh.",
+      "use": "Lighter, physics-free controller with camera obstacle avoidance."
+    },
+    {
+      "repo": "brunosimon/folio-2019",
+      "category": "3d-tech",
+      "group": "Games to learn from",
+      "stars": 4747,
+      "license": "MIT",
+      "sync": "full",
+      "what": "Drivable 3D portfolio (three.js + cannon).",
+      "use": "World structure, loading screen, interaction zones."
+    },
+    {
+      "repo": "mshumer/Claude-of-Duty",
+      "category": "3d-tech",
+      "group": "Games to learn from",
+      "stars": 3433,
+      "license": "MIT",
+      "sync": "full",
+      "what": "FPS in three.js built from a single prompt.",
+      "use": "First-person feel: sway, pointer lock, HUD, post stack."
+    },
+    {
+      "repo": "pmndrs/racing-game",
+      "category": "3d-tech",
+      "group": "Games to learn from",
+      "stars": 2218,
+      "license": "MIT",
+      "sync": "full",
+      "what": "Full open-source R3F game (zustand + cannon + drei).",
+      "use": "Best reference for R3F game architecture: store, level/HUD split, settings."
+    },
+    {
+      "repo": "brunosimon/folio-2025",
+      "category": "3d-tech",
+      "group": "Games to learn from",
+      "stars": 1880,
+      "license": "MIT",
+      "sync": "full",
+      "what": "Bruno Simon's 2025 portfolio game.",
+      "use": "Modern three.js (WebGPU/TSL era), day/night cycle, atmosphere."
+    },
+    {
+      "repo": "Mugen87/yuka",
+      "category": "3d-tech",
+      "group": "Games to learn from",
+      "stars": 1371,
+      "license": "MIT",
+      "sync": "docs",
+      "what": "Game AI: steering, FSM, pathfinding, perception.",
+      "use": "Agents-in-black patrols, vision cones, navmesh pathfinding."
+    },
+    {
+      "repo": "ZyFou/ProceduralTerrains",
+      "category": "3d-tech",
+      "group": "Games to learn from",
+      "stars": 611,
+      "license": "MIT",
+      "sync": "full",
+      "what": "Infinite procedural terrain, volumetric clouds, water.",
+      "use": "Desert/field terrain around a crash site."
+    },
+    {
+      "repo": "wwwtyro/Astray",
+      "category": "3d-tech",
+      "group": "Games to learn from",
+      "stars": 604,
+      "license": "Unlicense",
+      "sync": "full",
+      "what": "Small WebGL maze game.",
+      "use": "Minimal readable game loop."
+    },
+    {
+      "repo": "gorescript/gorescript",
+      "category": "3d-tech",
+      "group": "Games to learn from",
+      "stars": 351,
+      "license": "MIT",
+      "sync": "full",
+      "what": "Retro FPS in three.js.",
+      "use": "Lo-fi first-person movement and level format; suits a VHS/CRT look."
+    },
+    {
+      "repo": "akarlsten/cuberun",
+      "category": "3d-tech",
+      "group": "Games to learn from",
+      "stars": 348,
+      "license": "MIT",
+      "sync": "full",
+      "what": "Small, polished R3F game.",
+      "use": "Clean structure: menus, audio, postprocessing."
+    },
+    {
+      "repo": "StarKnightt/jungle-trail",
+      "category": "3d-tech",
+      "group": "Games to learn from",
+      "stars": 296,
+      "license": "MIT",
+      "sync": "full",
+      "what": "Procedural first-person jungle, no external art.",
+      "use": "Atmospheric first-person exploration with procedural textures and sound."
+    },
+    {
+      "repo": "LBALab/lba2remake",
+      "category": "3d-tech",
+      "group": "Games to learn from",
+      "stars": 286,
+      "license": "MIT",
+      "sync": "full",
+      "what": "Little Big Adventure 2 in three.js + React.",
+      "use": "Adventure systems: dialogue, inventory, scripts, scenes."
+    },
+    {
+      "repo": "iErcann/enari-engine",
+      "category": "3d-tech",
+      "group": "Games to learn from",
+      "stars": 276,
+      "license": "MIT",
+      "sync": "full",
+      "what": "three.js FPS playground.",
+      "use": "First-person controller, physics, asset loading."
+    },
+    {
+      "repo": "mohsenheydari/three-fps",
+      "category": "3d-tech",
+      "group": "Games to learn from",
+      "stars": 229,
+      "license": "MIT",
+      "sync": "full",
+      "what": "three.js FPS example.",
+      "use": "Entity/component structure, Ammo.js first-person movement."
+    },
+    {
+      "repo": "PauliusOS/pallet-town-3d",
+      "category": "3d-tech",
+      "group": "Games to learn from",
+      "stars": 187,
+      "license": "MIT",
+      "sync": "full",
+      "what": "Code-only first-person three.js town.",
+      "use": "Building environments in code, first-person exploration."
+    },
+    {
+      "repo": "simondevyoutube/ThreeJS_Tutorial_FirstPersonCamera",
+      "category": "3d-tech",
+      "group": "Games to learn from",
+      "stars": 76,
+      "license": "MIT",
+      "sync": "full",
+      "what": "SimonDev first-person camera tutorial.",
+      "use": "Head-bob and mouse-look maths (sibling repos cover fog, 3D sound, particles)."
+    },
+    {
+      "repo": "verekia/r3f-gamedev",
+      "category": "3d-tech",
+      "group": "Games to learn from",
+      "stars": 31,
+      "license": "MIT",
+      "sync": "full",
+      "what": "R3F game-dev recipes.",
+      "use": "ECS with R3F, game loop, input, state."
+    },
+    {
+      "repo": "lettier/3d-game-shaders-for-beginners",
+      "category": "3d-tech",
+      "group": "Shaders & atmosphere",
+      "stars": 19919,
+      "license": "none",
+      "sync": "docs",
+      "what": "Step-by-step SSAO, DoF, fog, bloom, film grain guide.",
+      "use": "GLSL theory for grain, fog, bloom, outlines. Reference only."
+    },
+    {
+      "repo": "patriciogonzalezvivo/thebookofshaders",
+      "category": "3d-tech",
+      "group": "Shaders & atmosphere",
+      "stars": 7030,
+      "license": "NOASSERTION",
+      "sync": "docs",
+      "what": "Guide to fragment shaders.",
+      "use": "Noise, patterns, SDFs for beams, glows, radar sweeps."
+    },
+    {
+      "repo": "patriciogonzalezvivo/lygia",
+      "category": "3d-tech",
+      "group": "Shaders & atmosphere",
+      "stars": 3446,
+      "license": "NOASSERTION",
+      "sync": "docs",
+      "what": "Multi-language shader function library.",
+      "use": "Noise, blur, grading, lighting snippets; check terms before shipping."
+    },
+    {
+      "repo": "ashima/webgl-noise",
+      "category": "3d-tech",
+      "group": "Shaders & atmosphere",
+      "stars": 2997,
+      "license": "MIT",
+      "sync": "full",
+      "what": "Procedural noise GLSL.",
+      "use": "Simplex/Perlin for clouds, static, heat shimmer, hull shimmer."
+    },
+    {
+      "repo": "0beqz/realism-effects",
+      "category": "3d-tech",
+      "group": "Shaders & atmosphere",
+      "stars": 1727,
+      "license": "MIT",
+      "sync": "docs",
+      "what": "SSGI, motion blur, TRAA for three.js.",
+      "use": "High-end lighting for night interiors."
+    },
+    {
+      "repo": "takram-design-engineering/three-geospatial",
+      "category": "3d-tech",
+      "group": "Shaders & atmosphere",
+      "stars": 1694,
+      "license": "MIT",
+      "sync": "docs",
+      "what": "Physically based atmosphere and volumetric clouds (R3F support).",
+      "use": "Strongest realistic twilight/night sky and cloud option."
+    },
+    {
+      "repo": "FarazzShaikh/THREE-CustomShaderMaterial",
+      "category": "3d-tech",
+      "group": "Shaders & atmosphere",
+      "stars": 1337,
+      "license": "MIT",
+      "sync": "docs",
+      "what": "Extend standard materials with custom shaders.",
+      "use": "Dissolve, hologram, energy effects while keeping PBR lighting."
+    },
+    {
+      "repo": "creativelifeform/three-nebula",
+      "category": "3d-tech",
+      "group": "Shaders & atmosphere",
+      "stars": 1227,
+      "license": "MIT",
+      "sync": "docs",
+      "what": "Particle engine for three.js.",
+      "use": "Dust, fireflies, sparks, crash debris."
+    },
+    {
+      "repo": "ebruneton/precomputed_atmospheric_scattering",
+      "category": "3d-tech",
+      "group": "Shaders & atmosphere",
+      "stars": 1067,
+      "license": "BSD-3-Clause",
+      "sync": "none",
+      "what": "Reference Bruneton atmospheric scattering.",
+      "use": "Theory behind realistic sky colour."
+    },
+    {
+      "repo": "Alchemist0823/three.quarks",
+      "category": "3d-tech",
+      "group": "Shaders & atmosphere",
+      "stars": 1037,
+      "license": "MIT",
+      "sync": "docs",
+      "what": "Particle/VFX engine with editor.",
+      "use": "Tractor beams, smoke, energy trails."
+    },
+    {
+      "repo": "DeadlyRedCube/Cathode-Retro",
+      "category": "3d-tech",
+      "group": "Shaders & atmosphere",
+      "stars": 819,
+      "license": "BSL-1.0",
+      "sync": "full",
+      "what": "NTSC signal + CRT emulation shaders.",
+      "use": "Found-footage and monitor look (port the GLSL)."
+    },
+    {
+      "repo": "N8python/n8ao",
+      "category": "3d-tech",
+      "group": "Shaders & atmosphere",
+      "stars": 496,
+      "license": "CC0-1.0",
+      "sync": "docs",
+      "what": "Efficient SSAO for three.js.",
+      "use": "Grounded contact shadows in dim night scenes."
+    },
+    {
+      "repo": "ektogamat/R3F-Ultimate-Lens-Flare",
+      "category": "3d-tech",
+      "group": "Shaders & atmosphere",
+      "stars": 267,
+      "license": "CC0-1.0",
+      "sync": "full",
+      "what": "Lens flare for react-postprocessing.",
+      "use": "Camera-recorded look for UFO lights and flashlights."
+    },
+    {
+      "repo": "gingerbeardman/webgl-crt-shader",
+      "category": "3d-tech",
+      "group": "Shaders & atmosphere",
+      "stars": 185,
+      "license": "MIT",
+      "sync": "full",
+      "what": "Tweakable CRT shader.",
+      "use": "Drop-in CRT/VHS pass: scanlines, curvature, bloom."
+    },
+    {
+      "repo": "statelyai/xstate",
+      "category": "3d-tech",
+      "group": "State, AI, audio",
+      "stars": 30155,
+      "license": "MIT",
+      "sync": "docs",
+      "what": "State machines and statecharts.",
+      "use": "Story/chapter/puzzle flow and NPC states."
+    },
+    {
+      "repo": "goldfire/howler.js",
+      "category": "3d-tech",
+      "group": "State, AI, audio",
+      "stars": 25351,
+      "license": "MIT",
+      "sync": "docs",
+      "what": "Web audio library.",
+      "use": "SFX, ambience, sprites, spatial audio: UFO hum, radio chatter, footsteps."
+    },
+    {
+      "repo": "pmndrs/jotai",
+      "category": "3d-tech",
+      "group": "State, AI, audio",
+      "stars": 21278,
+      "license": "MIT",
+      "sync": "docs",
+      "what": "Atomic React state.",
+      "use": "Fine-grained UI state for the evidence board and dialogs."
+    },
+    {
+      "repo": "Tonejs/Tone.js",
+      "category": "3d-tech",
+      "group": "State, AI, audio",
+      "stars": 14733,
+      "license": "MIT",
+      "sync": "docs",
+      "what": "Web Audio framework for interactive music.",
+      "use": "Generative drones, theremin tones, procedural radio static."
+    },
+    {
+      "repo": "pmndrs/valtio",
+      "category": "3d-tech",
+      "group": "State, AI, audio",
+      "stars": 10240,
+      "license": "MIT",
+      "sync": "none",
+      "what": "Proxy-based state.",
+      "use": "Mutable alternative that suits imperative loops."
+    },
+    {
+      "repo": "NateTheGreatt/bitECS",
+      "category": "3d-tech",
+      "group": "State, AI, audio",
+      "stars": 1506,
+      "license": "MPL-2.0",
+      "sync": "docs",
+      "what": "High-performance data-oriented ECS.",
+      "use": "Swarms, particles, drone fleets at high entity counts."
+    },
+    {
+      "repo": "hmans/miniplex",
+      "category": "3d-tech",
+      "group": "State, AI, audio",
+      "stars": 1053,
+      "license": "MIT",
+      "sync": "docs",
+      "what": "Developer-friendly ECS with React bindings.",
+      "use": "Game-object ECS that fits R3F."
+    },
+    {
+      "repo": "pmndrs/koota",
+      "category": "3d-tech",
+      "group": "State, AI, audio",
+      "stars": 737,
+      "license": "ISC",
+      "sync": "docs",
+      "what": "ECS-style real-time state for React/TS.",
+      "use": "Modern pmndrs pick bridging ECS and React."
+    },
+    {
+      "repo": "hmans/composer-suite",
+      "category": "3d-tech",
+      "group": "State, AI, audio",
+      "stars": 565,
+      "license": "MIT",
+      "sync": "docs",
+      "what": "three.js + React game-dev libraries (shader composer, VFX).",
+      "use": "Composable shader and VFX patterns."
+    },
+    {
+      "repo": "zeux/meshoptimizer",
+      "category": "3d-tech",
+      "group": "Assets & pipeline",
+      "stars": 8360,
+      "license": "MIT",
+      "sync": "none",
+      "what": "Mesh optimisation and gltfpack.",
+      "use": "Simplify and meshopt-compress GLBs."
+    },
+    {
+      "repo": "google/draco",
+      "category": "3d-tech",
+      "group": "Assets & pipeline",
+      "stars": 7488,
+      "license": "Apache-2.0",
+      "sync": "none",
+      "what": "Geometry compression.",
+      "use": "Draco GLBs decoded by drei useGLTF."
+    },
+    {
+      "repo": "pmndrs/gltfjsx",
+      "category": "3d-tech",
+      "group": "Assets & pipeline",
+      "stars": 5868,
+      "license": "MIT",
+      "sync": "docs",
+      "what": "glTF to JSX components (--transform).",
+      "use": "Every model as a typed R3F component, optimised in one step."
+    },
+    {
+      "repo": "donmccurdy/three-gltf-viewer",
+      "category": "3d-tech",
+      "group": "Assets & pipeline",
+      "stars": 2470,
+      "license": "MIT",
+      "sync": "none",
+      "what": "Drag-and-drop glTF viewer.",
+      "use": "Quick asset QA."
+    },
+    {
+      "repo": "donmccurdy/glTF-Transform",
+      "category": "3d-tech",
+      "group": "Assets & pipeline",
+      "stars": 1976,
+      "license": "MIT",
+      "sync": "docs",
+      "what": "glTF SDK and CLI.",
+      "use": "Build pipeline: dedupe, prune, resize, KTX2/WebP, Draco/meshopt."
+    },
+    {
+      "repo": "KhronosGroup/glTF-Blender-IO",
+      "category": "3d-tech",
+      "group": "Assets & pipeline",
+      "stars": 1663,
+      "license": "Apache-2.0",
+      "sync": "none",
+      "what": "Blender glTF import/export.",
+      "use": "Blender to GLB authoring path."
+    },
+    {
+      "repo": "KhronosGroup/KTX-Software",
+      "category": "3d-tech",
+      "group": "Assets & pipeline",
+      "stars": 1367,
+      "license": "NOASSERTION",
+      "sync": "none",
+      "what": "KTX2/Basis Universal texture tools.",
+      "use": "GPU-compressed textures; lower VRAM on mobile."
+    },
+    {
+      "repo": "pmndrs/detect-gpu",
+      "category": "3d-tech",
+      "group": "Assets & pipeline",
+      "stars": 1214,
+      "license": "MIT",
+      "sync": "docs",
+      "what": "GPU tier classification.",
+      "use": "Auto quality presets (drop volumetrics/SSAO on weak GPUs)."
+    },
+    {
+      "repo": "KhronosGroup/glTF-Sample-Assets",
+      "category": "3d-tech",
+      "group": "Assets & pipeline",
+      "stars": 1086,
+      "license": "none",
+      "sync": "none",
+      "what": "glTF feature test assets (per-asset licenses).",
+      "use": "Test PBR, KHR extensions, loader pipeline."
+    },
+    {
+      "repo": "devanshutak25/3d-resources",
+      "category": "3d-tech",
+      "group": "Assets & pipeline",
+      "stars": 957,
+      "license": "CC0-1.0",
+      "sync": "docs",
+      "what": "Curated hub of 3,400+ 3D/VFX/game-dev tools and assets.",
+      "use": "Finding CC0 models, textures, HDRIs."
+    },
+    {
+      "repo": "Poly-Haven/polyhavenassets",
+      "category": "3d-tech",
+      "group": "Assets & pipeline",
+      "stars": 521,
+      "license": "GPL-3.0",
+      "sync": "none",
+      "what": "Blender add-on for Poly Haven assets.",
+      "use": "Pull CC0 HDRIs/textures into Blender (add-on GPL, assets CC0)."
+    },
+    {
+      "repo": "pmndrs/market",
+      "category": "3d-tech",
+      "group": "Assets & pipeline",
+      "stars": 283,
+      "license": "MIT",
+      "sync": "none",
+      "what": "Source of market.pmnd.rs (CC0 R3F-ready assets).",
+      "use": "Quick CC0 props and HDRIs."
+    },
+    {
+      "repo": "pmndrs/assets",
+      "category": "3d-tech",
+      "group": "Assets & pipeline",
+      "stars": 109,
+      "license": "CC0-1.0",
+      "sync": "none",
+      "what": "Importable CC0 HDRIs, fonts, textures.",
+      "use": "Zero-config assets for drei Environment and Text."
+    },
+    {
+      "repo": "renpy/renpy",
+      "category": "mystery-design",
+      "group": "Narrative & dialogue engines",
+      "stars": 6853,
+      "license": "none",
+      "sync": "none",
+      "what": "Python visual-novel engine.",
+      "use": "Rollback, save slots, history log, cross-playthrough persistent data. Not web."
+    },
+    {
+      "repo": "inkle/ink",
+      "category": "mystery-design",
+      "group": "Narrative & dialogue engines",
+      "stars": 4947,
+      "license": "MIT",
+      "sync": "docs",
+      "what": "inkle's branching-narrative scripting language.",
+      "use": "Write interrogations in ink; tags drive UI and three.js events."
+    },
+    {
+      "repo": "OpenWebGAL/WebGAL",
+      "category": "mystery-design",
+      "group": "Narrative & dialogue engines",
+      "stars": 3980,
+      "license": "MPL-2.0",
+      "sync": "docs",
+      "what": "React/TypeScript web visual-novel engine.",
+      "use": "Closest stack match for a script-driven scene runtime in React."
+    },
+    {
+      "repo": "klembot/twinejs",
+      "category": "mystery-design",
+      "group": "Narrative & dialogue engines",
+      "stars": 2889,
+      "license": "GPL-3.0",
+      "sync": "none",
+      "what": "Twine 2 visual story editor.",
+      "use": "Node-graph authoring UX for our own story/evidence tool. GPL: ideas only."
+    },
+    {
+      "repo": "YarnSpinnerTool/YarnSpinner",
+      "category": "mystery-design",
+      "group": "Narrative & dialogue engines",
+      "stars": 2842,
+      "license": "MIT",
+      "sync": "docs",
+      "what": "Yarn Spinner compiler (C#).",
+      "use": "Node/line format, localisation line IDs, VO tagging."
+    },
+    {
+      "repo": "inkle/inky",
+      "category": "mystery-design",
+      "group": "Narrative & dialogue engines",
+      "stars": 2736,
+      "license": "none",
+      "sync": "none",
+      "what": "Electron IDE for ink.",
+      "use": "Writers author and play-test ink live."
+    },
+    {
+      "repo": "le-doux/bitsy",
+      "category": "mystery-design",
+      "group": "Narrative & dialogue engines",
+      "stars": 1070,
+      "license": "MIT",
+      "sync": "docs",
+      "what": "Tiny web engine for small games and stories.",
+      "use": "Minimal room + dialogue + item-flag model for side vignettes.",
+      "archived": true
+    },
+    {
+      "repo": "Monogatari/Monogatari",
+      "category": "mystery-design",
+      "group": "Narrative & dialogue engines",
+      "stars": 883,
+      "license": "MIT",
+      "sync": "docs",
+      "what": "Web visual-novel engine (web components, PWA).",
+      "use": "Browser save/load, offline PWA, scripted scene actions."
+    },
+    {
+      "repo": "y-lohse/inkjs",
+      "category": "mystery-design",
+      "group": "Narrative & dialogue engines",
+      "stars": 651,
+      "license": "MIT",
+      "sync": "docs",
+      "what": "JS/TS ink runtime.",
+      "use": "The runtime to embed: story.state.toJson() saves, external functions into React/three."
+    },
+    {
+      "repo": "tmedwards/sugarcube-2",
+      "category": "mystery-design",
+      "group": "Narrative & dialogue engines",
+      "stars": 269,
+      "license": "BSD-2-Clause",
+      "sync": "docs",
+      "what": "Twine story format with state history and saves.",
+      "use": "History/undo and save-serialisation design."
+    },
+    {
+      "repo": "tmedwards/tweego",
+      "category": "mystery-design",
+      "group": "Narrative & dialogue engines",
+      "stars": 165,
+      "license": "BSD-2-Clause",
+      "sync": "none",
+      "what": "CLI compiler for Twee.",
+      "use": "Story source as plain text in git, compiled in CI."
+    },
+    {
+      "repo": "hylyh/bondage.js",
+      "category": "mystery-design",
+      "group": "Narrative & dialogue engines",
+      "stars": 62,
+      "license": "MIT",
+      "sync": "docs",
+      "what": "JS runner for Yarn dialogue.",
+      "use": "Lightweight browser Yarn if we choose Yarn over ink."
+    },
+    {
+      "repo": "doublespeakgames/adarkroom",
+      "category": "mystery-design",
+      "group": "Mystery & investigation games",
+      "stars": 8299,
+      "license": "MPL-2.0",
+      "sync": "full",
+      "what": "Minimalist browser text adventure.",
+      "use": "UI that reveals itself as you progress, like a disclosure unfolding."
+    },
+    {
+      "repo": "veltman/clmystery",
+      "category": "mystery-design",
+      "group": "Mystery & investigation games",
+      "stars": 6272,
+      "license": "NOASSERTION",
+      "sync": "full",
+      "what": "Command-line murder mystery.",
+      "use": "Clues buried in a file dump solved by searching: archive-dump mechanic."
+    },
+    {
+      "repo": "AlexNisnevich/untrusted",
+      "category": "mystery-design",
+      "group": "Mystery & investigation games",
+      "stars": 4664,
+      "license": "none",
+      "sync": "docs",
+      "what": "Meta-JS adventure where you edit the game's code.",
+      "use": "'Hack the system' puzzles on the game's own UI."
+    },
+    {
+      "repo": "NUKnightLab/sql-mysteries",
+      "category": "mystery-design",
+      "group": "Mystery & investigation games",
+      "stars": 2219,
+      "license": "MIT",
+      "sync": "full",
+      "what": "SQL Murder Mystery.",
+      "use": "Query a fake database to find the answer: a classified-records terminal."
+    },
+    {
+      "repo": "bladecoder/bladecoder-adventure-engine",
+      "category": "mystery-design",
+      "group": "Mystery & investigation games",
+      "stars": 645,
+      "license": "Apache-2.0",
+      "sync": "none",
+      "what": "Point-and-click engine and editor (Java).",
+      "use": "Verbs, inventory, hotspots, cutscene scripting for 3D interactions."
+    },
+    {
+      "repo": "nivbend/gitstery",
+      "category": "mystery-design",
+      "group": "Mystery & investigation games",
+      "stars": 487,
+      "license": "none",
+      "sync": "none",
+      "what": "Murder mystery solved with git.",
+      "use": "Clues in revision history: leaked-document-revision puzzles."
+    },
+    {
+      "repo": "ironman5366/ai-murder-mystery-hackathon",
+      "category": "mystery-design",
+      "group": "Mystery & investigation games",
+      "stars": 248,
+      "license": "MIT",
+      "sync": "full",
+      "what": "Web murder mystery with LLM suspects (TS).",
+      "use": "AI interrogations with guardrails that keep suspects' secrets."
+    },
+    {
+      "repo": "mluogh/grontown",
+      "category": "mystery-design",
+      "group": "Mystery & investigation games",
+      "stars": 134,
+      "license": "none",
+      "sync": "docs",
+      "what": "Murder mystery with generative agents (TS).",
+      "use": "Agent memory and schedules so witness stories stay consistent."
+    },
+    {
+      "repo": "LuisMayo/objection_engine",
+      "category": "mystery-design",
+      "group": "Mystery & investigation games",
+      "stars": 122,
+      "license": "MIT",
+      "sync": "docs",
+      "what": "Turns threads into Ace Attorney scenes.",
+      "use": "'Present evidence' contradiction mechanics and staging."
+    },
+    {
+      "repo": "kreezii/jsgam",
+      "category": "mystery-design",
+      "group": "Mystery & investigation games",
+      "stars": 82,
+      "license": "MIT",
+      "sync": "docs",
+      "what": "JS point-and-click adventure maker.",
+      "use": "Web-native scene/hotspot/inventory JSON format."
+    },
+    {
+      "repo": "aelumiya/sql98detective",
+      "category": "mystery-design",
+      "group": "Mystery & investigation games",
+      "stars": 33,
+      "license": "MIT",
+      "sync": "full",
+      "what": "Detective game inside a fake Windows 98 (TS).",
+      "use": "Very close concept: in-world desktop OS as the investigation interface."
+    },
+    {
+      "repo": "excalidraw/excalidraw",
+      "category": "mystery-design",
+      "group": "Evidence board UI",
+      "stars": 132712,
+      "license": "MIT",
+      "sync": "docs",
+      "what": "Hand-drawn whiteboard (React).",
+      "use": "Sketchy notebook/corkboard look, embeddable."
+    },
+    {
+      "repo": "tldraw/tldraw",
+      "category": "mystery-design",
+      "group": "Evidence board UI",
+      "stars": 50534,
+      "license": "NOASSERTION",
+      "sync": "docs",
+      "what": "Infinite-canvas SDK for React.",
+      "use": "Pinned photos, red-string arrows, custom shapes. Own licence: check production terms."
+    },
+    {
+      "repo": "xyflow/xyflow",
+      "category": "mystery-design",
+      "group": "Evidence board UI",
+      "stars": 38478,
+      "license": "MIT",
+      "sync": "docs",
+      "what": "React Flow node-graph library.",
+      "use": "Best fit for the conspiracy board: evidence nodes, link edges, validate deductions."
+    },
+    {
+      "repo": "cytoscape/cytoscape.js",
+      "category": "mystery-design",
+      "group": "Evidence board UI",
+      "stars": 11221,
+      "license": "MIT",
+      "sync": "docs",
+      "what": "Graph visualisation and analysis.",
+      "use": "Auto-layout; check the player connected the key evidence chain."
+    },
+    {
+      "repo": "Wired-Square/Conspiracy-Board",
+      "category": "mystery-design",
+      "group": "Evidence board UI",
+      "stars": 1,
+      "license": "MIT",
+      "sync": "full",
+      "what": "Red-string pinboard + timeline (TS).",
+      "use": "Small ready example of the pinboard UX."
+    },
+    {
+      "repo": "xtermjs/xterm.js",
+      "category": "mystery-design",
+      "group": "ARG & document-game UI",
+      "stars": 21215,
+      "license": "MIT",
+      "sync": "docs",
+      "what": "Web terminal emulator.",
+      "use": "In-world terminal for Her Story-style keyword archive search."
+    },
+    {
+      "repo": "DustinBrett/daedalOS",
+      "category": "mystery-design",
+      "group": "ARG & document-game UI",
+      "stars": 13037,
+      "license": "MIT",
+      "sync": "docs",
+      "what": "Desktop environment in the browser.",
+      "use": "Windows, file explorer, viewers for a 'leaked government laptop'."
+    },
+    {
+      "repo": "1j01/98",
+      "category": "mystery-design",
+      "group": "ARG & document-game UI",
+      "stars": 1426,
+      "license": "none",
+      "sync": "none",
+      "what": "Windows 98 recreated for the web.",
+      "use": "Retro-OS look for period terminals. Reference only."
+    },
+    {
+      "repo": "1j01/os-gui",
+      "category": "mystery-design",
+      "group": "ARG & document-game UI",
+      "stars": 256,
+      "license": "MIT",
+      "sync": "docs",
+      "what": "Retro OS GUI library.",
+      "use": "Drop-in windows and menus."
+    },
+    {
+      "repo": "Madalaski/ObraDinnTutorial",
+      "category": "mystery-design",
+      "group": "ARG & document-game UI",
+      "stars": 84,
+      "license": "CC0-1.0",
+      "sync": "full",
+      "what": "Obra Dinn 1-bit dither shader tutorial (Unity).",
+      "use": "Port the dither pass to three.js for a declassified-photo look."
+    },
+    {
+      "repo": "galacticpuzzlehunt/gph-site",
+      "category": "mystery-design",
+      "group": "ARG & document-game UI",
+      "stars": 83,
+      "license": "MIT",
+      "sync": "docs",
+      "what": "Django puzzle-hunt server.",
+      "use": "Unlock graphs, hints, answer checking, rate limits for ARG phases."
+    },
+    {
+      "repo": "cijhho123/cicada3301",
+      "category": "mystery-design",
+      "group": "ARG & document-game UI",
+      "stars": 39,
+      "license": "NOASSERTION",
+      "sync": "docs",
+      "what": "Archive of Cicada 3301 puzzles.",
+      "use": "Real ARG puzzle chains: stego, ciphers, real-world hops."
+    },
+    {
+      "repo": "kevinychen/snap2",
+      "category": "mystery-design",
+      "group": "ARG & document-game UI",
+      "stars": 36,
+      "license": "MIT",
+      "sync": "none",
+      "what": "Puzzle-hunt solver tooling.",
+      "use": "Design puzzles that resist trivial automation."
+    },
+    {
+      "repo": "Yide-Zhang/ObraDinn-HintsAndCheck",
+      "category": "mystery-design",
+      "group": "ARG & document-game UI",
+      "stars": 24,
+      "license": "none",
+      "sync": "docs",
+      "what": "Obra Dinn hint and answer checker (JS).",
+      "use": "'3 correct lock in' validation and tiered hints for a deduction sheet."
+    },
+    {
+      "repo": "TaureHorn/netrunner-game_v2",
+      "category": "mystery-design",
+      "group": "ARG & document-game UI",
+      "stars": 14,
+      "license": "none",
+      "sync": "docs",
+      "what": "Browser terminal hacking game.",
+      "use": "Command parser and fake filesystem pattern."
+    },
+    {
+      "repo": "mxgmn/WaveFunctionCollapse",
+      "category": "mystery-design",
+      "group": "Procedural mysteries & text",
+      "stars": 25342,
+      "license": "NOASSERTION",
+      "sync": "docs",
+      "what": "Original WFC algorithm (C#).",
+      "use": "Constraint-based crash-site or base layouts."
+    },
+    {
+      "repo": "galaxykate/tracery",
+      "category": "mystery-design",
+      "group": "Procedural mysteries & text",
+      "stars": 2213,
+      "license": "Apache-2.0",
+      "sync": "docs",
+      "what": "Story-grammar text generator (JS).",
+      "use": "Procedural witness reports, redacted memos, radio chatter."
+    },
+    {
+      "repo": "kchapelier/wavefunctioncollapse",
+      "category": "mystery-design",
+      "group": "Procedural mysteries & text",
+      "stars": 526,
+      "license": "MIT",
+      "sync": "docs",
+      "what": "JS port of WFC.",
+      "use": "In-browser WFC for three.js tile layouts."
+    },
+    {
+      "repo": "robbestad/Rantjs",
+      "category": "mystery-design",
+      "group": "Procedural mysteries & text",
+      "stars": 218,
+      "license": "ISC",
+      "sync": "docs",
+      "what": "Seeded procedural text (TS).",
+      "use": "Reproducible flavour text for a same-seed daily case."
+    },
+    {
+      "repo": "mystery-o-matic/mystery-o-matic.github.io",
+      "category": "mystery-design",
+      "group": "Procedural mysteries & text",
+      "stars": 125,
+      "license": "AGPL-3.0",
+      "sync": "docs",
+      "what": "Daily generated murder mystery.",
+      "use": "Solvability-proven generation and daily loop. AGPL: ideas only."
+    },
+    {
+      "repo": "ShiJbey/Anansi",
+      "category": "mystery-design",
+      "group": "Procedural mysteries & text",
+      "stars": 78,
+      "license": "MIT",
+      "sync": "none",
+      "what": "Simulation-driven storylet visual novels (Unity).",
+      "use": "Social sim feeding storylets."
+    },
+    {
+      "repo": "JoshuaGrams/tiny-qbn",
+      "category": "mystery-design",
+      "group": "Procedural mysteries & text",
+      "stars": 51,
+      "license": "NOASSERTION",
+      "sync": "docs",
+      "what": "Quality-based storylets for SugarCube.",
+      "use": "Surface leads based on the evidence the player holds."
+    },
+    {
+      "repo": "siftystudio/viv",
+      "category": "mystery-design",
+      "group": "Procedural mysteries & text",
+      "stars": 36,
+      "license": "NOASSERTION",
+      "sync": "docs",
+      "what": "Emergent-narrative engine with story sifting (TS).",
+      "use": "Sift simulated events into a coherent cover-up history."
+    },
+    {
+      "repo": "tuchandra/zebra",
+      "category": "mystery-design",
+      "group": "Procedural mysteries & text",
+      "stars": 32,
+      "license": "MIT",
+      "sync": "full",
+      "what": "Logic-grid puzzle generator and solver.",
+      "use": "Unique-solution deduction puzzles for case files."
+    },
+    {
+      "repo": "corinnaj/mysterious-murder",
+      "category": "mystery-design",
+      "group": "Procedural mysteries & text",
+      "stars": 12,
+      "license": "MIT",
+      "sync": "docs",
+      "what": "Mystery generator via linear logic + MCTS actors.",
+      "use": "Simulate the incident, then derive clues from the trace."
+    },
+    {
+      "repo": "floriancargoet/ink-storylets",
+      "category": "mystery-design",
+      "group": "Procedural mysteries & text",
+      "stars": 8,
+      "license": "MIT",
+      "sync": "full",
+      "what": "Storylets for inkjs.",
+      "use": "Storylet selection inside the ink runtime."
+    },
+    {
+      "repo": "ellisonleao/magictools",
+      "category": "mystery-design",
+      "group": "Design reading",
+      "stars": 17352,
+      "license": "MIT",
+      "sync": "docs",
+      "what": "Huge list of game-dev resources.",
+      "use": "Index for assets, audio, tools, design reading."
+    },
+    {
+      "repo": "dawdle-deer/awesome-learn-gamedev",
+      "category": "mystery-design",
+      "group": "Design reading",
+      "stars": 3552,
+      "license": "CC0-1.0",
+      "sync": "docs",
+      "what": "Game-dev learning resources.",
+      "use": "Team reading list."
+    },
+    {
+      "repo": "Calinou/awesome-gamedev",
+      "category": "mystery-design",
+      "group": "Design reading",
+      "stars": 3140,
+      "license": "CC-BY-SA-4.0",
+      "sync": "docs",
+      "what": "Free-software/free-culture game-dev resources.",
+      "use": "Openly licensed assets safe to ship."
+    },
+    {
+      "repo": "hzoo/awesome-gametalks",
+      "category": "mystery-design",
+      "group": "Design reading",
+      "stars": 1184,
+      "license": "MIT",
+      "sync": "docs",
+      "what": "Curated game talks (GDC etc.).",
+      "use": "Narrative and puzzle talks: Obra Dinn, Her Story, Outer Wilds."
+    },
+    {
+      "repo": "Roobyx/awesome-game-design",
+      "category": "mystery-design",
+      "group": "Design reading",
+      "stars": 651,
+      "license": "CC0-1.0",
+      "sync": "docs",
+      "what": "Game design materials, GDDs, postmortems.",
+      "use": "Structure for our design doc."
+    },
+    {
+      "repo": "tajmone/awesome-interactive-fiction",
+      "category": "mystery-design",
+      "group": "Design reading",
+      "stars": 223,
+      "license": "CC0-1.0",
+      "sync": "docs",
+      "what": "IF frameworks and theory.",
+      "use": "Survey of IF engines and writing theory."
+    },
+    {
+      "repo": "bytecauldron/awesome-level-design",
+      "category": "mystery-design",
+      "group": "Design reading",
+      "stars": 178,
+      "license": "CC0-1.0",
+      "sync": "docs",
+      "what": "Level design resources.",
+      "use": "Environmental storytelling for crash sites and bunkers."
+    },
+    {
+      "repo": "LazyHatGuy/GDDMarkdownTemplate",
+      "category": "mystery-design",
+      "group": "Design reading",
+      "stars": 61,
+      "license": "NOASSERTION",
+      "sync": "docs",
+      "what": "Markdown GDD template.",
+      "use": "Skeleton for our game design doc."
+    },
+    {
+      "repo": "immerjs/immer",
+      "category": "mystery-design",
+      "group": "Saves & quests",
+      "stars": 28982,
+      "license": "MIT",
+      "sync": "none",
+      "what": "Immutable updates written as mutations.",
+      "use": "Nested save-state reducers; patches for undo/history."
+    },
+    {
+      "repo": "localForage/localForage",
+      "category": "mystery-design",
+      "group": "Saves & quests",
+      "stars": 25813,
+      "license": "Apache-2.0",
+      "sync": "none",
+      "what": "Async IndexedDB/localStorage wrapper.",
+      "use": "Simple save slots with fallback."
+    },
+    {
+      "repo": "dexie/Dexie.js",
+      "category": "mystery-design",
+      "group": "Saves & quests",
+      "stars": 14596,
+      "license": "Apache-2.0",
+      "sync": "docs",
+      "what": "IndexedDB wrapper.",
+      "use": "Local document archive, player notes, multiple saves."
+    },
+    {
+      "repo": "Rubonnek/quest-manager",
+      "category": "mystery-design",
+      "group": "Saves & quests",
+      "stars": 193,
+      "license": "MIT",
+      "sync": "docs",
+      "what": "Quest system for Godot.",
+      "use": "Quest/objective data model to port to TS."
+    },
+    {
+      "repo": "dmasad/StoryletManager",
+      "category": "mystery-design",
+      "group": "Saves & quests",
+      "stars": 14,
+      "license": "none",
+      "sync": "docs",
+      "what": "Parameterised storylet manager (JS).",
+      "use": "Small readable storylet/quest selection logic."
+    },
+    {
+      "repo": "ckpxgfnksd-max/uap-release-01",
+      "category": "ufo-data",
+      "group": "Modern case files (PURSUE 2026)",
+      "stars": 93,
+      "license": "none",
+      "sync": "none",
+      "what": "Git LFS mirror of the war.gov PURSUE UAP release (PDFs, videos, audio).",
+      "use": "Largest single corpus of real case files; pull originals from war.gov for provenance.",
+      "note": "Multi-GB LFS; never sync"
+    },
+    {
+      "repo": "ckpxgfnksd-max/uap-release-analyzer",
+      "category": "ufo-data",
+      "group": "Modern case files (PURSUE 2026)",
+      "stars": 154,
+      "license": "MIT",
+      "sync": "full",
+      "what": "Claude skill for analysing UAP document tranches.",
+      "use": "Pipeline to turn document dumps into structured KB entries."
+    },
+    {
+      "repo": "AlexZhangji/ufo-pursue-open-atlas",
+      "category": "ufo-data",
+      "group": "Modern case files (PURSUE 2026)",
+      "stars": 14,
+      "license": "NOASSERTION",
+      "sync": "docs",
+      "what": "Release 01 re-extracted to clean Markdown + captions, corpus.jsonl, atlas UI.",
+      "use": "Cleanest licence (README declares CC0) for real document text and image captions."
+    },
+    {
+      "repo": "Starmadebydata/pursue-uap-documents-dataset",
+      "category": "ufo-data",
+      "group": "Modern case files (PURSUE 2026)",
+      "stars": 0,
+      "license": "CC-BY-4.0",
+      "sync": "full",
+      "what": "CSV catalog of 207 PURSUE records with Zenodo DOI.",
+      "use": "Citable master index for an in-game case-file database (attribute)."
+    },
+    {
+      "repo": "DenisSergeevitch/UFO-USA",
+      "category": "ufo-data",
+      "group": "Modern case files (PURSUE 2026)",
+      "stars": 85,
+      "license": "none",
+      "sync": "docs",
+      "what": "Release 01 as per-page Markdown + manifest.jsonl.",
+      "use": "Page-level text for search/RAG. Gemini OCR; reference only."
+    },
+    {
+      "repo": "Co-Messi/uap-pursue",
+      "category": "ufo-data",
+      "group": "Modern case files (PURSUE 2026)",
+      "stars": 2,
+      "license": "none",
+      "sync": "none",
+      "what": "Archive of PURSUE Releases 01–04.",
+      "use": "Later tranches; pull originals from war.gov."
+    },
+    {
+      "repo": "noahcousins/ufofiles",
+      "category": "ufo-data",
+      "group": "Modern case files (PURSUE 2026)",
+      "stars": 14,
+      "license": "none",
+      "sync": "docs",
+      "what": "Next.js browser/scraper for war.gov/UFO (showmeufos.com).",
+      "use": "Reading-room UI reference."
+    },
+    {
+      "repo": "toor11/ufo",
+      "category": "ufo-data",
+      "group": "Modern case files (PURSUE 2026)",
+      "stars": 5,
+      "license": "none",
+      "sync": "docs",
+      "what": "Bulk downloader for war.gov UFO files.",
+      "use": "Pull originals ourselves (cleanest provenance)."
+    },
+    {
+      "repo": "freakynit/nsa-foia-umbra-ufo-markdown",
+      "category": "ufo-data",
+      "group": "Modern case files (PURSUE 2026)",
+      "stars": 1,
+      "license": "unknown",
+      "sync": "docs",
+      "what": "NSA UFO FOIA release (UMBRA-marked) as Markdown.",
+      "use": "Late-game 'top secret' pages; source originals from nsa.gov.",
+      "note": "licence not checked"
+    },
+    {
+      "repo": "johnesposito17/Project-BlueBook-AI-OCR-Correction",
+      "category": "ufo-data",
+      "group": "Historical case files",
+      "stars": 1,
+      "license": "none",
+      "sync": "docs",
+      "what": "LLM-corrected OCR of 57k Project Blue Book pages (NARA).",
+      "use": "Searchable 1947–69 USAF case text for historical clue chains; verify against NARA scans."
+    },
+    {
+      "repo": "JustinStec/blue-book-phenomenology",
+      "category": "ufo-data",
+      "group": "Historical case files",
+      "stars": 0,
+      "license": "MIT",
+      "sync": "docs",
+      "what": "OCR + NLP clustering of 12.6k Blue Book witness narratives.",
+      "use": "Archetypal encounter types for case design."
+    },
+    {
+      "repo": "richgel999/ufo_data",
+      "category": "ufo-data",
+      "group": "Historical case files",
+      "stars": 107,
+      "license": "Apache-2.0",
+      "sync": "docs",
+      "what": "~20 historical chronologies (Eberhart, Vallée, Hatch, NICAP) as JSON/Markdown.",
+      "use": "Dated event timeline for lore. Code Apache; data copyrights vary per source."
+    },
+    {
+      "repo": "richgel999/uap_resources",
+      "category": "ufo-data",
+      "group": "Historical case files",
+      "stars": 174,
+      "license": "NOASSERTION",
+      "sync": "docs",
+      "what": "Curated OSINT PDFs: Wilson/Davis notes, Puthoff, Elizondo, NYT.",
+      "use": "Whistleblower lore for dialogue and leaked-memo props. Mixed copyright."
+    },
+    {
+      "repo": "RR0/rr0.org",
+      "category": "ufo-data",
+      "group": "Historical case files",
+      "stars": 6,
+      "license": "NOASSERTION",
+      "sync": "none",
+      "what": "French unexplained-phenomena encyclopedia (since 1998).",
+      "use": "European cases and people cross-references."
+    },
+    {
+      "repo": "BassBeast1991/UK_UFO_Sighting_Analysis",
+      "category": "ufo-data",
+      "group": "Historical case files",
+      "stars": 0,
+      "license": "MIT",
+      "sync": "docs",
+      "what": "Extracts sightings from declassified UK MoD PDFs.",
+      "use": "UK cases (Open Government Licence) for non-US scenarios."
+    },
+    {
+      "repo": "YetAnotherMorty/The-Black-Vault-File-Dump",
+      "category": "ufo-data",
+      "group": "Historical case files",
+      "stars": 9,
+      "license": "none",
+      "sync": "none",
+      "what": "Raw ~6.5 GB dump of theblackvault.com documents.",
+      "use": "Avoid; fetch individual FOIA docs from agencies instead.",
+      "stale": true
+    },
+    {
+      "repo": "planetsig/ufo-reports",
+      "category": "ufo-data",
+      "group": "Sighting datasets",
+      "stars": 148,
+      "license": "none",
+      "sync": "none",
+      "what": "~80k geocoded NUFORC reports (the Kaggle 'scrubbed' CSV).",
+      "use": "Density patterns only. NUFORC ToS + no licence: never ship raw rows.",
+      "stale": true
+    },
+    {
+      "repo": "timothyrenner/nuforc_sightings_data",
+      "category": "ufo-data",
+      "group": "Sighting datasets",
+      "stars": 45,
+      "license": "MIT",
+      "sync": "docs",
+      "what": "DVC pipeline to clean and geocode NUFORC reports.",
+      "use": "Field-normalisation reference (shape, city, date). README flags NUFORC ToS.",
+      "stale": true
+    },
+    {
+      "repo": "UFOSINT/ufosint-explorer",
+      "category": "ufo-data",
+      "group": "Sighting datasets",
+      "stars": 8,
+      "license": "none",
+      "sync": "docs",
+      "what": "Web app over 573k deduplicated sightings from 4 databases, with overlays.",
+      "use": "Evidence-map model: quality toggles, overlays, detail modals."
+    },
+    {
+      "repo": "jamsoft/uap-data-vis-tool",
+      "category": "ufo-data",
+      "group": "Sighting datasets",
+      "stars": 16,
+      "license": "none",
+      "sync": "none",
+      "what": "Desktop tool over Hatch and UPDB (~318k events).",
+      "use": "Points to non-NUFORC corpora.",
+      "stale": true
+    },
+    {
+      "repo": "RR0/uDb",
+      "category": "ufo-data",
+      "group": "Sighting datasets",
+      "stars": 17,
+      "license": "none",
+      "sync": "none",
+      "what": "Reader for Larry Hatch's *U* database.",
+      "use": "Parse Hatch data (Hatch copyright)."
+    },
+    {
+      "repo": "data-poems/strange-places-dataset",
+      "category": "ufo-data",
+      "group": "Sighting datasets",
+      "stars": 7,
+      "license": "none",
+      "sync": "none",
+      "what": "354k geotagged anomalies: UFOs, bigfoot, haunted sites, meteorites.",
+      "use": "World-map ambience and side quests; README says CC BY 4.0, check per source."
+    },
+    {
+      "repo": "lukeslp/meteorites-ufos-detection-bias",
+      "category": "ufo-data",
+      "group": "Sighting datasets",
+      "stars": 2,
+      "license": "CC0-1.0",
+      "sync": "full",
+      "what": "Meteorite finds vs UFO reports by state and time.",
+      "use": "CC0 mundane-explanation (meteor/bolide) clues."
+    },
+    {
+      "repo": "rizzleroc/pursue-console",
+      "category": "ufo-data",
+      "group": "Analysis & evidence UIs",
+      "stars": 6,
+      "license": "MIT",
+      "sync": "full",
+      "what": "React investigation console over PURSUE: entity graph, signatures, narrative threads.",
+      "use": "Closest existing thing to our evidence board; MIT patterns."
+    },
+    {
+      "repo": "noahkarsky/UFOlogyNet",
+      "category": "ufo-data",
+      "group": "Analysis & evidence UIs",
+      "stars": 5,
+      "license": "MIT",
+      "sync": "full",
+      "what": "Knowledge graph of UAP people, programs, events (Loose Threads timeline).",
+      "use": "Ready people/program/event graph for the conspiracy web.",
+      "stale": true
+    },
+    {
+      "repo": "pax-k/war-gov-uap-wiki",
+      "category": "ufo-data",
+      "group": "Analysis & evidence UIs",
+      "stars": 6,
+      "license": "MIT",
+      "sync": "docs",
+      "what": "Obsidian knowledge-graph wiki from OCR'd war.gov files.",
+      "use": "Linked-wiki structure maps onto an in-game codex."
+    },
+    {
+      "repo": "timfaner/wtf-ufo",
+      "category": "ufo-data",
+      "group": "Analysis & evidence UIs",
+      "stars": 4,
+      "license": "none",
+      "sync": "docs",
+      "what": "OCR, RAG chunks and knowledge graph for the war.gov release.",
+      "use": "Chunking/graph pipeline reference."
+    },
+    {
+      "repo": "wlouie1/UFO-Sightings",
+      "category": "ufo-data",
+      "group": "Analysis & evidence UIs",
+      "stars": 48,
+      "license": "none",
+      "sync": "none",
+      "what": "D3 world map of 80k NUFORC sightings, 1906–2014.",
+      "use": "Time-scrubbing map visual reference.",
+      "stale": true
+    },
+    {
+      "repo": "guyroyse/understanding-probabilistic-data-structures",
+      "category": "ufo-data",
+      "group": "Analysis & evidence UIs",
+      "stars": 105,
+      "license": "none",
+      "sync": "none",
+      "what": "Redis probabilistic-structure demo on 112k sightings.",
+      "use": "Word-frequency / trending-shape mechanic idea."
+    },
+    {
+      "repo": "davidmosiah/uap-pulse",
+      "category": "ufo-data",
+      "group": "Analysis & evidence UIs",
+      "stars": 0,
+      "license": "MIT",
+      "sync": "docs",
+      "what": "MCP server + 3D map of PURSUE files.",
+      "use": "3D globe with document pins."
+    },
+    {
+      "repo": "nuemaan/declassified",
+      "category": "ufo-data",
+      "group": "Analysis & evidence UIs",
+      "stars": 1,
+      "license": "MIT",
+      "sync": "docs",
+      "what": "3D visualisation of 162 PURSUE files.",
+      "use": "3D evidence-view reference."
+    },
+    {
+      "repo": "MuffinSkull/pursue-uap-archive",
+      "category": "ufo-data",
+      "group": "Analysis & evidence UIs",
+      "stars": 0,
+      "license": "MIT",
+      "sync": "docs",
+      "what": "Release 01 browser in React + three.js + Framer Motion.",
+      "use": "Stylised archive browser on our exact stack."
+    },
+    {
+      "repo": "mhdSid/uap-monitor",
+      "category": "ufo-data",
+      "group": "Analysis & evidence UIs",
+      "stars": 3,
+      "license": "none",
+      "sync": "none",
+      "what": "Real-time multi-source monitor with credibility scoring and flight cross-check.",
+      "use": "'Was it a plane?' mechanic idea."
+    },
+    {
+      "repo": "spedmo/uapdrop-mcp",
+      "category": "ufo-data",
+      "group": "Analysis & evidence UIs",
+      "stars": 0,
+      "license": "MIT",
+      "sync": "docs",
+      "what": "MCP server over the UAPDrop archive (13.9k docs, 28k sightings).",
+      "use": "Queryable research backend; underlying data rights unclear."
+    },
+    {
+      "repo": "MickWest/Sitrec2",
+      "category": "ufo-data",
+      "group": "Sky reconstruction & detection",
+      "stars": 34,
+      "license": "NOASSERTION",
+      "sync": "docs",
+      "what": "Metabunk's 3D situation-recreation tool (Gimbal, GoFast, FLIR1/Nimitz and more).",
+      "use": "Top reference for 3D sky-scene geometry (camera, jet, target); skeptic 'debunk' evidence. Custom licence."
+    },
+    {
+      "repo": "MickWest/sitrec",
+      "category": "ufo-data",
+      "group": "Sky reconstruction & detection",
+      "stars": 105,
+      "license": "MIT",
+      "sync": "full",
+      "what": "Original Sitrec, superseded by Sitrec2.",
+      "use": "MIT-licensed code for the same reconstructions.",
+      "archived": true
+    },
+    {
+      "repo": "Sky360-Repository/cyclop2",
+      "category": "ufo-data",
+      "group": "Sky reconstruction & detection",
+      "stars": 35,
+      "license": "NOASSERTION",
+      "sync": "none",
+      "what": "Sky360 citizen-science all-sky observatory.",
+      "use": "Sky-watch station minigame reference.",
+      "archived": true
+    },
+    {
+      "repo": "Sky360-Repository/simpletracker",
+      "category": "ufo-data",
+      "group": "Sky reconstruction & detection",
+      "stars": 21,
+      "license": "MIT",
+      "sync": "docs",
+      "what": "OpenCV background-subtraction sky-object tracker.",
+      "use": "'Spot the object' mechanic.",
+      "archived": true
+    },
+    {
+      "repo": "NormanTUD/UFO-Detector",
+      "category": "ufo-data",
+      "group": "Sky reconstruction & detection",
+      "stars": 7,
+      "license": "NOASSERTION",
+      "sync": "none",
+      "what": "YOLOv5 models (incl. TF.js) of 50k things mistaken for UFOs.",
+      "use": "In-browser mundane-explanation classifier (Starlink, lanterns, balloons)."
+    },
+    {
+      "repo": "Montana/tic-tac-math",
+      "category": "ufo-data",
+      "group": "Sky reconstruction & detection",
+      "stars": 0,
+      "license": "none",
+      "sync": "docs",
+      "what": "Kinematics analysis of the 2004 Nimitz Tic Tac.",
+      "use": "Real numbers for tuning the Nimitz set piece."
+    },
+    {
+      "repo": "VoidCounsel/nimitz-py",
+      "category": "ufo-data",
+      "group": "Sky reconstruction & detection",
+      "stars": 0,
+      "license": "NOASSERTION",
+      "sync": "docs",
+      "what": "Python sim of the Nimitz encounter with adjustable physics.",
+      "use": "Prototype for the Nimitz scene."
+    },
+    {
+      "repo": "jackylawck/veil",
+      "category": "ufo-data",
+      "group": "Disclosure timeline & legislation",
+      "stars": 0,
+      "license": "MIT",
+      "sync": "docs",
+      "what": "Global official-disclosure ledger, daily ingestion, JSON schema v2.",
+      "use": "Maintained MIT schema for multi-country disclosure events."
+    },
+    {
+      "repo": "PickleTime27/uap-disclosure-tracker",
+      "category": "ufo-data",
+      "group": "Disclosure timeline & legislation",
+      "stars": 0,
+      "license": "none",
+      "sync": "docs",
+      "what": "Next.js PWA tracking hearings, FOIA, EOs, legislation.",
+      "use": "Schema for a disclosure news-feed UI (no data)."
+    },
+    {
+      "repo": "vercel/next.js",
+      "group": "Frameworks & UI",
+      "stars": 142410,
+      "license": "MIT",
+      "sync": "docs",
+      "what": "The React framework oresth.com runs on.",
+      "use": "App Router, route handlers, image/font optimisation; docs/ for version-specific APIs.",
+      "category": "web-starters"
+    },
+    {
+      "repo": "shadcn-ui/ui",
+      "group": "Frameworks & UI",
+      "stars": 124462,
+      "license": "MIT",
+      "sync": "docs",
+      "what": "Copy-in accessible React components on Radix/Base UI + Tailwind.",
+      "use": "Menus, dialogs, drawers for the game HUD and case-file UI without writing a11y from scratch.",
+      "category": "web-starters"
+    },
+    {
+      "repo": "pmndrs/zustand",
+      "group": "Frameworks & UI",
+      "stars": 58729,
+      "license": "MIT",
+      "sync": "docs",
+      "what": "Minimal React state store.",
+      "use": "Game state shared between the R3F scene and DOM HUD (works outside React render loop).",
+      "category": "web-starters"
+    },
+    {
+      "repo": "vercel/turborepo",
+      "group": "Frameworks & UI",
+      "stars": 31129,
+      "license": "MIT",
+      "sync": "none",
+      "what": "Monorepo build system.",
+      "use": "Only if the game splits into packages (engine / content / site).",
+      "category": "web-starters"
+    },
+    {
+      "repo": "fastapi/full-stack-fastapi-template",
+      "group": "Full-stack starters",
+      "stars": 45700,
+      "license": "MIT",
+      "sync": "none",
+      "what": "FastAPI + React + Postgres + Docker template.",
+      "use": "Reference if a Python backend is ever needed (e.g. data pipelines for case files).",
+      "category": "web-starters"
+    },
+    {
+      "repo": "t3-oss/create-t3-app",
+      "group": "Full-stack starters",
+      "stars": 29139,
+      "license": "MIT",
+      "sync": "docs",
+      "what": "Typesafe Next.js starter: tRPC, Prisma/Drizzle, NextAuth, Tailwind.",
+      "use": "Base for a version with accounts, cloud saves and leaderboards.",
+      "category": "web-starters"
+    },
+    {
+      "repo": "kriasoft/react-starter-kit",
+      "group": "Full-stack starters",
+      "stars": 23688,
+      "license": "MIT",
+      "sync": "none",
+      "what": "Bun + Vite + tRPC + Stripe on Cloudflare Workers.",
+      "use": "Alternative if the game leaves Next.js for a Vite SPA on Cloudflare.",
+      "category": "web-starters"
+    },
+    {
+      "repo": "shadcn-ui/taxonomy",
+      "group": "Full-stack starters",
+      "stars": 19292,
+      "license": "MIT",
+      "sync": "none",
+      "what": "Next.js 13 App Router example app.",
+      "use": "Dated; only for App Router patterns.",
+      "stale": true,
+      "category": "web-starters"
+    },
+    {
+      "repo": "nextjs/saas-starter",
+      "group": "Full-stack starters",
+      "stars": 16137,
+      "license": "MIT",
+      "sync": "docs",
+      "what": "Official Next.js + Postgres + Stripe + shadcn starter.",
+      "use": "Payments/auth if the game gets a paid tier or supporter pack.",
+      "category": "web-starters"
+    },
+    {
+      "repo": "wasp-lang/open-saas",
+      "group": "Full-stack starters",
+      "stars": 15990,
+      "license": "MIT",
+      "sync": "none",
+      "what": "Full SaaS boilerplate on the Wasp framework.",
+      "use": "Feature checklist reference; requires Wasp, so not a direct base.",
+      "category": "web-starters"
+    },
+    {
+      "repo": "ixartz/Next-js-Boilerplate",
+      "group": "Full-stack starters",
+      "stars": 13079,
+      "license": "MIT",
+      "sync": "full",
+      "what": "Next 16 + Tailwind 4 + Drizzle + Vitest + Testing Library + Playwright + Storybook.",
+      "use": "Closest match to oresth.com's stack; copy its jsdom/Testing Library + Playwright setup (a STATUS.md gap).",
+      "category": "web-starters"
+    },
+    {
+      "repo": "ixartz/SaaS-Boilerplate",
+      "group": "Full-stack starters",
+      "stars": 7423,
+      "license": "MIT",
+      "sync": "none",
+      "what": "Next.js SaaS with multi-tenancy, roles, i18n.",
+      "use": "i18n and roles reference only.",
+      "category": "web-starters"
+    },
+    {
+      "repo": "vercel/ai",
+      "group": "AI & content",
+      "stars": 26912,
+      "license": "NOASSERTION",
+      "sync": "docs",
+      "what": "Vercel AI SDK for TypeScript (streaming, tools, agents).",
+      "use": "If NPCs/witnesses get LLM-driven interrogation dialogue.",
+      "category": "web-starters"
+    },
+    {
+      "repo": "vercel/chatbot",
+      "group": "AI & content",
+      "stars": 20968,
+      "license": "NOASSERTION",
+      "sync": "none",
+      "what": "Full Next.js AI chatbot app.",
+      "use": "Reference implementation for a chat-style witness interview screen.",
+      "category": "web-starters"
+    },
+    {
+      "repo": "vercel/commerce",
+      "group": "AI & content",
+      "stars": 14273,
+      "license": "MIT",
+      "sync": "none",
+      "what": "Next.js storefront on Shopify.",
+      "use": "Only if merch/store is added to the site.",
+      "category": "web-starters"
+    },
+    {
+      "repo": "timlrx/tailwind-nextjs-starter-blog",
+      "group": "AI & content",
+      "stars": 10555,
+      "license": "MIT",
+      "sync": "none",
+      "what": "Next.js + MDX blog starter.",
+      "use": "MDX pipeline for in-game case files / devlog.",
+      "category": "web-starters"
+    }
+  ]
+}
