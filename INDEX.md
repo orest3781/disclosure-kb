@@ -2,7 +2,7 @@
 
 # Index
 
-195 source repos across 4 categories. Stars checked 2026-09-23.
+232 source repos across 5 categories. Stars checked 2026-09-23.
 
 | Category | Repos | Covers |
 |---|---:|---|
@@ -10,3 +10,4 @@
 | [Mystery game design](catalog/mystery-design.md) | 62 | Dialogue engines, mystery and investigation games, evidence-board UI, ARG/document-game UI, procedural mysteries, design reading, saves and quests. |
 | [UFO / UAP source data](catalog/ufo-data.md) | 43 | Real case files (PURSUE, Blue Book, FOIA), sighting datasets, analysis and evidence UIs, sky reconstruction, and disclosure timelines. Read the data-licensing notes before shipping anything. |
 | [Web starters & frameworks](catalog/web-starters.md) | 16 | Next.js starters, full-stack templates, UI and AI building blocks. |
+| [AI decision models (Jev)](catalog/ai-decisions.md) | 37 | TypeSafe AI's Jev System One model (launched 2026-09-15): typed, calibrated decisions in 70–500 ms. Official SDKs, games built on it, open/local alternatives, dev tooling, directories. |

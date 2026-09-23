@@ -20,6 +20,11 @@
       "id": "web-starters",
       "title": "Web starters & frameworks",
       "description": "Next.js starters, full-stack templates, UI and AI building blocks."
+    },
+    {
+      "id": "ai-decisions",
+      "title": "AI decision models (Jev)",
+      "description": "TypeSafe AI's Jev System One model (launched 2026-09-15): typed, calibrated decisions in 70–500 ms. Official SDKs, games built on it, open/local alternatives, dev tooling, directories."
     }
   ],
   "sources": [
@@ -1985,6 +1990,376 @@
       "what": "Next.js + MDX blog starter.",
       "use": "MDX pipeline for in-game case files / devlog.",
       "category": "web-starters"
+    },
+    {
+      "repo": "typesafe-ai/typesafe-sdk-js",
+      "category": "ai-decisions",
+      "group": "Official (TypeSafe AI)",
+      "stars": 229,
+      "license": "MIT",
+      "sync": "docs",
+      "what": "Official TypeScript/JS SDK (@typesafe-ai/sdk, Node 20+).",
+      "use": "What we'd call from Next.js route handlers: client.systemOne({ state, questions })."
+    },
+    {
+      "repo": "typesafe-ai/skills",
+      "category": "ai-decisions",
+      "group": "Official (TypeSafe AI)",
+      "stars": 1974,
+      "license": "MIT",
+      "sync": "full",
+      "what": "Official agent skill for designing TypeSafe workflows.",
+      "use": "Install in Claude Code so it designs Jev questions with current docs."
+    },
+    {
+      "repo": "typesafe-ai/typesafe-sdk-python",
+      "category": "ai-decisions",
+      "group": "Official (TypeSafe AI)",
+      "stars": 210,
+      "license": "MIT",
+      "sync": "docs",
+      "what": "Official Python SDK.",
+      "use": "Only for Python tooling (e.g. KB/data scripts)."
+    },
+    {
+      "repo": "typesafe-ai/system-one-adapter-python",
+      "category": "ai-decisions",
+      "group": "Official (TypeSafe AI)",
+      "stars": 275,
+      "license": "MIT",
+      "sync": "docs",
+      "what": "Drop-in TypeSafeClient backed by ordinary LLM APIs.",
+      "use": "Shows the contract; fallback pattern when Jev is unavailable."
+    },
+    {
+      "repo": "AbdelStark/heist-one",
+      "category": "ai-decisions",
+      "group": "Games built with Jev",
+      "stars": 7,
+      "license": "MIT",
+      "sync": "full",
+      "what": "Browser stealth game: Jev makes typed guard judgments, deterministic code owns the world.",
+      "use": "The architecture to copy for our NPCs: batched per-guard questions, validation, stale rejection, scripted fallback, decision inspector."
+    },
+    {
+      "repo": "wondertwins/jev-benchmark",
+      "category": "ai-decisions",
+      "group": "Games built with Jev",
+      "stars": 6,
+      "license": "MIT",
+      "sync": "full",
+      "what": "Benchmarks: chess and 'who is the player talking to?' for voice-driven NPCs.",
+      "use": "Hard numbers: NPC addressee F1 0.96 at ~0.17 s; chess weak unless code supplies facts. Lessons on phrasing state."
+    },
+    {
+      "repo": "Imrank26/3d-Game-with-jev",
+      "category": "ai-decisions",
+      "group": "Games built with Jev",
+      "stars": 1,
+      "license": "none",
+      "sync": "docs",
+      "what": "three.js + React racer with a Jev autopilot.",
+      "use": "Same stack as ours; dual-layer design (Jev tactics ~1 s, 60 FPS reflex governor vetoes stale advice). Reference only."
+    },
+    {
+      "repo": "bytelabs-oss/clash-jev",
+      "category": "ai-decisions",
+      "group": "Games built with Jev",
+      "stars": 30,
+      "license": "MIT",
+      "sync": "docs",
+      "what": "Clash Royale bot: Jev decides every move from live state.",
+      "use": "Real-time decisions from structured game state."
+    },
+    {
+      "repo": "PromptEngineer48/laya-vs-jev-arena",
+      "category": "ai-decisions",
+      "group": "Games built with Jev",
+      "stars": 27,
+      "license": "MIT",
+      "sync": "docs",
+      "what": "Jev vs open-source Laya racing in Snake and a fighting arena.",
+      "use": "Side-by-side of hosted vs local decision models in a game loop."
+    },
+    {
+      "repo": "kikoncuo/jevfire",
+      "category": "ai-decisions",
+      "group": "Games built with Jev",
+      "stars": 47,
+      "license": "MIT",
+      "sync": "docs",
+      "what": "Jev-style parallel decisions on local CUDA LLMs, with game-agent examples.",
+      "use": "Self-hosted route for many NPC decisions per frame budget."
+    },
+    {
+      "repo": "enoyola/jev-grand-prix",
+      "category": "ai-decisions",
+      "group": "Games built with Jev",
+      "stars": 7,
+      "license": "MIT",
+      "sync": "docs",
+      "what": "F1 game where Jev picks the line and pedals and learns corner limits between laps.",
+      "use": "Between-attempt learning loop (store outcomes, feed back as state)."
+    },
+    {
+      "repo": "tirukovelamanoj/jev-plays-doom",
+      "category": "ai-decisions",
+      "group": "Games built with Jev",
+      "stars": 1,
+      "license": "MIT",
+      "sync": "docs",
+      "what": "Jev drives Doom from structured state, no pixels.",
+      "use": "Structured state beats raw pixels; describe the scene as facts."
+    },
+    {
+      "repo": "thecodacus/decision-playground",
+      "category": "ai-decisions",
+      "group": "Games built with Jev",
+      "stars": 15,
+      "license": "none",
+      "sync": "docs",
+      "what": "Browser playground for Jev-style decisions on llama-server.",
+      "use": "Quick way to prototype questions locally."
+    },
+    {
+      "repo": "southleft/component-charades",
+      "category": "ai-decisions",
+      "group": "Games built with Jev",
+      "stars": 2,
+      "license": "none",
+      "sync": "docs",
+      "what": "Taboo-style Next.js game refereed by Jev.",
+      "use": "Judging free-text player answers against a target (our deduction checks)."
+    },
+    {
+      "repo": "phureewat29/jev-got",
+      "category": "ai-decisions",
+      "group": "Games built with Jev",
+      "stars": 2,
+      "license": "none",
+      "sync": "docs",
+      "what": "Game of Thrones Jev proof of concept (TS).",
+      "use": "Character/faction judgments over lore."
+    },
+    {
+      "repo": "vtrivedy/jev-plays-games",
+      "category": "ai-decisions",
+      "group": "Games built with Jev",
+      "stars": 3,
+      "license": "none",
+      "sync": "docs",
+      "what": "Chess and Connect Four vs Jev.",
+      "use": "Turn-based opponent pattern."
+    },
+    {
+      "repo": "hemanth/jev-chess",
+      "category": "ai-decisions",
+      "group": "Games built with Jev",
+      "stars": 2,
+      "license": "none",
+      "sync": "docs",
+      "what": "Chess moves, persona opponents, game classification (TS).",
+      "use": "Persona-conditioned choices (witness personalities)."
+    },
+    {
+      "repo": "NandhaKishorM/laya",
+      "category": "ai-decisions",
+      "group": "Open and local alternatives",
+      "stars": 19150,
+      "license": "Apache-2.0",
+      "sync": "docs",
+      "what": "Open non-autoregressive decision engine: choice/score/yes-no in one pass, 100+ languages.",
+      "use": "Local/offline fallback so the game works without the API. Claims unverified."
+    },
+    {
+      "repo": "jaredpalmer/kev",
+      "category": "ai-decisions",
+      "group": "Open and local alternatives",
+      "stars": 5304,
+      "license": "Apache-2.0",
+      "sync": "docs",
+      "what": "Tiny Jev-like decision models on Qwen3.5 you can train and run.",
+      "use": "Train a small in-house NPC judgment model later."
+    },
+    {
+      "repo": "TheoLeeCJ/SemIf-OpenJev",
+      "category": "ai-decisions",
+      "group": "Open and local alternatives",
+      "stars": 4014,
+      "license": "MIT",
+      "sync": "docs",
+      "what": "'Semantic ifs' from open models on a home GPU.",
+      "use": "Local prototyping."
+    },
+    {
+      "repo": "wfzyx/von",
+      "category": "ai-decisions",
+      "group": "Open and local alternatives",
+      "stars": 544,
+      "license": "Apache-2.0",
+      "sync": "docs",
+      "what": "Open System One model, claims sub-15 ms, drop-in Jev alternative.",
+      "use": "Candidate for in-browser/edge decisions if claims hold."
+    },
+    {
+      "repo": "nokia-applied-research/AnyJev",
+      "category": "ai-decisions",
+      "group": "Open and local alternatives",
+      "stars": 297,
+      "license": "Apache-2.0",
+      "sync": "docs",
+      "what": "Turn any LLM into a Jev-style decision model, no training.",
+      "use": "Fallback adapter pattern."
+    },
+    {
+      "repo": "ekzhang/openjev-sglang",
+      "category": "ai-decisions",
+      "group": "Open and local alternatives",
+      "stars": 289,
+      "license": "none",
+      "sync": "docs",
+      "what": "Jev-compatible API endpoint on open models (SGLang).",
+      "use": "Self-hosted Jev-compatible endpoint. No licence: reference only."
+    },
+    {
+      "repo": "logan-markewich/jeff",
+      "category": "ai-decisions",
+      "group": "Open and local alternatives",
+      "stars": 224,
+      "license": "MIT",
+      "sync": "docs",
+      "what": "Self-hosted drop-in replacement for Jev (GliNER-style encoder).",
+      "use": "Cheap local classifier fallback."
+    },
+    {
+      "repo": "Heman10x-NGU/openJev-verdict-2.0",
+      "category": "ai-decisions",
+      "group": "Open and local alternatives",
+      "stars": 274,
+      "license": "Apache-2.0",
+      "sync": "docs",
+      "what": "151M-param calibrated decision engine (ONNX/WebGPU).",
+      "use": "Small enough to consider running in the browser."
+    },
+    {
+      "repo": "tamaratran/fast-jev-compaction",
+      "category": "ai-decisions",
+      "group": "Dev tooling",
+      "stars": 6475,
+      "license": "MIT",
+      "sync": "docs",
+      "what": "Claude Code plugin: Jev scores which tool results to keep during compaction.",
+      "use": "Optional: cheaper, longer Claude Code sessions on our repos."
+    },
+    {
+      "repo": "eran-broder/jev-skills",
+      "category": "ai-decisions",
+      "group": "Dev tooling",
+      "stars": 0,
+      "license": "MIT",
+      "sync": "docs",
+      "what": "Claude Code/Codex plugin: Jev decides which skills the model sees each turn.",
+      "use": "Optional context-cost saver."
+    },
+    {
+      "repo": "0xNatoshi/jev-codex-router",
+      "category": "ai-decisions",
+      "group": "Dev tooling",
+      "stars": 245,
+      "license": "MIT",
+      "sync": "docs",
+      "what": "Per-turn model/effort routing for Codex via Jev.",
+      "use": "Routing pattern (cheap vs expensive model)."
+    },
+    {
+      "repo": "devagrawal09/jev-review",
+      "category": "ai-decisions",
+      "group": "Dev tooling",
+      "stars": 571,
+      "license": "MIT",
+      "sync": "docs",
+      "what": "Staged code-review workflow and dashboard built on Jev.",
+      "use": "Cheap PR triage."
+    },
+    {
+      "repo": "turinglabsorg/doc",
+      "category": "ai-decisions",
+      "group": "Dev tooling",
+      "stars": 0,
+      "license": "none",
+      "sync": "docs",
+      "what": "Jev wired into Claude Code: comment checks, skill routing, cheap-model routing.",
+      "use": "Ideas for a Claude Code sidekick."
+    },
+    {
+      "repo": "sutro-sh/jev-align",
+      "category": "ai-decisions",
+      "group": "Dev tooling",
+      "stars": 281,
+      "license": "Apache-2.0",
+      "sync": "docs",
+      "what": "Calibrate Jev 'AI functions' from human feedback (GEPA).",
+      "use": "Tune our NPC questions from play-test labels."
+    },
+    {
+      "repo": "juspay/neurolink",
+      "category": "ai-decisions",
+      "group": "Dev tooling",
+      "stars": 138,
+      "license": "MIT",
+      "sync": "docs",
+      "what": "AI SDK with generate, stream and a calibrated 'decide' via Jev.",
+      "use": "One interface for LLM text + Jev decisions."
+    },
+    {
+      "repo": "browser-use/jev-ultrafast",
+      "category": "ai-decisions",
+      "group": "Dev tooling",
+      "stars": 18782,
+      "license": "MIT",
+      "sync": "none",
+      "what": "Fast, cheap web agent built on Jev.",
+      "use": "Shows Jev choosing actions from a large option set."
+    },
+    {
+      "repo": "yibie/awesome-jev",
+      "category": "ai-decisions",
+      "group": "Directories",
+      "stars": 1418,
+      "license": "none",
+      "sync": "docs",
+      "what": "Curated list of Jev projects and integrations.",
+      "use": "Discovery."
+    },
+    {
+      "repo": "kydlikebtc/awesome-jev",
+      "category": "ai-decisions",
+      "group": "Directories",
+      "stars": 169,
+      "license": "NOASSERTION",
+      "sync": "docs",
+      "what": "805 verified Jev examples indexed by the decision each makes; CI re-checks sources weekly.",
+      "use": "Best index for 'has anyone made this decision with Jev?'. Dual licence (code/data)."
+    },
+    {
+      "repo": "Anil-matcha/awesome-jev-by-typesafe",
+      "category": "ai-decisions",
+      "group": "Directories",
+      "stars": 815,
+      "license": "MIT",
+      "sync": "docs",
+      "what": "Use cases, patterns, prompts and starter code.",
+      "use": "Pattern ideas."
+    },
+    {
+      "repo": "walidboulanouar/awesome-jev-use-cases",
+      "category": "ai-decisions",
+      "group": "Directories",
+      "stars": 123,
+      "license": "CC0-1.0",
+      "sync": "docs",
+      "what": "74 demos ranked, 150+ repos, limits, cost, API examples.",
+      "use": "Limits and cost reference."
     }
   ]
 }
