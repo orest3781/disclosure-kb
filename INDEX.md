@@ -2,7 +2,7 @@
 
 # Index
 
-629 source repos across 11 categories. Stars checked 2026-09-23.
+629 source repos across 11 categories. Stars checked 2026-09-23. For the analysis (stack, features, pipelines, policy) start at [kb/README.md](kb/README.md); for verdicts see [REVIEW.md](REVIEW.md).
 
 | Category | Repos | Covers |
 |---|---:|---|

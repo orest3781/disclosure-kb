@@ -9,10 +9,11 @@ the notes we've pulled out of them. It feeds the Disclosure Protocol game on
 
 | Path | What it is |
 |---|---|
-| [`INDEX.md`](INDEX.md) | Start here: every category, with counts |
+| [`kb/`](kb/README.md) | **Start here.** The analysis layer: stack decisions, feature→tool map, pipelines, data sources, licensing policy, risks, roadmap, glossary |
+| [`INDEX.md`](INDEX.md) | Every category, with counts |
 | [`REVIEW.md`](REVIEW.md) | Every source with a verdict (Adopt / Trial / Tool only / Reference / Prototype only / Avoid), licence risk and a short review |
 | [`catalog/`](catalog/) | One page per category: repo, stars, license, what it is, what we take from it |
-| [`notes/`](notes/) | Our own distilled knowledge per category: patterns, decisions, gotchas |
+| [`notes/`](notes/) | Findings per category: patterns, recommendations, gotchas |
 | `sources.json` | The single source of truth for the catalog. Edit this, not `catalog/` |
 | `vendor/` | Local copies of the source repos, pulled by the sync script. Gitignored |
 | [`scripts/sync.mjs`](scripts/sync.mjs) | Pulls source repos into `vendor/` |
@@ -25,6 +26,17 @@ would make it huge, go stale right away, and break licenses. That matters most f
 license, which are all rights reserved. Instead, `sync.mjs` pulls fresh shallow copies into
 `vendor/` whenever you need them. That way you (and Claude) can read and search every source in
 one place.
+
+## How it's layered
+
+```
+sources.json ──► catalog/*.md   one row per source (generated)
+      ├───────► REVIEW.md       one verdict per source (generated)
+notes/*.md ───► findings within one category (written)
+kb/*.md ──────► decisions across categories: stack, features, pipelines, policy (written)
+```
+
+Facts about a source go in `sources.json`. Findings within an area go in `notes/`. Decisions that cut across areas go in `kb/`.
 
 ## Use it
 

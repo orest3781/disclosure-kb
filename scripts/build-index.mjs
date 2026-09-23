@@ -75,7 +75,7 @@ const summary = categories
   .join("\n");
 files.set(
   "INDEX.md",
-  `${header}# Index\n\n${sources.length} source repos across ${categories.length} categories. Stars checked ${checkedAt}.\n\n| Category | Repos | Covers |\n|---|---:|---|\n${summary}\n`,
+  `${header}# Index\n\n${sources.length} source repos across ${categories.length} categories. Stars checked ${checkedAt}. For the analysis (stack, features, pipelines, policy) start at [kb/README.md](kb/README.md); for verdicts see [REVIEW.md](REVIEW.md).\n\n| Category | Repos | Covers |\n|---|---:|---|\n${summary}\n`,
 );
 
 let stale = 0;
