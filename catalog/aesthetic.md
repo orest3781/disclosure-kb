@@ -81,3 +81,16 @@ Stars checked 2026-09-23. Notes: [notes/aesthetic.md](../notes/aesthetic.md). Sy
 | [PaulLeCam/react-leaflet](https://github.com/PaulLeCam/react-leaflet) | 5.6k | ⚠️ custom — read it | React components for Leaflet maps | Simpler 2D clue map alternative to MapLibre — _LICENSE is Hippocratic License 2.1 (not OSI), so review before use. Leaflet itself is BSD-2_ | none |
 | [basementstudio/scrollytelling](https://github.com/basementstudio/scrollytelling) | 1.7k | MIT | React plus GSAP scrollytelling animation library | Cinematic scroll timelines for the Next.js intro and chapter transitions — _GitHub says NOASSERTION. Root LICENSE is MIT_ | docs |
 | [NUKnightLab/juxtapose](https://github.com/NUKnightLab/juxtapose) | 883 | MPL-2.0 | Before/after image comparison slider | 'Enhance' reveals: original vs processed UFO photo, redacted vs unredacted page — _GitHub says NOASSERTION. LICENSE is MPL-2.0_ | docs |
+
+### Evidence UI
+
+| Repo | ★ | License | What it is | What we take from it | Sync |
+|---|---:|---|---|---|---|
+| [react95-io/React95](https://github.com/react95-io/React95) | 7.3k | MIT | Windows 95 style React component library | Retro government-workstation UI for the evidence desktop — _styled-components based_ | docs |
+| [lookscanned/lookscanned.io](https://github.com/lookscanned/lookscanned.io) | 3.6k | MIT | Make PDFs look scanned (noise, skew, blur) in the browser | Age declassified memos into convincing photocopy/scan evidence at build time | docs |
+| [jcubic/jquery.terminal](https://github.com/jcubic/jquery.terminal) | 3.2k | MIT | Web terminal emulator with command parsing, ANSI, formatting | Fake-OS/terminal puzzles (query databases, decrypt files) where xterm.js is overkill — _jQuery dependency; wrap or port_ | docs |
+| [alexadam/img-encode](https://github.com/alexadam/img-encode) | 292 | MIT | Encode an image into audio viewable as a spectrogram (JS) | Hide symbols/coordinates in radio recordings for spectrogram puzzles | full |
+| [solusipse/spectrology](https://github.com/solusipse/spectrology) | 279 | MIT | Python image-to-audio spectrogram encoder | Offline pipeline tool to bake spectrogram images into WAV evidence | docs |
+| [hongfaqiu/image-to-audio](https://github.com/hongfaqiu/image-to-audio) | 9 | MIT | TypeScript image-to-audio spectrogram encoder | TS port candidate for runtime-generated spectrogram clues — _Tiny (9 stars)_ | full |
+| [rajtilak-2020/SSTV-Encoder](https://github.com/rajtilak-2020/SSTV-Encoder) | 3 | MIT | Browser JS image-to-SSTV signal encoder | Generate SSTV transmissions (decoders already catalogued) for intercepted-signal puzzles — _Tiny (3 stars)_ | full |
+| [hitcherland/webredact](https://github.com/hitcherland/webredact) | 0 | ⚠️ none (all rights reserved — reference only) | Online redacted-document generator for RPGs | Only found redaction generator; reference for black-bar redaction + reveal mechanics — _Tiny (0 stars), no licence: read only; build our own_ | full |

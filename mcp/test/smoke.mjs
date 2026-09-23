@@ -4,7 +4,9 @@ import { Client } from "@modelcontextprotocol/client";
 import { StdioClientTransport } from "@modelcontextprotocol/client/stdio";
 import assert from "node:assert/strict";
 import { dirname, join } from "node:path";
+import { readFileSync } from "node:fs";
 import { fileURLToPath } from "node:url";
+import { reviewSource } from "../../scripts/lib/review.mjs";
 
 const here = dirname(fileURLToPath(import.meta.url));
 const client = new Client({ name: "smoke", version: "0.0.0" });
@@ -29,7 +31,10 @@ assert.match(sat, /Adopt/);
 
 const avoid = await call("kb_search_sources", { verdict: "Avoid", response_format: "json" });
 const avoidJson = JSON.parse(avoid);
-assert.equal(avoidJson.total, 5);
+const { sources } = JSON.parse(readFileSync(join(here, "..", "..", "sources.json"), "utf8"));
+const expectedAvoid = sources.filter((s) => reviewSource(s).verdict === "Avoid").length;
+assert.ok(expectedAvoid > 0);
+assert.equal(avoidJson.total, expectedAvoid);
 assert.ok(avoidJson.sources.every((s) => s.verdict === "Avoid"));
 
 const bad = await call("kb_search_sources", { category: "nope" });

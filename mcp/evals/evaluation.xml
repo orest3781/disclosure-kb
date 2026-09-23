@@ -1,7 +1,7 @@
 <evaluation>
   <qa_pair>
     <question>How many sources in the knowledge base carry the verdict "Avoid"?</question>
-    <answer>5</answer>
+    <answer>6</answer>
   </qa_pair>
   <qa_pair>
     <question>According to the catalogue, how many GitHub stars does the SGP4 satellite propagation library shashwatak/satellite-js have?</question>
@@ -16,7 +16,7 @@
     <answer>6</answer>
   </qa_pair>
   <qa_pair>
-    <question>Which category id contains exactly 81 sources and includes the National Archives Catalog API docs repo?</question>
+    <question>Which category id contains exactly 105 sources and includes the National Archives Catalog API docs repo?</question>
     <answer>apis</answer>
   </qa_pair>
   <qa_pair>
@@ -25,7 +25,7 @@
   </qa_pair>
   <qa_pair>
     <question>How many sources in the "sky-geo" category are licensed AGPL-3.0?</question>
-    <answer>5</answer>
+    <answer>6</answer>
   </qa_pair>
   <qa_pair>
     <question>According to the note on usnationalarchives/Catalog-API, which email address do you contact to obtain an API key?</question>

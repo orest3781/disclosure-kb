@@ -151,3 +151,57 @@ Stars checked 2026-09-23. Notes: [notes/apis.md](../notes/apis.md). Sync locally
 |---|---:|---|---|---|---|
 | [LibreTranslate/LibreTranslate](https://github.com/LibreTranslate/LibreTranslate) | 16.7k | AGPL-3.0 | LibreTranslate - self-hostable open-source machine translation API (Argos Translate models). | Self-hosted fallback for translating player-submitted text/community content without per-character fees. — _Auth: optional API keys on your server. Hosted (portal.libretranslate.com): Pro $29/mo (80/min burst, 20/min sustained), Business $58/mo; 2,000 chars per call; self-hosting free. LICENCE FLAG: AGPL-3.0 - fine as a separate network service, but modifications served to users must be published._ | docs |
 | [DeepL/deepl-node](https://github.com/DeepL/deepl-node) | 435 | MIT | Official Node.js library for the DeepL translation API (text, documents, glossaries). | Pipeline translation of case files, NPC scripts and UI strings into next-intl/i18next message files with a glossary for in-world terms. — _Auth: DeepL-Auth-Key (Free keys end ':fx'). Pricing (deepl.com/en/pro-api): API Free 500,000 characters/month; API Pro base fee and per-character price not stated on pages read. TERMS: page says free-tier texts may be used for model improvement; Pro has data-privacy guarantees - use Pro for unreleased story content._ | docs |
+
+### Hearings & legislation
+
+| Repo | ★ | License | What it is | What we take from it | Sync |
+|---|---:|---|---|---|---|
+| [unitedstates/congress](https://github.com/unitedstates/congress) | 1.1k | CC0-1.0 | Public-domain scrapers for bills, amendments, votes and bill text from govinfo/congress.gov | Pull the UAP Disclosure Act amendment text and NDAA UAP sections as structured JSON for in-game legislation documents — _Code and output data CC0. Covers bills/amendments/votes, not hearing transcripts._ | docs |
+| [usgpo/bulk-data](https://github.com/usgpo/bulk-data) | 384 | ⚠️ none (all rights reserved — reference only) | Official GPO user guides for govinfo bulk XML (bills, BILLSTATUS, CREC, Statutes, US Code) | Reference for fetching the enacted UAP provisions (NDAA FY2022-FY2025) in USLM/bill XML — _This repo holds docs only. The govinfo data is a US government work (public domain). No repo licence._ | docs |
+| [usgpo/bill-status](https://github.com/usgpo/bill-status) | 201 | ⚠️ none (all rights reserved — reference only) | Official schema and user guide for Bill Status XML bulk data | Track the status history of UAP bills and amendments (e.g. the UAP Disclosure Act) for a timeline puzzle — _Docs only. The data is public domain. No repo licence._ | docs |
+| [usgpo/uslm](https://github.com/usgpo/uslm) | 198 | ⚠️ custom — read it | United States Legislative Markup XML schema and stylesheets | Parse enacted statute text (NDAA UAP sections) into clean sections for in-game documents — _The schema is a US government work. GitHub says NOASSERTION._ | docs |
+| [unitedstates/congressional-record](https://github.com/unitedstates/congressional-record) | 150 | ⚠️ custom — read it | Parser that turns the daily Congressional Record into structured speaker-by-speaker XML/JSON | Pull floor speeches on the UAP Disclosure Act (Schumer/Rounds, 2023-2024) as quotable, attributed dialogue — _Congressional Record is a US government work (public domain). GitHub reports NOASSERTION for the repo licence, so check the LICENSE file before bundling._ | docs |
+| [amurshak/congressMCP](https://github.com/amurshak/congressMCP) | 32 | ⚠️ custom — read it | MCP server wrapping the Congress.gov API (bills, amendments, committee meetings, hearings) | Lets the authoring agent look up UAP hearings, committee meetings and amendment text while writing cases — _Needs a Congress.gov API key. GitHub says NOASSERTION, so check the licence._ | docs |
+| [datamade/govinfo](https://github.com/datamade/govinfo) | 9 | MIT | Scraper for congressional hearing (CHRG) packages via the govinfo API | Fetch printed transcripts of the 2022 HPSCI UAP hearing and the 2023 and 2024 House Oversight UAP hearings once they are published as CHRG packages — _Needs a free api.data.gov key. Transcripts are public domain. The repo is old (2018), so it may need updating for API v4._ | docs |
+| [selkind/chrg_tools](https://github.com/selkind/chrg_tools) | 1 | MIT | Library for splitting govinfo CHRG hearing packages into speakers and statements | Turn a UAP hearing transcript into speaker-attributed lines for the interrogation/testimony scenes — _Tiny (1 star) but one of the few hearing-specific parsers. MIT._ | docs |
+| [nelazar/congressional-hearing-tool](https://github.com/nelazar/congressional-hearing-tool) | 0 | GPL-3.0 | CLI that parses hearing transcripts by speaker and downloads related hearing files | Alternative to chrg_tools for speaker segmentation of the UAP hearing transcripts — _Tiny (0 stars). GPL-3.0, so use it as an offline tool only and never bundle it._ | docs |
+
+### Agency archives
+
+| Repo | ★ | License | What it is | What we take from it | Sync |
+|---|---:|---|---|---|---|
+| [MuckRock/API-examples](https://github.com/MuckRock/API-examples) | 67 | MIT | Example scripts for the MuckRock FOIA API | Find completed FOIA requests about UFOs/UAP (FBI, CIA, AARO) and their released files — _MIT. MuckRock request data is public, but released files keep their agency or copyright status._ | docs |
+| [MuckRock/python-documentcloud](https://github.com/MuckRock/python-documentcloud) | 14 | ⚠️ custom — read it | Python client for the DocumentCloud API (hosts many FOIA-released PDFs with OCR text) | Pull OCR text and page images of FOIA UFO documents that journalists have already uploaded — _GitHub says NOASSERTION. Each uploaded document has its own rights, so only use public documents. Respect API rate limits._ | docs |
+| [history-lab/foiarchive-search](https://github.com/history-lab/foiarchive-search) | 3 | MIT | Streamlit search GUI over History Lab's FOIArchive | Reference UI for browsing declassified corpora, including CREST — _MIT, 3 stars._ | docs |
+| [history-lab/history-lab-mcp](https://github.com/history-lab/history-lab-mcp) | 2 | MIT | MCP server and CLI for searching about 5M declassified documents in History Lab's FOIArchive (includes CIA CREST, State cables, PDB) | Full-text search of CREST and other declassified collections from the authoring agent, with no scraping of cia.gov — _MIT. The underlying documents are US government works. Follow History Lab's usage terms. The older foiarchive-api was retired in Aug 2025._ | docs |
+
+### Explanations: sky events
+
+| Repo | ★ | License | What it is | What we take from it | Sync |
+|---|---:|---|---|---|---|
+| [tcarwash/swpclib](https://github.com/tcarwash/swpclib) | 1 | MIT | Python wrapper for NOAA SWPC JSON services (Kp, solar wind, alerts) | Fetch Kp and geomagnetic storm context for recent sightings — _Tiny (1 star), MIT. SWPC data is public domain. For historic Kp back to 1932 use GFZ Potsdam (CC BY 4.0)._ | docs |
+
+### Explanations: satellites & launches
+
+| Repo | ★ | License | What it is | What we take from it | Sync |
+|---|---:|---|---|---|---|
+| [TheSpaceDevs/launch-library-mcp](https://github.com/TheSpaceDevs/launch-library-mcp) | 0 | ⚠️ none (all rights reserved — reference only) | MCP server for Launch Library 2 | Lets the authoring agent look up the launch that matches a sighting — _Tiny (0 stars), no licence. Free LL2 API tier is rate-limited (about 15 req/hr), so check TheSpaceDevs terms and cache responses._ | docs |
+
+### Newspaper archives
+
+| Repo | ★ | License | What it is | What we take from it | Sync |
+|---|---:|---|---|---|---|
+| [LibraryOfCongress/chronam](https://github.com/LibraryOfCongress/chronam) _(archived)_ | 72 | ⚠️ none (all rights reserved — reference only) | Original Chronicling America web app and API software (now superseded by Open ONI) | Reference for the ChronAm data model (batches, OCR, METS/ALTO) — _Archived, no licence file (a US government work, likely public domain)._ | docs |
+| [dell-research-harvard/efficient_ocr](https://github.com/dell-research-harvard/efficient_ocr) | 12 | Apache-2.0 | EffOCR: efficient character-level OCR for historical documents | OCR low-quality scans of historic newspapers and typewritten memos — _Apache-2.0._ | docs |
+| [GLAM-Workbench/trove-newspapers](https://github.com/GLAM-Workbench/trove-newspapers) | 10 | MIT | Notebooks and examples for working with Trove digitised newspapers | Recipes for date and place filtering of Australian coverage — _MIT._ | docs |
+| [hugovk/chroniclingamerica.py](https://github.com/hugovk/chroniclingamerica.py) | 9 | ⚠️ none (all rights reserved — reference only) | Python client for the Chronicling America search API | Search 1940s-1963 newspapers for 'flying saucer' reports by date and state — _No licence (reference; the API is simple enough to call directly). Chronicling America is moving to the loc.gov API._ | docs |
+| [GeoHistoricalData/gallipy](https://github.com/GeoHistoricalData/gallipy) | 9 | AGPL-3.0 | Python wrapper for the BnF Gallica APIs (French newspapers and documents) | French press coverage of the 1954 French wave, to pair with GEIPAN cases — _AGPL-3.0: tool only. Gallica reuse is free for non-commercial use, but commercial reuse needs a BnF licence._ | docs |
+| [GLAM-Workbench/trove-newspaper-harvester](https://github.com/GLAM-Workbench/trove-newspaper-harvester) | 6 | MIT | Harvests Trove (National Library of Australia) newspaper search results with OCR text | Australian UFO waves (e.g. 1954, Westall 1966, Valentich 1978 coverage) — _MIT. Needs a Trove API key. Trove API terms apply and articles after 1955 may be in copyright._ | docs |
+| [brandontlocke/downloadingamerica](https://github.com/brandontlocke/downloadingamerica) | 4 | GPL-3.0 | Script that exports Chronicling America search results to plain text and metadata | Bulk-export the July 1947 flying-disc wave coverage for case writing — _GPL-3.0: tool only. Same ChronAm copyright caveat._ | docs |
+| [cyanheads/libofcongress-mcp-server](https://github.com/cyanheads/libofcongress-mcp-server) | 4 | Apache-2.0 | MCP server for LOC digital collections and Chronicling America with full OCR text | Lets the authoring agent search historic newspapers for contemporaneous accounts — _Apache-2.0._ | docs |
+
+### OCR & redaction
+
+| Repo | ★ | License | What it is | What we take from it | Sync |
+|---|---:|---|---|---|---|
+| [MuckRock/documentcloud](https://github.com/MuckRock/documentcloud) | 54 | AGPL-3.0 | DocumentCloud backend: OCR, entity extraction and annotation for document dumps | Reference architecture for the in-game document viewer and OCR pipeline — _AGPL-3.0: reference or tool only._ | docs |

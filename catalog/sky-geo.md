@@ -99,3 +99,57 @@ Stars checked 2026-09-23. Notes: [notes/sky-geo.md](../notes/sky-geo.md). Sync l
 | [reaviz/reagraph](https://github.com/reaviz/reagraph) | 1.1k | Apache-2.0 | WebGL graph visualisation for React, built on R3F. | Native React/R3F knowledge-graph component for the deduction board. — _Check that its R3F version works with React 19._ | docs |
 | [vasturiano/timelines-chart](https://github.com/vasturiano/timelines-chart) | 627 | MIT | d3 swimlane timelines chart. | Compact overlapping-events view, e.g. radar contacts compared with aircraft on station. | full |
 | [NUKnightLab/StoryMapJS](https://github.com/NUKnightLab/StoryMapJS) | 249 | MPL-2.0 | Map-driven storytelling slides. | Guided tour of a sighting's locations. — _GitHub shows NOASSERTION; the LICENSE is MPL-2.0._ | docs |
+
+### Explanations: sky events
+
+| Repo | ★ | License | What it is | What we take from it | Sync |
+|---|---:|---|---|---|---|
+| [mrk-its/homeassistant-blitzortung](https://github.com/mrk-its/homeassistant-blitzortung) | 349 | MIT | Client for live lightning strikes from Blitzortung.org | Reference for live lightning overlays — _MIT code. Blitzortung data is for private, non-commercial use only and redistribution needs permission, so do not ship it in a commercial game. Prefer GLM or NOAA sources._ | docs |
+| [CroatianMeteorNetwork/RMS](https://github.com/CroatianMeteorNetwork/RMS) | 224 | GPL-3.0 | Global Meteor Network station software. GMN publishes daily meteor trajectory and orbit data | Check whether a bright meteor was recorded near a sighting's time and place (the 'was it a meteor?' answer) — _The code is GPL-3.0 (tool only). GMN trajectory data at globalmeteornetwork.org/data is CC BY 4.0._ | docs |
+| [deeplycloudy/glmtools](https://github.com/deeplycloudy/glmtools) | 68 | BSD-3-Clause | Tools for GOES-R Geostationary Lightning Mapper data (gridding, flash extraction) | Rule lightning or bolide flashes in or out at a sighting location and time (2017 onward) — _BSD-3-Clause. GLM L2 data is NOAA open data on AWS (public domain)._ | docs |
+| [typpo/showers](https://github.com/typpo/showers) | 65 | MIT | WebGL rendering of the debris streams behind meteor showers (CAMS data) | Visual reference for an in-game 'why were there so many lights tonight' meteor-shower explainer — _MIT. Shower orbit data comes from CAMS/NASA, so check CAMS attribution._ | docs |
+| [wmpg/WesternMeteorPyLib](https://github.com/wmpg/WesternMeteorPyLib) | 46 | MIT | Meteor physics library: trajectory solving, radiants, orbits, shower association | Offline: rebuild a fireball's ground track from GMN or CNEOS data and assign it to a shower for the explanation reveal — _MIT._ | docs |
+| [helioforecast/auroramaps](https://github.com/helioforecast/auroramaps) | 21 | LGPL-3.0 | Aurora forecasts and hindcasts from solar wind data (OVATION Prime 2010) | Rebuild whether aurora was visible at a historic sighting's location (the 'was it the aurora?' explanation) — _LGPL-3.0: keep it offline or dynamically linked. Input solar wind data comes from NOAA/NASA (public domain)._ | docs |
+| [sidgan/nasaweb](https://github.com/sidgan/nasaweb) | 11 | ⚠️ none (all rights reserved — reference only) | NASA CAMS meteor shower portal (SpaceML) | Reference for showing CAMS meteor detections on a globe — _No licence (reference only). CAMS data is NASA/SETI-affiliated, so check the terms._ | docs |
+| [GefeiSHEN/NOAA-Aurora-Archive](https://github.com/GefeiSHEN/NOAA-Aurora-Archive) | 1 | ⚠️ none (all rights reserved — reference only) | Byte-for-byte archive of NOAA SWPC OVATION aurora forecast snapshots, collected by GitHub Actions | Historic aurora-probability grids for recent (2026+) cases. SWPC itself keeps only the latest — _Tiny (1 star, Sep 2026), no licence. NOAA SWPC data is public domain._ | docs |
+| [RyanXXYC/neo-bolide-glm-signatures](https://github.com/RyanXXYC/neo-bolide-glm-signatures) | 0 | MIT | Notebook that separates bolide signatures from lightning in GOES GLM data, using NASA's NEO-Bolide catalog | Link a satellite-detected bolide (neo-bolide.ndc.nasa.gov) to a witness sighting — _Tiny (0 stars) but the only GLM-bolide repo. MIT. GLM data is NOAA open data (public domain)._ | docs |
+
+### Explanations: satellites & launches
+
+| Repo | ★ | License | What it is | What we take from it | Sync |
+|---|---:|---|---|---|---|
+| [r-spacex/SpaceX-API](https://github.com/r-spacex/SpaceX-API) _(archived)_ | 10.9k | Apache-2.0 | Open-source REST API and dataset of SpaceX launches, Starlink and landings | Match 'strange spiral/plume' sightings to Falcon 9 launches and the Starlink batches deployed from them — _Apache-2.0, archived in 2024 so the data is frozen. Use Launch Library 2 for launches after that._ | docs |
+| [Flowm/satvis](https://github.com/Flowm/satvis) | 406 | MIT | 3D satellite tracker and pass predictor for 12,000+ CelesTrak satellites on a CesiumJS globe | Reference for showing Starlink trains and ISS passes in the sky view — _MIT. Element sets come from CelesTrak (free use, attribute CelesTrak). Historical TLEs need Space-Track (account terms)._ | docs |
+| [Nosudrum/launch-stats](https://github.com/Nosudrum/launch-stats) | 27 | Apache-2.0 | Launch statistics and charts built from the Launch Library 2 API | Reference code for bulk-pulling and caching LL2 launch history — _Apache-2.0._ | docs |
+| [satvisorcom/satvisor](https://github.com/satvisorcom/satvisor) | 12 | AGPL-3.0 | Three.js/Svelte satellite tracker with sky view, visual magnitude and pass prediction | Brightness estimates (visual magnitude) for 'bright moving light' Starlink/ISS explanations — _AGPL-3.0: tool only, never bundle._ | docs |
+| [sizhewang25/jonathon-space-archive](https://github.com/sizhewang25/jonathon-space-archive) | 1 | ⚠️ custom — read it | Daily mirror of Jonathan McDowell's GCAT (General Catalog of Artificial Space Objects) | Authoritative launch and reentry history since 1957 for 'was it a rocket or a reentry?' explanations — _Tiny mirror (1 star, NOASSERTION). The GCAT data is CC BY 4.0 (J. McDowell, planet4589.org), so attribute it. Prefer fetching from planet4589.org directly._ | docs |
+| [gtrainar/findStarlink](https://github.com/gtrainar/findStarlink) | 1 | GPL-3.0 | Python script that finds the brightest Starlink trains between astronomical twilight and sunrise | Predict or hindcast whether a Starlink train was visible at a sighting — _Tiny (1 star) but the only Starlink-train predictor found. GPL-3.0: tool only._ | docs |
+
+### Explanations: weather & balloons
+
+| Repo | ★ | License | What it is | What we take from it | Sync |
+|---|---:|---|---|---|---|
+| [projecthorus/pysondehub](https://github.com/projecthorus/pysondehub) | 22 | GPL-3.0 | Python interface to SondeHub radiosonde telemetry (live and archived flights) | Match 'silver balloon' sightings to real weather-balloon flights (2021 onward) — _GPL-3.0: tool only. SondeHub data is volunteer-collected, so check SondeHub's terms. Radiosondes are public NWS launches._ | docs |
+| [mgehne/igrastations](https://github.com/mgehne/igrastations) | 1 | ⚠️ none (all rights reserved — reference only) | Readers and utilities for NOAA's IGRA radiosonde archive | Weather-balloon launch times and stations back to the 1940s, to test the balloon explanation for historic cases — _Tiny (1 star), no licence (reference only). IGRA v2 data is NOAA public domain._ | docs |
+
+### Explanations: aircraft & drones
+
+| Repo | ★ | License | What it is | What we take from it | Sync |
+|---|---:|---|---|---|---|
+| [davidmegginson/ourairports-data](https://github.com/davidmegginson/ourairports-data) | 505 | Unlicense | Nightly CSVs of worldwide airports, runways, navaids and frequencies | 'Near an airport or approach path?' check for night-light sightings — _Public domain (Unlicense)._ | docs |
+| [adsblol/globe_history_2024](https://github.com/adsblol/globe_history_2024) _(archived)_ | 58 | ODbL-1.0 | 2024 archive of adsb.lol aircraft traces | Aircraft traffic for the Nov-Dec 2024 New Jersey 'drone' sightings, to test the plane explanation — _ODbL-1.0. Archived and very large._ | none |
+| [adsblol/globe_history_2026](https://github.com/adsblol/globe_history_2026) | 54 | ODbL-1.0 | Daily open-data dumps of every aircraft trace seen by adsb.lol in 2026 | Check whether an aircraft was over a sighting location at that time (the 'was it a plane?' answer) — _The data is ODbL-1.0 (attribution and share-alike on derived databases). Very large, so sync none. It lists individual aircraft: never use it to look up people._ | none |
+| [adsblol/globe_history_2025](https://github.com/adsblol/globe_history_2025) _(archived)_ | 53 | ODbL-1.0 | 2025 archive of adsb.lol aircraft traces | Same as 2026, for 2025 cases (includes the late-2024/2025 'drone wave' period) — _ODbL-1.0. Archived and very large._ | none |
+| [JakPot42/airspace-awareness](https://github.com/JakPot42/airspace-awareness) | 0 | ⚠️ none (all rights reserved — reference only) | Pattern detector built on FAA UAS (drone) Sighting Reports and public reports of incidents at military installations | The only repo found that uses the FAA drone sighting reports. Seed for drone-explanation cases — _Tiny (0 stars), no licence (reference only). The FAA UAS Sighting Reports themselves are public US government records (faa.gov)._ | docs |
+
+### Newspaper archives
+
+| Repo | ★ | License | What it is | What we take from it | Sync |
+|---|---:|---|---|---|---|
+| [LibraryOfCongress/ndnp-open-ocr](https://github.com/LibraryOfCongress/ndnp-open-ocr) | 28 | ⚠️ custom — read it | LOC Tesseract pipeline that re-OCRs NDNP newspaper scans into ALTO XML and PDF | Better OCR for faded 1940s-50s newspaper pages used as in-game clippings — _GitHub says NOASSERTION (a US government work). New in 2026._ | docs |
+
+### OCR & redaction
+
+| Repo | ★ | License | What it is | What we take from it | Sync |
+|---|---:|---|---|---|---|
+| [freelawproject/x-ray](https://github.com/freelawproject/x-ray) | 827 | BSD-2-Clause | Detects bad redactions (text still present under black boxes) in PDFs | Game mechanic: let players 'x-ray' a redacted document. Also checks our own redacted props — _BSD-2-Clause. Only run it on public documents._ | docs |

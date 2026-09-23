@@ -151,3 +151,62 @@ Stars checked 2026-09-23. Notes: [notes/mystery-design.md](../notes/mystery-desi
 |---|---:|---|---|---|---|
 | [0xsha/CrazyWall](https://github.com/0xsha/CrazyWall) | 74 | MIT | Vue digital evidence board / detective suite | Reference for pin-and-string evidence board interactions — _Vue, not React, so port the ideas rather than the code_ | full |
 | [Fungeey/detectiveboard](https://github.com/Fungeey/detectiveboard) | 28 | ⚠️ none (all rights reserved — reference only) | TS web editor that organizes ideas as a detective evidence board | UX reference for the player's own clue board — _No license, so reference only_ | none |
+
+### Investigation games
+
+| Repo | ★ | License | What it is | What we take from it | Sync |
+|---|---:|---|---|---|---|
+| [bobeff/open-source-games](https://github.com/bobeff/open-source-games) | 15.4k | CC0-1.0 | Large curated list of open-source games | Find further adventure/investigation games to study — _List only_ | docs |
+| [godot-escoria/escoria-demo-game](https://github.com/godot-escoria/escoria-demo-game) | 851 | MIT | Demo game for the Escoria point-and-click adventure framework | Study verbs, inventory, item combination and dialogue scripting structure — _Godot, 2D_ | docs |
+| [carenalgas/popochiu](https://github.com/carenalgas/popochiu) | 355 | MIT | Godot plugin for point-and-click adventures (AGS/PowerQuest inspired) | Study inventory, hotspot and dialogue data model — _Godot, 2D_ | docs |
+| [deep-entertainment/egoventure](https://github.com/deep-entertainment/egoventure) | 76 | ⚠️ custom — read it | First-person point-and-click adventure framework (Myst/Carol Reed style) | Study node-based first-person investigation, inventory and notebook design — _Licence unclear_ | docs |
+| [MenacingMecha/gd_fpcc](https://github.com/MenacingMecha/gd_fpcc) | 29 | MIT | Godot first-person controller skeleton for walking sims | Reference for walking-sim movement feel and interaction triggers — _Godot 3, small_ | docs |
+| [xesf/agrippa](https://github.com/xesf/agrippa) | 10 | MIT | Web reimplementation of The X-Files Game (1998) engine | Direct thematic reference: FMV investigation, evidence and inventory flow on the web — _Small, stale since 2020; needs original game data_ | docs |
+| [r2d2m/Cogito](https://github.com/r2d2m/Cogito) | 3 | MIT | Copy of COGITO, a Godot 4 immersive-sim template (doors, notes, keypads, carryable and inspectable items) | Study component-based interactables and readable notes design — _Original Phazorknight/Cogito was unreachable via the API; this is a surviving copy, prefer upstream if it reappears_ | docs |
+| [Karthikn-VR/Detective-Game-3D](https://github.com/Karthikn-VR/Detective-Game-3D) | 0 | ⚠️ none (all rights reserved — reference only) | React + Three.js first-person investigation game | Only R3F detective game found; compare interaction and clue UI — _Tiny, 0 stars, no licence: read only_ | full |
+
+### Quests & inventory
+
+| Repo | ★ | License | What it is | What we take from it | Sync |
+|---|---:|---|---|---|---|
+| [shomykohai/quest-system](https://github.com/shomykohai/quest-system) | 470 | MIT | Modular quest system for Godot 4 (quests, steps, states) | Reference data model for quest lifecycle (available/active/completed/failed) to port to TS + xstate — _Godot/GDScript: design reference only_ | docs |
+| [TheWalruzz/godot-questify](https://github.com/TheWalruzz/godot-questify) | 254 | MIT | Graph-based quest editor and manager for Godot 4 | Reference for node-graph quest authoring (conditions, branches) we could mirror in a React Flow editor — _Godot/GDScript: design reference only_ | docs |
+| [DRincs-Productions/nqtr](https://github.com/DRincs-Productions/nqtr) | 2 | LGPL-2.1 | TS location/time/event (quest + routine) framework for Pixi-VN with ink topics | Closest TS example of quests + locations + time-of-day wired to ink; read for API shape — _Tiny (2 stars); LGPL-2.1 so read, do not vendor_ | full |
+
+### Deduction mechanics
+
+| Repo | ★ | License | What it is | What we take from it | Sync |
+|---|---:|---|---|---|---|
+| [tau-prolog/tau-prolog](https://github.com/tau-prolog/tau-prolog) | 641 | BSD-3-Clause | ISO Prolog interpreter in JavaScript | Express witness statements/contradictions as rules and query them for the contradiction/"press" mechanic | docs |
+| [chrisamaphone/interactive-lp](https://github.com/chrisamaphone/interactive-lp) | 292 | ⚠️ custom — read it | Ceptre: linear-logic language for generative narrative/game rules | Design reference for rule-based generation of events and evidence trails — _GitHub reports NOASSERTION licence; reference only_ | docs |
+| [meteor/logic-solver](https://github.com/meteor/logic-solver) | 148 | MIT | MiniSat-based boolean logic solver in pure JS | Validate that each case/deduction page has exactly one consistent solution; auto-check clue sufficiency | full |
+| [james-owen-ryan/talktown](https://github.com/james-owen-ryan/talktown) | 105 | MIT | Town simulation with agent knowledge propagation, lies and misremembering | Model how rumours/sightings spread and degrade between NPCs to generate contradictory testimony — _Python research code; reference_ | docs |
+| [murfffi/zebra4j](https://github.com/murfffi/zebra4j) | 21 | LGPL-3.0 | Zebra/logic-grid puzzle generator and solver library | Algorithm reference for generating Obra-Dinn-style identity grids with guaranteed uniqueness — _Java, LGPL-3.0: reference_ | docs |
+| [AmrGenidy/sherlocks-legacy](https://github.com/AmrGenidy/sherlocks-legacy) | 4 | AGPL-3.0 | Detective game with JSON case files, lie-catching and a case maker | Reference for a data-driven case schema (suspects, statements, contradictions) — _AGPL-3.0: read only, never bundle_ | docs |
+| [wangyufanshuai/turtle-soup](https://github.com/wangyufanshuai/turtle-soup) | 3 | MIT | Next.js/TS offline mystery: ask questions, inspect evidence, assemble causal chains to prove a solution | Same stack as ours; reference for "prove it with a causal chain" instead of keyword solving — _Tiny (3 stars), Chinese UI_ | full |
+| [gdgeek/murder-mystery-generator](https://github.com/gdgeek/murder-mystery-generator) | 3 | ⚠️ none (all rights reserved — reference only) | TypeScript murder-mystery (script-kill) scenario generator | Reference for procedural case structure: roles, timelines, clues — _Tiny (3 stars); no licence: read only_ | docs |
+| [edycutjong/redacted-game](https://github.com/edycutjong/redacted-game) | 0 | MIT | Asymmetric-information detective game with censored evidence and linted handcrafted cases | Reference for case-file linting and redacted-evidence deduction — _Tiny (0 stars)_ | full |
+
+### Narrative tooling
+
+| Repo | ★ | License | What it is | What we take from it | Sync |
+|---|---:|---|---|---|---|
+| [blurymind/YarnClassic](https://github.com/blurymind/YarnClassic) | 546 | MIT | Browser-based Yarn dialogue node editor | Visual node-graph reference for a narrative state visualiser; option if we author barks in Yarn | docs |
+| [wildwinter/Ink-Localiser](https://github.com/wildwinter/Ink-Localiser) | 41 | MIT | Extracts ink strings and assigns stable IDs for localisation | Stable line IDs for i18n, VO and subtitles from our ink sources | docs |
+| [mnbroatch/yarn-bound](https://github.com/mnbroatch/yarn-bound) | 35 | ⚠️ none (all rights reserved — reference only) | Ergonomic JS runner wrapper around bondage.js (Yarn) | Yarn runtime in JS if we ever run Yarn alongside ink — _No licence detected: check before use_ | docs |
+| [wildwinter/Ink-Tester](https://github.com/wildwinter/Ink-Tester) | 28 | MIT | Testing framework that plays ink stories to find dead ends/coverage | Branch-coverage and dead-end checks for ink in CI (port or run as tool) — _C#_ | docs |
+| [wildwinter/screenplay-tools](https://github.com/wildwinter/screenplay-tools) | 25 | MIT | Fountain / Final Draft parsing and writing (multi-language incl. JS) | Let writers draft cutscenes/interrogations in Fountain and convert to ink/captions | docs |
+| [RemyVim/ink-if-story-template](https://github.com/RemyVim/ink-if-story-template) | 24 | MIT | Web template for ink IF with save system, themes and accessibility options | Reference for ink save/restore and accessible text settings in a web player | full |
+| [wildwinter/Ink-Explorer](https://github.com/wildwinter/Ink-Explorer) | 18 | MIT | Runtime exploration/visualisation of ink and Dink stories | Narrative state visualiser reference for debugging knot/variable state | docs |
+| [wildwinter/dink](https://github.com/wildwinter/dink) | 17 | ⚠️ custom — read it | Dialogue-ink: screenplay-style dialogue layer on ink with line IDs, VO scripts | Structure speaker lines, directions and VO recording scripts on top of ink — _GitHub reports NOASSERTION_ | docs |
+| [wildwinter/Ink-Storylet-Framework](https://github.com/wildwinter/Ink-Storylet-Framework) | 11 | MIT | Storylet framework for ink (TypeScript) | Salience-based storylets for case leads alongside floriancargoet/ink-storylets | docs |
+| [storylet-studio/storylets](https://github.com/storylet-studio/storylets) | 5 | MIT | Storylet editor plus JS/Unity/Unreal/Godot runtimes | Candidate barks/storylet runtime and authoring tool — _Tiny (5 stars), very new_ | docs |
+| [oleksii-chekhovskyi/yarn-spinner-runner-ts](https://github.com/oleksii-chekhovskyi/yarn-spinner-runner-ts) | 1 | ⚠️ none (all rights reserved — reference only) | TS parser/compiler/runtime for Yarn Spinner 3 with React adapter | Only YS3-in-TS runtime found; watch if Yarn is considered — _Tiny (1 star), no licence_ | full |
+
+### Writing corpora
+
+| Repo | ★ | License | What it is | What we take from it | Sync |
+|---|---:|---|---|---|---|
+| [dariusk/corpora](https://github.com/dariusk/corpora) | 5.1k | ⚠️ none (all rights reserved — reference only) | Large collection of small CC0 JSON word lists and data | Names, occupations, governments, objects for procedural case files and redacted docs — _GitHub detects no licence; README states CC0_ | docs |
+| [standardebooks/h-g-wells_the-war-of-the-worlds](https://github.com/standardebooks/h-g-wells_the-war-of-the-worlds) | 4 | ⚠️ custom — read it | Clean public-domain War of the Worlds (CC0 production) | Quotable in-world period text, epigraphs, radio-drama pastiche — _Text US public domain; SE work CC0 (GitHub shows NOASSERTION)_ | docs |
+| [standardebooks/h-p-lovecraft_short-fiction](https://github.com/standardebooks/h-p-lovecraft_short-fiction) | 2 | ⚠️ custom — read it | Clean public-domain Lovecraft short fiction | Tone/reference texts for cosmic-dread documents — _Check each story is PD in target markets; SE work CC0_ | docs |

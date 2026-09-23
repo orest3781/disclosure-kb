@@ -26,14 +26,31 @@ What the knowledge base can't vouch for, what nobody has built, and what could b
 
 Rule: anything under 100 stars gets a spike before a dependency, and "Reference" if the spike fails.
 
-## Nobody has built these (ours to write)
+## Gaps: what exists and what's ours to write
 
-1. **FLIR, night-vision and radar post-effects for three.js.** Only tiny Unity repos exist. Plan: custom `postprocessing` Effects (heat LUT, phosphor + noise, polar sweep SDF).
-2. **A 3D web mystery game to learn from.** The closest are 2D (`sql98detective`, `clmystery`) or adventure engines (`lba2remake`). Architecture comes from `racing-game` plus `heist-one`.
-3. **Hearing transcripts and the UAP Disclosure Act text on GitHub.** Take them from govinfo and congress.gov.
-4. **A CIA Reading Room / FBI Vault API.** Manual download only.
-5. **A JS/TS quest system library.** Compose xstate + zustand + Dexie + ink state.
-6. **An open UFO-mystery dialogue corpus.** Everything narrative is ours to write; procedural text (tracery, Rantjs) fills gaps.
+A targeted gap scan on 2026-09-23 added 185 sources. Status per gap:
+
+| Gap | Status | Best finds | Still ours to build |
+|---|---|---|---|
+| FLIR, night-vision, radar effects | Partly | `kevtoe/worldview` (Cesium GLSL for NVG/FLIR, MIT), `MirzaBeig/Post-Processing-Scan` (radar/scan, Unlicense), `KingToot14/radar_shader` | The three.js `postprocessing` Effects themselves; a gun-camera / targeting-pod HUD (SVG/HTML overlay) |
+| VHS and found-footage look | Filled | `felixturner/bad-tv-shader`, `Cyanilux/URP_RetroCRTShader` (port), `libretro/glsl-shaders` (check each file's licence) | |
+| Vertex animation, impostors, crowds | Mostly | `sweriko/Horde`, `zadvorsky/three.bas`, `three-octahedral-impostor`; `openvat` bakes VATs (GPL, tool only) | A proven three.js VAT decoder (`three-vat` is brand new) and an animation blend tree |
+| A 3D web mystery game to learn from | Partly | Design refs: `escoria-demo-game`, `popochiu`, COGITO (`r2d2m/Cogito` copy), `xesf/agrippa` (X-Files Game engine, reference) | Nothing polished in three.js/R3F; architecture still comes from `racing-game` + `heist-one` |
+| Scene details | Partly | Decals (drei `Decal`), `threex.volumetricspotlight`, `threejs-volumetric-beam` (tractor beam), grass fields to flatten for crop circles, `SpaceshipGenerator` | Crop-circle generator, saucer shaders (glow, cloak) |
+| Free CC0 3D assets | Filled | KayKit packs (confirm LICENSE), `KenneyNL/Starter-Kit-Basic-Scene`, Quaternius mirrors, `madjin/awesome-cc0`, `ToxSam/open-source-3D-assets` | |
+| Quests, inventory, achievements, saves | Partly | `json-rules-engine`, `json-logic-js`, `mitt`, `superjson`/`devalue` + `lz-string`, `dnd-kit` | The quest, inventory and achievement systems (on zustand + xstate); Godot `quest-system`/`questify` for the data model |
+| Deduction mechanics | Partly | `meteor/logic-solver` (prove each case has one solution), `tau-prolog` (testimony contradictions), `minisearch` (Her Story-style archive search), `talktown` (rumour spread) | The deduction board itself; no Obra Dinn / Her Story / Golden Idol clones exist |
+| Evidence UI | Filled except redaction | `lookscanned.io`, `jquery.terminal`, `React95`, `zen-fs/core`, `ExifReader`, `img-encode` + `spectrology` | Redaction tool, numbers-station generator |
+| Narrative tooling | Filled | wildwinter's `Ink-Localiser`, `Ink-Tester`, `Ink-Explorer`, `dink`, `screenplay-tools`; `vidstack/captions`; `YarnClassic` | A barks system (storylets + rule matching) |
+| Accessibility and input | Partly | `hotkeys-js`, `contro`, `joymap`, `libDaltonLens` (port as a shader) | A gamepad remapping screen and options framework |
+| Writing corpora | Partly | `dariusk/corpora` (CC0 per README), Standard Ebooks (War of the Worlds, Lovecraft: check each story), `gutendex` | Every UFO-mystery line of dialogue. SCP wiki is CC BY-SA (share-alike); X-Files scripts and TV Tropes are off-limits |
+| Hearing transcripts, Disclosure Act | Partly | `unitedstates/congress` (CC0, bills not hearings), `usgpo/bulk-data`, `datamade/govinfo`, `selkind/chrg_tools` | Speaker-by-speaker transcripts: fetch the congress.gov/govinfo PDFs and split them |
+| CIA CREST, FBI Vault | Partly | `history-lab/history-lab-mcp` (FOIArchive incl. CREST), `wretcher207/the-ufo-files` (FBI flying-discs OCR), MuckRock tools | A maintained CREST index. cia.gov is behind a bot wall: fetch slowly, by hand |
+| Other official archives | Partly (thin) | GEIPAN loader, `uap-events-dataset` (CC BY 4.0 per README), `uk-ufo-map` | Blue Book index, AARO case data, Chile/Australia/Canada. Use GEIPAN CSVs, UK National Archives, archive.org |
+| Explanations: meteors, launches, satellites, balloons, aurora | Mostly | `CroatianMeteorNetwork/RMS` (GPL tool; data CC BY), `WesternMeteorPyLib`, `launch-stats`, `satvis`, `findStarlink` (GPL tool), `glmtools`, `pysondehub`, `auroramaps`, adsb.lol history (ODbL, 2024+) | AMS API client; ADS-B history before 2023. Blitzortung lightning is non-commercial: don't ship it |
+| Newspapers and declassified OCR | Filled | `AmericanStories` + `newswire` (CC BY 4.0 on HF), `chroniclingamerica.py`, `trove-newspaper-harvester`, `freelawproject/x-ray` (bad-redaction detector) | Redaction detection on image-only scans |
+
+Details per finding are in the notes for each category and in [REVIEW.md](../REVIEW.md).
 
 ## Vendor and platform risks
 

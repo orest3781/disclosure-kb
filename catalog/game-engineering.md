@@ -123,3 +123,59 @@ Stars checked 2026-09-23. Notes: [notes/game-engineering.md](../notes/game-engin
 | [KilledByAPixel/LittleJS](https://github.com/KilledByAPixel/LittleJS) | 4.2k | MIT | Tiny HTML5 game engine with built-in juice (particles, shake, ZzFX, input) | Reference for game-feel patterns (camera shake, hit-stop, particle bursts) to port into R3F | docs |
 | [alemangui/pizzicato](https://github.com/alemangui/pizzicato) | 1.7k | MIT | Web Audio wrapper with effects (reverb, distortion, filters) | Radio and tape-recorder effects on interview audio — _Older project; howler and tone are already in the catalog_ | none |
 | [KilledByAPixel/ZzFX](https://github.com/KilledByAPixel/ZzFX) | 792 | MIT | Tiny procedural sound-effect synthesizer | Generated UI blips, static and zaps with no audio assets | none |
+
+### Quests & inventory
+
+| Repo | ★ | License | What it is | What we take from it | Sync |
+|---|---:|---|---|---|---|
+| [clauderic/dnd-kit](https://github.com/clauderic/dnd-kit) | 17.7k | MIT | Accessible React drag-and-drop toolkit | Inventory grid and evidence-board pinning with keyboard-accessible drag and drop | docs |
+| [developit/mitt](https://github.com/developit/mitt) | 11.9k | MIT | 200-byte typed event emitter | Game-wide event bus (clueFound, docOpened, questAdvanced) feeding achievements, barks and analytics | full |
+| [ravionhq/superjson](https://github.com/ravionhq/superjson) | 5.3k | MIT | JSON superset serializer (Date, Map, Set, BigInt) | Serialise zustand/xstate snapshots with Maps/Sets into Dexie save slots — _Repo moved from flightcontrol-dev/blitz-js; now under ravionhq_ | docs |
+| [pieroxy/lz-string](https://github.com/pieroxy/lz-string) | 4.4k | MIT | LZ string compression for localStorage/URLs | Compress saves and produce shareable save/case codes or URL-encoded debug states | docs |
+| [CacheControl/json-rules-engine](https://github.com/CacheControl/json-rules-engine) | 3.1k | ISC | JSON-defined rules engine (facts + conditions -> events) | Author quest/objective completion and flag triggers as data, evaluated against the zustand store | docs |
+| [sveltejs/devalue](https://github.com/sveltejs/devalue) | 2.8k | MIT | Serialiser handling cycles, repeated refs, Maps/Sets | Save-game snapshots with cyclic evidence graphs; safer than JSON.stringify | docs |
+| [sindresorhus/emittery](https://github.com/sindresorhus/emittery) | 2.1k | MIT | Typed async event emitter with ordering guarantees | Alternative bus when listeners are async (Dexie writes, audio loads) and need awaiting | docs |
+| [jwadhams/json-logic-js](https://github.com/jwadhams/json-logic-js) | 1.5k | MIT | Serialisable JSON Logic expressions evaluated in JS | Store unlock conditions for evidence/objectives in content files and in saves without eval() | full |
+
+### Deduction mechanics
+
+| Repo | ★ | License | What it is | What we take from it | Sync |
+|---|---:|---|---|---|---|
+| [lucaong/minisearch](https://github.com/lucaong/minisearch) | 6.1k | MIT | Tiny client-side full-text search with fuzzy matching | Her Story-style "search the archive" terminal over transcripts and documents, fully offline | docs |
+
+### Evidence UI
+
+| Repo | ★ | License | What it is | What we take from it | Sync |
+|---|---:|---|---|---|---|
+| [mattiasw/ExifReader](https://github.com/mattiasw/ExifReader) | 996 | MPL-2.0 | Browser EXIF/IPTC/XMP metadata parser | Photo-analysis puzzles: player inspects timestamps/GPS/camera metadata on evidence photos — _MPL-2.0: file-level copyleft only_ | docs |
+| [zen-fs/core](https://github.com/zen-fs/core) | 425 | LGPL-3.0 | Virtual filesystem for the browser (BrowserFS successor) | Back an in-game file browser/terminal with a real FS API (ls, cat, hidden dirs) — _LGPL-3.0: use as unmodified npm dependency_ | docs |
+
+### Narrative tooling
+
+| Repo | ★ | License | What it is | What we take from it | Sync |
+|---|---:|---|---|---|---|
+| [vidstack/captions](https://github.com/vidstack/captions) | 148 | MIT | 5 kB VTT/SRT/SSA caption parser and renderer | Subtitles for VO, radio intercepts and video evidence, CSS-styleable | docs |
+| [chromy/ink-proof](https://github.com/chromy/ink-proof) | 22 | MIT | Conformance test suite for ink compilers/runtimes | Verify inkjs behaviour against reference when upgrading | docs |
+| [bemisguided/vscode-ink-language-tools](https://github.com/bemisguided/vscode-ink-language-tools) | 20 | MIT | VS Code extension with ink diagnostics, preview and navigation | Writer tooling for ink authoring | docs |
+| [wildwinter/game-subtitles](https://github.com/wildwinter/game-subtitles) | 2 | MIT | Preps dialogue lines for subtitles and displays them at runtime | Reference for subtitle line splitting/timing for our caption system — _Tiny (2 stars), C#_ | docs |
+| [chaoz23/inkcheck](https://github.com/chaoz23/inkcheck) | 2 | MIT | CI for ink: compile checks, exhaustive branch playtesting, dead-content detection (CLI + MCP) | Branching-story linter/tester in TS for our CI — _Tiny (2 stars)_ | full |
+
+### Accessibility & input
+
+| Repo | ★ | License | What it is | What we take from it | Sync |
+|---|---:|---|---|---|---|
+| [jaywcjlove/hotkeys-js](https://github.com/jaywcjlove/hotkeys-js) | 7.1k | MIT | Dependency-free keyboard shortcut capture | Rebindable UI hotkeys (open case file, notebook) with scopes | docs |
+| [niklashigi/contro](https://github.com/niklashigi/contro) | 51 | MIT | Unified keyboard/mouse/gamepad controls abstraction | Action-based input layer that makes remapping and gamepad parity simple | docs |
+| [diegodoumecq/joymap](https://github.com/diegodoumecq/joymap) | 25 | MIT | Gamepad API wrapper with button/axis mapping | Gamepad remapping screen and per-controller mappings | docs |
+| [DaltonLens/libDaltonLens](https://github.com/DaltonLens/libDaltonLens) | 19 | Unlicense | Single-file public-domain colour-vision-deficiency simulation algorithms | Port to a GLSL post-process pass for colour-blind simulation/filters and QA | full |
+| [MaulingMonkey/mmk.gamepad](https://github.com/MaulingMonkey/mmk.gamepad) | 18 | Apache-2.0 | TS gamepad API for consistent cross-browser bindings | Normalise controller layouts across browsers | docs |
+| [reececomo/pixijs-input-devices](https://github.com/reececomo/pixijs-input-devices) | 14 | MIT | Input handling with a11y, i18n keyboard layouts, gamepad navigation (PixiJS) | Reference for layout-aware key labels and focus navigation with gamepad — _PixiJS-specific: reference_ | docs |
+| [bfollington/use-control](https://github.com/bfollington/use-control) | 13 | MIT | Keyboard, mouse and gamepad input via React hooks | React-friendly input mapping for UI overlays | full |
+
+### Writing corpora
+
+| Repo | ★ | License | What it is | What we take from it | Sync |
+|---|---:|---|---|---|---|
+| [standardebooks/tools](https://github.com/standardebooks/tools) | 1.7k | ⚠️ custom — read it | Standard Ebooks toolchain for producing ebooks | Pipeline to clean/format further PD texts (e.g. Charles Fort) consistently — _GitHub reports NOASSERTION (GPL-3.0 per project); tool only_ | docs |
+| [garethbjohnson/gutendex](https://github.com/garethbjohnson/gutendex) | 384 | MIT | JSON web API for Project Gutenberg metadata | Find PD pulp sci-fi/Fortean texts by subject for the writing corpus | docs |
+| [pgcorpus/gutenberg](https://github.com/pgcorpus/gutenberg) | 222 | GPL-3.0 | Pipeline to build the Standardized Project Gutenberg Corpus | Bulk-download PD texts for style reference/n-gram tooling — _GPL-3.0 tool: run, do not bundle_ | docs |

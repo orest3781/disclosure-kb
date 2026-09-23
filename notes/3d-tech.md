@@ -65,6 +65,15 @@ A second pass added 131 sources to the catalogue. What matters for the game:
 - **Still missing.** No good 3D investigation or escape-room game, and no notable vertex-animation-texture, impostor or animation-state-machine library. Kenney, Quaternius and ambientCG aren't officially on GitHub, so download their assets from their own sites.
 - **Unverified.** The notes on `godot`, `needle-engine-support`, `defold`, `Poly-Haven/Public-API` and `armorpaint` weren't checked against the repos.
 
+## Gap scan 2026-09-23
+
+Status of every gap, with the other categories, is in [kb/risks-and-gaps.md](../kb/risks-and-gaps.md). For 3D:
+- **Thermal and night vision:** port `kevtoe/worldview`'s Cesium GLSL into `postprocessing` Effects. For radar, port `MirzaBeig/Post-Processing-Scan` (Unlicense). Unity repos with no licence are technique only.
+- **VHS look:** `felixturner/bad-tv-shader` (MIT), ported from ShaderPass to a pmndrs Effect.
+- **Crowds and distant objects:** `sweriko/Horde` and `three.bas`; octahedral impostors. For VAT, bake with `openvat` (GPL, a tool only) and decode with our own shader; `three-vat` is too new to rely on.
+- **Tractor beam and flashlight:** `threejs-volumetric-beam`, drei `SpotLight`. For crop circles, flatten a grass field (`three-stylized`, `terra`) with a mask texture.
+- **Assets:** KayKit Space Base, Furniture and City packs, and Quaternius sci-fi packs are CC0; confirm each LICENSE, and prefer the original downloads.
+
 ## License cautions
 
 - No license (reference only, don't copy): `lettier/3d-game-shaders-for-beginners`, `pmndrs/threejs-journey`, `pmndrs/use-cannon`.

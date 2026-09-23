@@ -2,18 +2,18 @@
 
 # Index
 
-760 source repos across 11 categories. Stars checked 2026-09-23. For the analysis (stack, features, pipelines, policy) start at [kb/README.md](kb/README.md); for verdicts see [REVIEW.md](REVIEW.md).
+945 source repos across 11 categories. Stars checked 2026-09-23. For the analysis (stack, features, pipelines, policy) start at [kb/README.md](kb/README.md); for verdicts see [REVIEW.md](REVIEW.md).
 
 | Category | Repos | Covers |
 |---|---:|---|
-| [3D game tech](catalog/3d-tech.md) | 209 | Engines, R3F ecosystem, games to learn from, shaders and atmosphere, state/AI/audio, and the asset pipeline. |
-| [Mystery game design](catalog/mystery-design.md) | 81 | Dialogue engines, mystery and investigation games, evidence-board UI, ARG/document-game UI, procedural mysteries, design reading, saves and quests. |
-| [UFO / UAP source data](catalog/ufo-data.md) | 43 | Real case files (PURSUE, Blue Book, FOIA), sighting datasets, analysis and evidence UIs, sky reconstruction, and disclosure timelines. Read the data-licensing notes before shipping anything. |
+| [3D game tech](catalog/3d-tech.md) | 260 | Engines, R3F ecosystem, games to learn from, shaders and atmosphere, state/AI/audio, and the asset pipeline. |
+| [Mystery game design](catalog/mystery-design.md) | 115 | Dialogue engines, mystery and investigation games, evidence-board UI, ARG/document-game UI, procedural mysteries, design reading, saves and quests. |
+| [UFO / UAP source data](catalog/ufo-data.md) | 61 | Real case files (PURSUE, Blue Book, FOIA), sighting datasets, analysis and evidence UIs, sky reconstruction, and disclosure timelines. Read the data-licensing notes before shipping anything. |
 | [Web starters & frameworks](catalog/web-starters.md) | 16 | Next.js starters, full-stack templates, UI and AI building blocks. |
 | [AI decision models (Jev)](catalog/ai-decisions.md) | 37 | TypeSafe AI's Jev System One model (launched 2026-09-15): typed, calibrated decisions in 70–500 ms. Official SDKs, games built on it, open/local alternatives, dev tooling, directories. |
 | [MCP servers & CLI tools](catalog/tooling.md) | 59 | MCP servers and command-line tools for building, debugging and researching: browser/devtools MCPs, code-graph and token savers, Blender/three.js MCPs, document converters for the case files, MCP SDKs, and everyday CLIs. |
-| [Sky, space & geo data](catalog/sky-geo.md) | 54 | Accurate night skies, satellites and Starlink, air traffic, weather, maps and globes, and timeline/graph visualisation. Data licences (ODbL, OpenSky, ADS-B Exchange) are called out per row. |
-| [Web game engineering](catalog/game-engineering.md) | 83 | WebGPU and performance, procedural environments, multiplayer, playtesting and analytics, testing 3D apps, accessibility/i18n/PWA, and game feel. |
+| [Sky, space & geo data](catalog/sky-geo.md) | 78 | Accurate night skies, satellites and Starlink, air traffic, weather, maps and globes, and timeline/graph visualisation. Data licences (ODbL, OpenSky, ADS-B Exchange) are called out per row. |
+| [Web game engineering](catalog/game-engineering.md) | 109 | WebGPU and performance, procedural environments, multiplayer, playtesting and analytics, testing 3D apps, accessibility/i18n/PWA, and game feel. |
 | [AI asset generation](catalog/ai-assets.md) | 56 | Text/image-to-3D, image generation, audio/SFX/music, NPC voices (TTS), speech-to-text, and ML that runs in the browser. Model weights often carry their own licences; read the notes column. |
-| [Aesthetic & ARG tooling](catalog/aesthetic.md) | 41 | Retro/terminal/CRT UI, open fonts and fictional paperwork, found-footage and signal effects, ciphers and steganography, and storytelling UIs. |
-| [APIs](catalog/apis.md) | 81 | Public data APIs (space, government archives, historic newspapers, knowledge, geo, weather history) and service APIs (LLMs, voice, generative media, backend, payments, notifications, translation). Each row's note gives auth, limits and terms as stated on the provider's own page. |
+| [Aesthetic & ARG tooling](catalog/aesthetic.md) | 49 | Retro/terminal/CRT UI, open fonts and fictional paperwork, found-footage and signal effects, ciphers and steganography, and storytelling UIs. |
+| [APIs](catalog/apis.md) | 105 | Public data APIs (space, government archives, historic newspapers, knowledge, geo, weather history) and service APIs (LLMs, voice, generative media, backend, payments, notifications, translation). Each row's note gives auth, limits and terms as stated on the provider's own page. |

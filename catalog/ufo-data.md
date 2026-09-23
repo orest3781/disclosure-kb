@@ -78,3 +78,46 @@ Stars checked 2026-09-23. Notes: [notes/ufo-data.md](../notes/ufo-data.md). Sync
 |---|---:|---|---|---|---|
 | [jackylawck/veil](https://github.com/jackylawck/veil) | 0 | MIT | Global official-disclosure ledger, daily ingestion, JSON schema v2. | Maintained MIT schema for multi-country disclosure events. | docs |
 | [PickleTime27/uap-disclosure-tracker](https://github.com/PickleTime27/uap-disclosure-tracker) | 0 | ⚠️ none (all rights reserved — reference only) | Next.js PWA tracking hearings, FOIA, EOs, legislation. | Schema for a disclosure news-feed UI (no data). | docs |
+
+### Hearings & legislation
+
+| Repo | ★ | License | What it is | What we take from it | Sync |
+|---|---:|---|---|---|---|
+| [the-computer-club/UAP-Congressional-Notes](https://github.com/the-computer-club/UAP-Congressional-Notes) _(archived)_ | 1 | ⚠️ none (all rights reserved — reference only) | Obsidian notes taken from the 26 July 2023 UAP hearing | Reference for how the testimony can be split into topics and linked notes (evidence-board model) — _Archived, 1 star, no licence. These are unofficial notes, so never quote them as the transcript._ | docs |
+| [johnbailon/uaphearings](https://github.com/johnbailon/uaphearings) | 0 | ⚠️ none (all rights reserved — reference only) | Small HTML page about the July 2023 House UAP hearing | Reference only. It is the only GitHub repo aimed specifically at the 2023 hearing — _Tiny (0 stars), no licence, not structured data. Prefer the official congress.gov transcript PDF (HHRG-118-GO06-Transcript-20230726)._ | docs |
+
+### UFO event indexes
+
+| Repo | ★ | License | What it is | What we take from it | Sync |
+|---|---:|---|---|---|---|
+| [smithphillipaustin-lab/uap-events-dataset](https://github.com/smithphillipaustin-lab/uap-events-dataset) | 0 | ⚠️ custom — read it | Nightly CSV/JSON of documented UAP events (hearings, document releases, reports, testimony) with source URLs | Seed list of dated events with primary-source links for the case timeline — _The README says the data is CC BY 4.0 (attribute Disclosure Archives), while GitHub says NOASSERTION. It is an editorial mirror of disclosurearchives.com, so check each claim against the primary source. It lists named witnesses: use only public testimony._ | docs |
+
+### Agency archives
+
+| Repo | ★ | License | What it is | What we take from it | Sync |
+|---|---:|---|---|---|---|
+| [MuckRock/TodayInCIA](https://github.com/MuckRock/TodayInCIA) | 5 | ⚠️ none (all rights reserved — reference only) | Bot that picks CIA CREST documents created on this day in history | Shows how to enumerate and date-filter CREST documents for a 'document of the day' feature — _No licence and inactive since 2017. CREST documents are US government works, but cia.gov/readingroom sits behind a bot wall: throttle requests and never use anti-bot tools._ | docs |
+| [morisy/ci-trend-explorer](https://github.com/morisy/ci-trend-explorer) | 3 | MIT | Script that charts how often a term appears in the CIA CREST archive over time | Chart when 'flying saucer' and 'UFO' mentions peak in CIA files to set puzzle clues — _MIT, 3 stars, 2017. It depends on the CREST search endpoint, which may have changed. Same CIA site caveats apply._ | docs |
+| [rva5120/cia-crest-explorer](https://github.com/rva5120/cia-crest-explorer) | 3 | ⚠️ none (all rights reserved — reference only) | Document clustering over a CREST corpus | Reference for grouping CREST UFO documents into themed dossiers — _No licence (reference only), 2017._ | docs |
+| [BeccaLiu/FBI-vault-spatial-search](https://github.com/BeccaLiu/FBI-vault-spatial-search) | 2 | ⚠️ none (all rights reserved — reference only) | Geo-tagging and Solr index of FBI Vault documents with a map search | Reference for putting FBI Vault UFO memos on the 3D map by extracted place names — _Old (2014), 2 stars, no licence (reference only). FBI Vault content is public domain._ | docs |
+| [wretcher207/the-ufo-files](https://github.com/wretcher207/the-ufo-files) | 1 | ⚠️ none (all rights reserved — reference only) | OCR transcripts (1,262 pages) of FBI file 62-HQ-83894 'flying discs' 1944-1973, plus 50+ case writeups | Ready source text for the 1947-era cases (Kenneth Arnold, Mantell, Hottel memo) in the FBI case files — _The FBI records are public domain and the author's writeups are CC BY 4.0 (per the README). GitHub shows no licence file. The OCR is unverified, so check quotes against vault.fbi.gov._ | docs |
+| [napalm911/public-ufo-uap-evidence-archive](https://github.com/napalm911/public-ufo-uap-evidence-archive) | 0 | ⚠️ none (all rights reserved — reference only) | Downloaders and JSON indexes for 13 official sources: FBI Vault, CIA CREST, Blue Book, ODNI, AARO, NASA, Navy videos, NDAA/UAPDA, hearings, foreign releases | One-stop fetch scripts to build the game's local primary-source corpus — _0 stars and no licence file, although the README says the scripts are MIT. Check that each downloader respects site terms and rate limits (especially cia.gov)._ | docs |
+
+### Foreign UFO archives
+
+| Repo | ★ | License | What it is | What we take from it | Sync |
+|---|---:|---|---|---|---|
+| [dsartori/CDNMonstersAndAliens](https://github.com/dsartori/CDNMonstersAndAliens) | 2 | Unlicense | Map data for UFO (and cryptid) sightings in Canada | Only Canadian-specific data repo found. A possible seed for Canadian cases — _Unlicense code, 2 stars. The source of the sighting records is not verified, so check it before use. It may come from the Canadian UFO Survey (Ufology Research, Manitoba), which has its own terms._ | docs |
+| [JGM-89/ufo-aggregator](https://github.com/JGM-89/ufo-aggregator) | 0 | ⚠️ none (all rights reserved — reference only) | Normalised JSON feed that aggregates official UFO records by country (US live; GEIPAN, UK TNA, Brazil FAB, Canada NRC, Chile, Peru, Uruguay, Australia, NZ stubbed) | Schema idea for one multi-country 'foreign files' record format — _0 stars, no licence (reference only). Most non-US adapters are stubs._ | docs |
+| [sboghossian/blueport](https://github.com/sboghossian/blueport) | 0 | AGPL-3.0 | Page-cited, hash-anchored archive pipeline for government UAP releases (US war.gov/NARA, Brazil SIAN) | Reference for ingesting Brazil's Arquivo Nacional (SIAN) UFO files, one of the few Brazil tools — _AGPL-3.0: use it as an offline tool only. It also ingests a private 'leak set' (Corbell), so exclude that part. Pre-alpha._ | docs |
+| [calshius/uk-ufo-map](https://github.com/calshius/uk-ufo-map) | 0 | ⚠️ none (all rights reserved — reference only) | Map of UK sightings taken from the released MoD UFO files | Reference for plotting UK MoD cases on the 3D map — _No licence and 0 stars. The source MoD files at The National Archives are Crown copyright, reusable under the Open Government Licence (check each file)._ | docs |
+| [michaelvaillant/spatial-point-patterns](https://github.com/michaelvaillant/spatial-point-patterns) | 0 | MIT | Reproducible spatial point-pattern analysis of French GEIPAN UAP cases | Shows how to load the official GEIPAN CSV (cases plus testimonies) and use its A/B/C/D classification as the 'explained vs unexplained' label — _MIT, 0 stars. Get the data from GEIPAN's official CSV download (cnes-geipan.fr), whose reuse terms are not clearly stated, so confirm with GEIPAN before redistributing._ | docs |
+| [mickael-pezzoni/geipan-scraper](https://github.com/mickael-pezzoni/geipan-scraper) | 0 | ⚠️ none (all rights reserved — reference only) | Scraper for GEIPAN case pages | Fallback only. Prefer GEIPAN's official CSV exports — _Tiny, no licence. GEIPAN publishes CSV directly, so avoid scraping._ | docs |
+
+### Newspaper archives
+
+| Repo | ★ | License | What it is | What we take from it | Sync |
+|---|---:|---|---|---|---|
+| [dell-research-harvard/AmericanStories](https://github.com/dell-research-harvard/AmericanStories) | 140 | ⚠️ none (all rights reserved — reference only) | Code for the American Stories dataset: article-level text from Chronicling America scans, 1774-1963 | Article-level (not page-level) text of the 1947-1963 saucer waves, ready for search and clippings — _No repo licence. The dataset on Hugging Face is CC BY 4.0. Underlying newspaper copyright applies to post-1929 content._ | docs |
+| [DataScienceUIBK/ChroniclingAmericaQA](https://github.com/DataScienceUIBK/ChroniclingAmericaQA) | 16 | MIT | Large QA dataset built on Chronicling America newspaper pages | Example of large-scale access to ChronAm OCR text. Mine it for 1947 'flying disc' wave articles — _MIT code. Chronicling America pages are mostly public domain, but coverage now runs to 1963 and post-1929 pages may still be in copyright._ | docs |
+| [dell-research-harvard/newswire](https://github.com/dell-research-harvard/newswire) | 13 | ⚠️ none (all rights reserved — reference only) | Code for the Newswire dataset of about 2.7M AP/UPI newswire articles from local papers, 1878-1977 | The best open source for the 1950s-1970s UFO waves (1952 Washington, 1966 Michigan 'swamp gas', 1973) as wire copy — _No repo licence. The dataset on Hugging Face is CC BY 4.0. Wire copyright may apply after 1929, so quote short excerpts._ | docs |

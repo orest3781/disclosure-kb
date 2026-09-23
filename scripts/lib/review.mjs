@@ -25,6 +25,7 @@ Hopding/pdf-lib katspaugh/wavesurfer.js ggerganov/ggwave russellsamora/scrollama
 anthropics/anthropic-sdk-typescript usnationalarchives/Catalog-API LibraryOfCongress/data-exploration usgpo/api LibraryOfCongress/api.congress.gov
 GSA/api.data.gov better-auth/better-auth upstash/ratelimit-js upstash/redis-js neondatabase/serverless cloudflare/workers-sdk resend/react-email
 livekit/agents-js akrherz/iem wikimedia/wikidata-query-rdf
+developit/mitt clauderic/dnd-kit lucaong/minisearch CacheControl/json-rules-engine unitedstates/congress freelawproject/x-ray
 yoannmoinet/nipplejs protectwise/troika KhronosGroup/glTF-Validator isaac-mason/recast-navigation-js
 `.split(/\s+/).filter(Boolean));
 
@@ -44,6 +45,7 @@ export const AVOID = new Map([
   ["Tencent-Hunyuan/Hunyuan3D-2", "no licence granted in the EU, UK or South Korea; 1M MAU clause"],
   ["kijai/ComfyUI-Hunyuan3DWrapper", "ships the Hunyuan licence (EU/UK/South Korea excluded)"],
   ["planetsig/ufo-reports", "NUFORC scrape: NUFORC terms forbid redistribution, and there's no licence"],
+  ["sboghossian/blueport", "ingests a private 'leak set' of unverifiable provenance; use Brazil's SIAN originals instead"],
   ["YetAnotherMorty/The-Black-Vault-File-Dump", "bulk re-hosting of The Black Vault; fetch FOIA originals instead"],
 ]);
 
@@ -54,6 +56,10 @@ export const OVERRIDE = new Map([
   ["ShanonPearce/ASH-IR-Dataset", ["Reference", "impulse responses are CC BY-NC-SA: non-commercial, don't ship them"]],
   ["rameshvarun/feedvid-live", ["Reference", "custom non-commercial licence: study the game, don't copy"]],
   ["pmndrs/triplex", ["Tool only", "editor app is AGPL-licensed (no licence detected at repo root): run it as a dev tool, never bundle"]],
+  ["mrk-its/homeassistant-blitzortung", ["Reference", "code is MIT, but Blitzortung lightning data is private, non-commercial use only"]],
+  ["standardebooks/tools", ["Tool only", "GPL-3.0 per the project (GitHub reports NOASSERTION): run it, never bundle"]],
+  ["xesf/agrippa", ["Reference", "needs the original X-Files Game data, which is copyrighted: study the engine only"]],
+  ["dariusk/corpora", ["Trial", "GitHub detects no licence, but the README dedicates the data to CC0: confirm per file"]],
   ["brunosimon/my-room-in-3d", ["Reference", "no licence: study the baked-lighting workflow, don't copy code or assets"]],
 ]);
 
