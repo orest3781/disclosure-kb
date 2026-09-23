@@ -45,6 +45,11 @@
       "id": "ai-assets",
       "title": "AI asset generation",
       "description": "Text/image-to-3D, image generation, audio/SFX/music, NPC voices (TTS), speech-to-text, and ML that runs in the browser. Model weights often carry their own licences; read the notes column."
+    },
+    {
+      "id": "aesthetic",
+      "title": "Aesthetic & ARG tooling",
+      "description": "Retro/terminal/CRT UI, open fonts and fictional paperwork, found-footage and signal effects, ciphers and steganography, and storytelling UIs."
     }
   ],
   "sources": [
@@ -5071,6 +5076,630 @@
       "what": "Official MediaPipe Tasks sample apps, including web and JavaScript examples.",
       "use": "Starting code for face landmarker and gesture recogniser integration in a Next.js client component.",
       "category": "ai-assets"
+    },
+    {
+      "repo": "jdan/98.css",
+      "group": "retro-ui",
+      "stars": 11508,
+      "license": "MIT",
+      "sync": "docs",
+      "what": "Semantic-HTML CSS design system that recreates Windows 98 UI",
+      "use": "Skin for the in-world 'agency workstation' desktop windows, dialogs and file explorer",
+      "category": "aesthetic",
+      "note": "The companion OS shell (1j01/98, os-gui) is already in the catalog"
+    },
+    {
+      "repo": "botoxparty/XP.css",
+      "group": "retro-ui",
+      "stars": 3099,
+      "license": "MIT",
+      "sync": "docs",
+      "what": "CSS framework for faithful Windows XP GUI recreations (includes 98.css)",
+      "use": "Alternate era skin for a later-timeline (2000s) leaked-files desktop",
+      "category": "aesthetic"
+    },
+    {
+      "repo": "khang-nd/7.css",
+      "group": "retro-ui",
+      "stars": 2442,
+      "license": "MIT",
+      "sync": "docs",
+      "what": "Tree-shakeable, JS-free CSS recreation of the Windows 7 UI",
+      "use": "Third era skin if the story spans decades of the same terminal",
+      "category": "aesthetic"
+    },
+    {
+      "repo": "nostalgic-css/NES.css",
+      "group": "retro-ui",
+      "stars": 21835,
+      "license": "MIT",
+      "sync": "docs",
+      "what": "8-bit NES-style CSS framework",
+      "use": "Pixel UI for an in-game 'retro minigame' or old military training sim",
+      "category": "aesthetic",
+      "note": "Less on-theme than the OS skins, so use it sparingly"
+    },
+    {
+      "repo": "propjockey/augmented-ui",
+      "group": "retro-ui",
+      "stars": 1405,
+      "license": "BSD-2-Clause",
+      "sync": "docs",
+      "what": "Pure-CSS cyberpunk clipped corners, bevels and borders via data attributes",
+      "use": "Main 'neon classified' HUD frames, panels and buttons with no images",
+      "category": "aesthetic"
+    },
+    {
+      "repo": "arwes/arwes",
+      "group": "retro-ui",
+      "stars": 7561,
+      "license": "MIT",
+      "sync": "docs",
+      "what": "Futuristic sci-fi React UI framework with animated frames, text and sound",
+      "use": "Animated reveal and 'decrypting' transitions for dossiers in Next.js",
+      "category": "aesthetic",
+      "note": "The 'next' branch is a rewrite with an API still in flux, so pin a version"
+    },
+    {
+      "repo": "internet-development/www-sacred",
+      "group": "retro-ui",
+      "stars": 1560,
+      "license": "MIT",
+      "sync": "docs",
+      "what": "SRCL: React components with a monospace, terminal/ASCII aesthetic",
+      "use": "Ready-made terminal-style React components (tables, menus, windows) for the in-world OS",
+      "category": "aesthetic"
+    },
+    {
+      "repo": "paper-design/shaders",
+      "group": "retro-ui",
+      "stars": 3474,
+      "license": "Apache-2.0",
+      "sync": "docs",
+      "what": "Zero-dependency canvas/WebGL shaders (dithering, halftone, grain, etc.) with React bindings",
+      "use": "Drop-in dithering, halftone and paper-grain backgrounds for evidence images and UI",
+      "category": "aesthetic"
+    },
+    {
+      "repo": "nitin42/terminal-in-react",
+      "group": "terminal",
+      "stars": 2156,
+      "license": "MIT",
+      "sync": "docs",
+      "what": "React component that renders a configurable terminal with custom commands",
+      "use": "Quick in-world command prompt for ARG commands (decrypt, ls, cat)",
+      "category": "aesthetic",
+      "note": "Old and unmaintained. xterm.js (already cataloged) is the robust choice"
+    },
+    {
+      "repo": "linuswillner/react-console-emulator",
+      "group": "terminal",
+      "stars": 314,
+      "license": "MIT",
+      "sync": "full",
+      "what": "Small, customizable Unix-like terminal emulator for React",
+      "use": "Lightweight fake shell for puzzle input where full xterm.js is overkill",
+      "category": "aesthetic"
+    },
+    {
+      "repo": "Swordfish90/cool-retro-term",
+      "group": "terminal",
+      "stars": 26435,
+      "license": "GPL-3.0",
+      "sync": "none",
+      "what": "Qt/QML terminal emulator that mimics CRT phosphor, bloom and curvature",
+      "use": "Visual reference only for CRT glow, burn-in and flicker parameters in our shaders",
+      "category": "aesthetic",
+      "note": "GitHub reports no license. Repo root ships gpl-2.0.txt and gpl-3.0.txt. Do not copy code into the web app"
+    },
+    {
+      "repo": "codrops/CSSGlitchEffect",
+      "group": "glitch-ascii-dither",
+      "stars": 700,
+      "license": "none",
+      "sync": "full",
+      "what": "CSS clip-path/animation glitch effect for images and text",
+      "use": "Glitch transitions on corrupted files and 'signal lost' screens",
+      "category": "aesthetic",
+      "note": "No LICENSE file. README allows free use in personal and commercial projects (Codrops terms)"
+    },
+    {
+      "repo": "mir3z/aalib.js",
+      "group": "glitch-ascii-dither",
+      "stars": 247,
+      "license": "MIT",
+      "sync": "full",
+      "what": "ASCII art library that renders images and video to ASCII in the browser",
+      "use": "Render surveillance stills or UFO photos as ASCII in the terminal",
+      "category": "aesthetic"
+    },
+    {
+      "repo": "andrewstephens75/as-dithered-image",
+      "group": "glitch-ascii-dither",
+      "stars": 250,
+      "license": "MIT",
+      "sync": "full",
+      "what": "HTML custom element for crisp Atkinson-dithered images at any DPI",
+      "use": "1-bit 'fax/teletype' rendering of evidence photos",
+      "category": "aesthetic"
+    },
+    {
+      "repo": "505e06b2/Image-to-Braille",
+      "group": "glitch-ascii-dither",
+      "stars": 783,
+      "license": "none",
+      "sync": "none",
+      "what": "Web app that converts images to Unicode braille art with dithering",
+      "use": "Reference for text-only image rendering inside the terminal",
+      "category": "aesthetic",
+      "note": "No license, so reference only and do not copy code"
+    },
+    {
+      "repo": "IBM/plex",
+      "group": "fonts",
+      "stars": 11654,
+      "license": "OFL-1.1",
+      "sync": "none",
+      "what": "IBM Plex type family including Plex Mono",
+      "use": "Main UI and mono typeface for a clean 'government system' look",
+      "category": "aesthetic",
+      "note": "OFL"
+    },
+    {
+      "repo": "ctrlcctrlv/TT2020",
+      "group": "fonts",
+      "stars": 372,
+      "license": "OFL-1.1",
+      "sync": "none",
+      "what": "Hyperrealistic typewriter font with per-glyph variation and ink wear",
+      "use": "Body text of in-world typed memos and 1940s–70s case files",
+      "category": "aesthetic",
+      "note": "OFL"
+    },
+    {
+      "repo": "quoteunquoteapps/CourierPrime",
+      "group": "fonts",
+      "stars": 181,
+      "license": "OFL-1.1",
+      "sync": "none",
+      "what": "Refined, open-licensed Courier replacement",
+      "use": "Clean typewriter face for readable long-form transcripts",
+      "category": "aesthetic",
+      "note": "OFL"
+    },
+    {
+      "repo": "dse/dse-typewriter-font",
+      "group": "fonts",
+      "stars": 150,
+      "license": "OFL-1.1",
+      "sync": "none",
+      "what": "Monospace font inspired by pre-war typewriters",
+      "use": "Alternate period face for 1940s-era documents",
+      "category": "aesthetic",
+      "note": "GitHub says NOASSERTION. LICENSE.md is SIL OFL 1.1 with Reserved Font Name 'DSE Typewriter'"
+    },
+    {
+      "repo": "rektdeckard/departure-mono",
+      "group": "fonts",
+      "stars": 3508,
+      "license": "MIT",
+      "sync": "none",
+      "what": "Lo-fi monospaced pixel font",
+      "use": "Terminal and HUD readouts in the neon layer",
+      "category": "aesthetic",
+      "note": "MIT (not OFL)"
+    },
+    {
+      "repo": "internet-development/www-server-mono",
+      "group": "fonts",
+      "stars": 751,
+      "license": "OFL-1.1",
+      "sync": "none",
+      "what": "Typewriter- and CLI-inspired monospace typeface",
+      "use": "Terminal font that bridges the typewriter and computer eras",
+      "category": "aesthetic",
+      "note": "OFL"
+    },
+    {
+      "repo": "mooniak/stick-no-bills-font",
+      "group": "fonts",
+      "stars": 30,
+      "license": "OFL-1.1",
+      "sync": "none",
+      "what": "Libre stencil typeface (Latin, Sinhala, Tamil)",
+      "use": "Stencilled crate, box and 'TOP SECRET' header lettering",
+      "category": "aesthetic",
+      "note": "OFL"
+    },
+    {
+      "repo": "google/fonts",
+      "group": "fonts",
+      "stars": 20513,
+      "license": "none",
+      "sync": "none",
+      "what": "Source of all Google Fonts families (Special Elite, VT323, Share Tech Mono, Stardos Stencil, etc.)",
+      "use": "Canonical place to pull OFL typewriter, stencil and CRT fonts and their license files",
+      "category": "aesthetic",
+      "note": "No single repo license. Each family folder has its own license (mostly OFL, some Apache or UFL), so check each one. Huge repo"
+    },
+    {
+      "repo": "pagedjs/pagedjs",
+      "group": "documents",
+      "stars": 1516,
+      "license": "MIT",
+      "sync": "docs",
+      "what": "Paged-media polyfill for paginated HTML-to-print and PDF",
+      "use": "Lay out multi-page in-world dossiers with headers, page numbers and classification footers",
+      "category": "aesthetic"
+    },
+    {
+      "repo": "diegomura/react-pdf",
+      "group": "documents",
+      "stars": 16806,
+      "license": "MIT",
+      "sync": "docs",
+      "what": "Create PDF files with React components",
+      "use": "Generate downloadable fictional case-file PDFs as ARG handouts",
+      "category": "aesthetic"
+    },
+    {
+      "repo": "Hopding/pdf-lib",
+      "group": "documents",
+      "stars": 8642,
+      "license": "MIT",
+      "sync": "docs",
+      "what": "Create and modify PDFs in any JS runtime",
+      "use": "Stamp, redact-overlay, or hide puzzle payloads (attachments, metadata) in game PDFs",
+      "category": "aesthetic"
+    },
+    {
+      "repo": "kane50613/takumi",
+      "group": "documents",
+      "stars": 3022,
+      "license": "Apache-2.0",
+      "sync": "docs",
+      "what": "Render images and paged PDFs from JSX/HTML/CSS without a headless browser (Rust/WASM)",
+      "use": "Server-side rendering of document scans and OG cards on Vercel or edge",
+      "category": "aesthetic"
+    },
+    {
+      "repo": "DocCreator/DocCreator",
+      "group": "documents",
+      "stars": 138,
+      "license": "LGPL-3.0",
+      "sync": "none",
+      "what": "Synthetic document-image generator with ink, paper, blur and shadow degradation models",
+      "use": "Offline pipeline to age our own fictional pages into 'photocopied, faded' art",
+      "category": "aesthetic",
+      "note": "C++ desktop tool, used only for asset pipeline"
+    },
+    {
+      "repo": "ntsc-rs/ntsc-rs",
+      "group": "signal",
+      "stars": 2596,
+      "license": "NOASSERTION",
+      "sync": "docs",
+      "what": "Accurate open-source VHS/NTSC analog emulator (app plus AE/OpenFX plugin)",
+      "use": "Pre-render found-footage clips with authentic tape artifacts",
+      "category": "aesthetic",
+      "note": "Root is MIT/Apache-2.0/ISC except /crates/gui, which has a separate license. Web port is ntsc-rs/ntsc-rs-web (33 stars, no license, experimental)"
+    },
+    {
+      "repo": "katspaugh/wavesurfer.js",
+      "group": "signal",
+      "stars": 10418,
+      "license": "BSD-3-Clause",
+      "sync": "docs",
+      "what": "Audio waveform player with regions and spectrogram plugins",
+      "use": "In-world audio-log player where players find messages in the spectrogram",
+      "category": "aesthetic"
+    },
+    {
+      "repo": "calebj0seph/spectro",
+      "group": "signal",
+      "stars": 600,
+      "license": "MIT",
+      "sync": "full",
+      "what": "Real-time WebGL spectrogram generator (React/TS)",
+      "use": "Live spectrogram view of intercepted radio audio to reveal hidden images",
+      "category": "aesthetic"
+    },
+    {
+      "repo": "ggerganov/ggwave",
+      "group": "signal",
+      "stars": 7876,
+      "license": "MIT",
+      "sync": "docs",
+      "what": "Tiny data-over-sound library (WASM/JS available)",
+      "use": "Chirping 'transmissions' that decode to clues through the mic or a second device",
+      "category": "aesthetic"
+    },
+    {
+      "repo": "quiet/quiet-js",
+      "group": "signal",
+      "stars": 2268,
+      "license": "BSD-3-Clause",
+      "sync": "docs",
+      "what": "Transmit data over sound using Web Audio (libquiet binding)",
+      "use": "Alternative modem-noise data channel for ARG audio clues",
+      "category": "aesthetic",
+      "note": "Old and unmaintained. Prefer ggwave"
+    },
+    {
+      "repo": "kamalmostafa/minimodem",
+      "group": "signal",
+      "stars": 983,
+      "license": "GPL-3.0",
+      "sync": "none",
+      "what": "Software audio FSK/RTTY/Bell modem",
+      "use": "Author-side tool to encode teletype-style RTTY bursts in radio audio",
+      "category": "aesthetic",
+      "note": "GitHub says NOASSERTION. COPYING is GPLv3+. Use only as an offline tool"
+    },
+    {
+      "repo": "xdsopl/robot36",
+      "group": "signal",
+      "stars": 512,
+      "license": "0BSD",
+      "sync": "docs",
+      "what": "SSTV (Robot36 and others) decoder for Android",
+      "use": "Players decode SSTV images hidden in 'numbers station' audio with a phone",
+      "category": "aesthetic",
+      "note": "The encoder side is xdsopl's separate tools"
+    },
+    {
+      "repo": "colaclanth/sstv",
+      "group": "signal",
+      "stars": 283,
+      "license": "GPL-3.0",
+      "sync": "none",
+      "what": "Python SSTV decoder",
+      "use": "Author-side check that encoded SSTV clues decode cleanly",
+      "category": "aesthetic",
+      "note": "GPL, offline tooling only"
+    },
+    {
+      "repo": "smolgroot/sstv-decoder",
+      "group": "signal",
+      "stars": 38,
+      "license": "0BSD",
+      "sync": "full",
+      "what": "TypeScript PWA SSTV decoder using Web Audio",
+      "use": "Embed an in-world 'signal analyzer' that decodes SSTV in the browser",
+      "category": "aesthetic",
+      "note": "Small and new"
+    },
+    {
+      "repo": "gchq/CyberChef",
+      "group": "arg-ciphers",
+      "stars": 35933,
+      "license": "Apache-2.0",
+      "sync": "docs",
+      "what": "Web app for encoding, encryption, compression and data analysis with chainable recipes",
+      "use": "Design and test cipher chains, and embed as an in-world 'decoder' tool",
+      "category": "mystery-design",
+      "note": "Can be self-hosted as a static build"
+    },
+    {
+      "repo": "bee-san/Ciphey",
+      "group": "arg-ciphers",
+      "stars": 21628,
+      "license": "MIT",
+      "sync": "docs",
+      "what": "Automatic decryption and decoding without knowing the cipher or key",
+      "use": "QA: make sure puzzles are not trivially auto-solved, or tune difficulty",
+      "category": "mystery-design"
+    },
+    {
+      "repo": "mattnotmax/cyberchef-recipes",
+      "group": "arg-ciphers",
+      "stars": 2216,
+      "license": "none",
+      "sync": "docs",
+      "what": "Curated CyberChef recipe collection",
+      "use": "Inspiration for multi-layer decode puzzles",
+      "category": "mystery-design",
+      "note": "No license, so read only"
+    },
+    {
+      "repo": "betaveros/bcodex",
+      "group": "arg-ciphers",
+      "stars": 9,
+      "license": "MIT",
+      "sync": "full",
+      "what": "Converter for puzzlehunt-style encodings (Haskell CLI plus tiny JS app)",
+      "use": "Reference for common puzzlehunt encodings (A1Z26, binary, semaphore-like chains)",
+      "category": "mystery-design"
+    },
+    {
+      "repo": "DominicBreuker/stego-toolkit",
+      "group": "arg-stego",
+      "stars": 2693,
+      "license": "none",
+      "sync": "docs",
+      "what": "Docker collection of CTF steganography tools and cheat-sheet",
+      "use": "Author checklist of stego techniques players can realistically solve",
+      "category": "mystery-design",
+      "note": "No license (Dockerfile plus README)"
+    },
+    {
+      "repo": "Ge0rg3/StegOnline",
+      "group": "arg-stego",
+      "stars": 390,
+      "license": "WTFPL",
+      "sync": "full",
+      "what": "Web port of StegSolve (bit planes, LSB extract, color filters)",
+      "use": "Point players to it or embed a variant as the in-world image analyzer",
+      "category": "mystery-design"
+    },
+    {
+      "repo": "Zeecka/AperiSolve",
+      "group": "arg-stego",
+      "stars": 846,
+      "license": "MIT",
+      "sync": "docs",
+      "what": "Steganalysis web platform running zsteg, steghide, exiftool, binwalk, etc.",
+      "use": "QA hidden-image clues against the tools that real ARG players use",
+      "category": "mystery-design"
+    },
+    {
+      "repo": "petereigenschink/steganography.js",
+      "group": "arg-stego",
+      "stars": 374,
+      "license": "MIT",
+      "sync": "full",
+      "what": "JS library to hide and reveal messages in images",
+      "use": "Encode clue text into evidence PNGs at build time or in the browser",
+      "category": "mystery-design"
+    },
+    {
+      "repo": "ragibson/Steganography",
+      "group": "arg-stego",
+      "stars": 664,
+      "license": "MIT",
+      "sync": "docs",
+      "what": "Python LSB steganography for PNG/BMP and WAV",
+      "use": "Build-script hiding of data in images and audio logs",
+      "category": "mystery-design"
+    },
+    {
+      "repo": "soldair/node-qrcode",
+      "group": "arg-codes",
+      "stars": 8179,
+      "license": "MIT",
+      "sync": "docs",
+      "what": "QR code generator for Node and browser (canvas/SVG)",
+      "use": "Generate QR clues printed on in-world documents and posters",
+      "category": "mystery-design"
+    },
+    {
+      "repo": "metafloor/bwip-js",
+      "group": "arg-codes",
+      "stars": 2418,
+      "license": "MIT",
+      "sync": "docs",
+      "what": "Barcode writer supporting 100+ symbologies (Code39, DataMatrix, PDF417…)",
+      "use": "Period-plausible barcodes and inventory tags on evidence crates",
+      "category": "mystery-design",
+      "note": "GitHub says NOASSERTION. Root LICENSE is MIT (plus MIT for bundled FileSaver)"
+    },
+    {
+      "repo": "zxing-js/library",
+      "group": "arg-codes",
+      "stars": 2936,
+      "license": "Apache-2.0",
+      "sync": "docs",
+      "what": "Multi-format 1D/2D barcode decoder and encoder in TS",
+      "use": "In-world 'scanner' that reads codes players photograph or upload",
+      "category": "mystery-design",
+      "note": "In maintenance mode"
+    },
+    {
+      "repo": "keiranking/Phil",
+      "group": "puzzle-gen",
+      "stars": 320,
+      "license": "Apache-2.0",
+      "sync": "docs",
+      "what": "Browser crossword construction tool with autofill",
+      "use": "Author themed crosswords whose answers form a meta-clue",
+      "category": "mystery-design"
+    },
+    {
+      "repo": "viresh-ratnakar/exolve",
+      "group": "puzzle-gen",
+      "stars": 95,
+      "license": "MIT",
+      "sync": "full",
+      "what": "Embeddable interactive crossword player with a simple text spec",
+      "use": "Embed crosswords and cryptics directly in in-world newspapers",
+      "category": "mystery-design"
+    },
+    {
+      "repo": "increpare/PuzzleScript",
+      "group": "puzzle-gen",
+      "stars": 1092,
+      "license": "MIT",
+      "sync": "docs",
+      "what": "HTML5 engine and DSL for tile-based logic puzzles",
+      "use": "Prototype or embed a logic minigame as a 'terminal program'",
+      "category": "mystery-design"
+    },
+    {
+      "repo": "dlareau/puzzlespring",
+      "group": "puzzle-server",
+      "stars": 13,
+      "license": "MIT",
+      "sync": "docs",
+      "what": "Django/HTMX self-hostable puzzle hunt platform",
+      "use": "Reference for answer checking, hints and unlock-structure models",
+      "category": "mystery-design",
+      "note": "Newer successor to dlareau/puzzlehunt_server (19 stars, MIT)"
+    },
+    {
+      "repo": "russellsamora/scrollama",
+      "group": "storytelling",
+      "stars": 6004,
+      "license": "MIT",
+      "sync": "docs",
+      "what": "IntersectionObserver-based scrollytelling library",
+      "use": "Scroll-driven declassified-report reveals (redactions lifting as you scroll)",
+      "category": "aesthetic",
+      "note": "React wrapper: squirrelsquirrel78/react-scrollama (405 stars, MIT)"
+    },
+    {
+      "repo": "basementstudio/scrollytelling",
+      "group": "storytelling",
+      "stars": 1662,
+      "license": "MIT",
+      "sync": "docs",
+      "what": "React plus GSAP scrollytelling animation library",
+      "use": "Cinematic scroll timelines for the Next.js intro and chapter transitions",
+      "category": "aesthetic",
+      "note": "GitHub says NOASSERTION. Root LICENSE is MIT"
+    },
+    {
+      "repo": "NUKnightLab/juxtapose",
+      "group": "storytelling",
+      "stars": 883,
+      "license": "MPL-2.0",
+      "sync": "docs",
+      "what": "Before/after image comparison slider",
+      "use": "'Enhance' reveals: original vs processed UFO photo, redacted vs unredacted page",
+      "category": "aesthetic",
+      "note": "GitHub says NOASSERTION. LICENSE is MPL-2.0"
+    },
+    {
+      "repo": "0xsha/CrazyWall",
+      "group": "investigation-board",
+      "stars": 74,
+      "license": "MIT",
+      "sync": "full",
+      "what": "Vue digital evidence board / detective suite",
+      "use": "Reference for pin-and-string evidence board interactions",
+      "category": "mystery-design",
+      "note": "Vue, not React, so port the ideas rather than the code"
+    },
+    {
+      "repo": "Fungeey/detectiveboard",
+      "group": "investigation-board",
+      "stars": 28,
+      "license": "none",
+      "sync": "none",
+      "what": "TS web editor that organizes ideas as a detective evidence board",
+      "use": "UX reference for the player's own clue board",
+      "category": "mystery-design",
+      "note": "No license, so reference only"
+    },
+    {
+      "repo": "PaulLeCam/react-leaflet",
+      "group": "storytelling",
+      "stars": 5601,
+      "license": "NOASSERTION",
+      "sync": "none",
+      "what": "React components for Leaflet maps",
+      "use": "Simpler 2D clue map alternative to MapLibre",
+      "category": "aesthetic",
+      "note": "LICENSE is Hippocratic License 2.1 (not OSI), so review before use. Leaflet itself is BSD-2"
     }
   ]
 }

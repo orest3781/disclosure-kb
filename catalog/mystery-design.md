@@ -103,3 +103,51 @@ Stars checked 2026-09-23. Notes: [notes/mystery-design.md](../notes/mystery-desi
 | [dexie/Dexie.js](https://github.com/dexie/Dexie.js) | 14.6k | Apache-2.0 | IndexedDB wrapper. | Local document archive, player notes, multiple saves. | docs |
 | [Rubonnek/quest-manager](https://github.com/Rubonnek/quest-manager) | 193 | MIT | Quest system for Godot. | Quest/objective data model to port to TS. | docs |
 | [dmasad/StoryletManager](https://github.com/dmasad/StoryletManager) | 14 | ⚠️ none (all rights reserved — reference only) | Parameterised storylet manager (JS). | Small readable storylet/quest selection logic. | docs |
+
+### arg-ciphers
+
+| Repo | ★ | License | What it is | What we take from it | Sync |
+|---|---:|---|---|---|---|
+| [gchq/CyberChef](https://github.com/gchq/CyberChef) | 35.9k | Apache-2.0 | Web app for encoding, encryption, compression and data analysis with chainable recipes | Design and test cipher chains, and embed as an in-world 'decoder' tool — _Can be self-hosted as a static build_ | docs |
+| [bee-san/Ciphey](https://github.com/bee-san/Ciphey) | 21.6k | MIT | Automatic decryption and decoding without knowing the cipher or key | QA: make sure puzzles are not trivially auto-solved, or tune difficulty | docs |
+| [mattnotmax/cyberchef-recipes](https://github.com/mattnotmax/cyberchef-recipes) | 2.2k | ⚠️ none (all rights reserved — reference only) | Curated CyberChef recipe collection | Inspiration for multi-layer decode puzzles — _No license, so read only_ | docs |
+| [betaveros/bcodex](https://github.com/betaveros/bcodex) | 9 | MIT | Converter for puzzlehunt-style encodings (Haskell CLI plus tiny JS app) | Reference for common puzzlehunt encodings (A1Z26, binary, semaphore-like chains) | full |
+
+### arg-stego
+
+| Repo | ★ | License | What it is | What we take from it | Sync |
+|---|---:|---|---|---|---|
+| [DominicBreuker/stego-toolkit](https://github.com/DominicBreuker/stego-toolkit) | 2.7k | ⚠️ none (all rights reserved — reference only) | Docker collection of CTF steganography tools and cheat-sheet | Author checklist of stego techniques players can realistically solve — _No license (Dockerfile plus README)_ | docs |
+| [Zeecka/AperiSolve](https://github.com/Zeecka/AperiSolve) | 846 | MIT | Steganalysis web platform running zsteg, steghide, exiftool, binwalk, etc. | QA hidden-image clues against the tools that real ARG players use | docs |
+| [ragibson/Steganography](https://github.com/ragibson/Steganography) | 664 | MIT | Python LSB steganography for PNG/BMP and WAV | Build-script hiding of data in images and audio logs | docs |
+| [Ge0rg3/StegOnline](https://github.com/Ge0rg3/StegOnline) | 390 | WTFPL | Web port of StegSolve (bit planes, LSB extract, color filters) | Point players to it or embed a variant as the in-world image analyzer | full |
+| [petereigenschink/steganography.js](https://github.com/petereigenschink/steganography.js) | 374 | MIT | JS library to hide and reveal messages in images | Encode clue text into evidence PNGs at build time or in the browser | full |
+
+### arg-codes
+
+| Repo | ★ | License | What it is | What we take from it | Sync |
+|---|---:|---|---|---|---|
+| [soldair/node-qrcode](https://github.com/soldair/node-qrcode) | 8.2k | MIT | QR code generator for Node and browser (canvas/SVG) | Generate QR clues printed on in-world documents and posters | docs |
+| [zxing-js/library](https://github.com/zxing-js/library) | 2.9k | Apache-2.0 | Multi-format 1D/2D barcode decoder and encoder in TS | In-world 'scanner' that reads codes players photograph or upload — _In maintenance mode_ | docs |
+| [metafloor/bwip-js](https://github.com/metafloor/bwip-js) | 2.4k | MIT | Barcode writer supporting 100+ symbologies (Code39, DataMatrix, PDF417…) | Period-plausible barcodes and inventory tags on evidence crates — _GitHub says NOASSERTION. Root LICENSE is MIT (plus MIT for bundled FileSaver)_ | docs |
+
+### puzzle-gen
+
+| Repo | ★ | License | What it is | What we take from it | Sync |
+|---|---:|---|---|---|---|
+| [increpare/PuzzleScript](https://github.com/increpare/PuzzleScript) | 1.1k | MIT | HTML5 engine and DSL for tile-based logic puzzles | Prototype or embed a logic minigame as a 'terminal program' | docs |
+| [keiranking/Phil](https://github.com/keiranking/Phil) | 320 | Apache-2.0 | Browser crossword construction tool with autofill | Author themed crosswords whose answers form a meta-clue | docs |
+| [viresh-ratnakar/exolve](https://github.com/viresh-ratnakar/exolve) | 95 | MIT | Embeddable interactive crossword player with a simple text spec | Embed crosswords and cryptics directly in in-world newspapers | full |
+
+### puzzle-server
+
+| Repo | ★ | License | What it is | What we take from it | Sync |
+|---|---:|---|---|---|---|
+| [dlareau/puzzlespring](https://github.com/dlareau/puzzlespring) | 13 | MIT | Django/HTMX self-hostable puzzle hunt platform | Reference for answer checking, hints and unlock-structure models — _Newer successor to dlareau/puzzlehunt_server (19 stars, MIT)_ | docs |
+
+### investigation-board
+
+| Repo | ★ | License | What it is | What we take from it | Sync |
+|---|---:|---|---|---|---|
+| [0xsha/CrazyWall](https://github.com/0xsha/CrazyWall) | 74 | MIT | Vue digital evidence board / detective suite | Reference for pin-and-string evidence board interactions — _Vue, not React, so port the ideas rather than the code_ | full |
+| [Fungeey/detectiveboard](https://github.com/Fungeey/detectiveboard) | 28 | ⚠️ none (all rights reserved — reference only) | TS web editor that organizes ideas as a detective evidence board | UX reference for the player's own clue board — _No license, so reference only_ | none |
