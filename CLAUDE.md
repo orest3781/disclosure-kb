@@ -10,3 +10,4 @@ This is the knowledge base for a 3D UFO-disclosure mystery game (Next.js + React
 - Before suggesting that code or data go into the game, check the license rules in `README.md`.
 - A decision that affects more than one category goes in `kb/stack.md` (with alternatives and why), not in a note. New data sources also get a row in `kb/data-sources.md` and, if attribution is needed, its register.
 - Never mark a source Adopt in `scripts/build-review.mjs` without a matching recommendation in `notes/` or `kb/stack.md`.
+- The MCP server in `mcp/` (tools `kb_*`) answers the same questions from any repo; after changing `sources.json` or `scripts/lib/review.mjs`, run `cd mcp && npm test`.

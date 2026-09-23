@@ -17,6 +17,7 @@ the notes we've pulled out of them. It feeds the Disclosure Protocol game on
 | `sources.json` | The single source of truth for the catalog. Edit this, not `catalog/` |
 | `vendor/` | Local copies of the source repos, pulled by the sync script. Gitignored |
 | [`scripts/sync.mjs`](scripts/sync.mjs) | Pulls source repos into `vendor/` |
+| [`mcp/`](mcp/README.md) | MCP server: any agent can search the catalog, read kb/ and notes/, and grep synced code. `cd mcp && npm install && npm run build` |
 | [`scripts/build-index.mjs`](scripts/build-index.mjs) | Validates `sources.json`, regenerates `INDEX.md` and `catalog/` |
 
 ## Why we don't copy other repos in
@@ -56,6 +57,10 @@ Each source has a `sync` mode:
 - `none`: listed in the index only (data dumps, huge repos, or repos with no license).
 
 Pass `--mode full` to override the mode for a single run.
+
+## Ask it from any agent
+
+The `mcp/` server exposes the knowledge base over MCP. Claude Code loads it automatically from `.mcp.json` when opened in this repo; see [mcp/README.md](mcp/README.md) for other projects and clients.
 
 ## Add a source
 

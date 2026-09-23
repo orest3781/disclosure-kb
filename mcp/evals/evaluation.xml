@@ -1,0 +1,42 @@
+<evaluation>
+  <qa_pair>
+    <question>How many sources in the knowledge base carry the verdict "Avoid"?</question>
+    <answer>5</answer>
+  </qa_pair>
+  <qa_pair>
+    <question>According to the catalogue, how many GitHub stars does the SGP4 satellite propagation library shashwatak/satellite-js have?</question>
+    <answer>1091</answer>
+  </qa_pair>
+  <qa_pair>
+    <question>In the AI asset generation category's "sfx-music" group, which repo is the only one licensed Apache-2.0?</question>
+    <answer>multimodal-art-projection/YuE</answer>
+  </qa_pair>
+  <qa_pair>
+    <question>How many catalogued sources are licensed under the SIL Open Font License (OFL-1.1)?</question>
+    <answer>6</answer>
+  </qa_pair>
+  <qa_pair>
+    <question>Which category id contains exactly 81 sources and includes the National Archives Catalog API docs repo?</question>
+    <answer>apis</answer>
+  </qa_pair>
+  <qa_pair>
+    <question>What licence does the catalogue record for the Kokoro text-to-speech repo (hexgrad/kokoro)?</question>
+    <answer>Apache-2.0</answer>
+  </qa_pair>
+  <qa_pair>
+    <question>How many sources in the "sky-geo" category are licensed AGPL-3.0?</question>
+    <answer>5</answer>
+  </qa_pair>
+  <qa_pair>
+    <question>According to the note on usnationalarchives/Catalog-API, which email address do you contact to obtain an API key?</question>
+    <answer>Catalog_API@nara.gov</answer>
+  </qa_pair>
+  <qa_pair>
+    <question>In the mystery-design category's "arg-stego" group, which repo is the web port of StegSolve?</question>
+    <answer>Ge0rg3/StegOnline</answer>
+  </qa_pair>
+  <qa_pair>
+    <question>In kb/stack.md, which library is the decided pick for the conspiracy board (the "Investigation UI" section)?</question>
+    <answer>xyflow</answer>
+  </qa_pair>
+</evaluation>

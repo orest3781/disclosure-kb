@@ -14,3 +14,18 @@ jobs:
         run: node scripts/build-review.mjs --check
       - name: sync resolves every source
         run: node scripts/sync.mjs --dry-run
+  mcp:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: mcp
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: mcp/package-lock.json
+      - run: npm ci
+      - name: build and smoke-test the MCP server
+        run: npm test

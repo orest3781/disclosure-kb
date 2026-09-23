@@ -2,9 +2,9 @@
 
 Ordered so each spike de-risks the next. Each has a pass condition; a failed spike downgrades its sources to "Reference" in `REVIEW.md`.
 
-## Phase 0: make the knowledge base queryable (½ day)
+## Phase 0: make the knowledge base queryable — done
 
-**disclosure-kb MCP server** on `modelcontextprotocol/typescript-sdk`, tested with `inspector`: `search_sources`, `get_notes`, `search_vendor` (ripgrep over `vendor/`). Pass: any Claude session in any repo can answer "what do we use for X?" from the KB.
+**disclosure-kb MCP server** lives in `mcp/` (see [mcp/README.md](../mcp/README.md)): seven `kb_*` tools and `kb://docs/…` resources over stdio, with a smoke test against the built server. Pass condition met: any Claude session in any repo can answer "what do we use for X?" from the KB.
 
 ## Phase 1: the two riskiest bets (1 week)
 

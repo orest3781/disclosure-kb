@@ -33,14 +33,9 @@ GitHub, Vercel, Cloudflare, Figma, Hugging Face, tldraw, Mermaid, Canva and Goog
 - `codebase-memory-mcp` or `graphify` build a code graph of oresth.com plus `vendor/`, so agents look things up instead of reading whole files.
 - `rtk` and `headroom` compress command and tool output. They're worth adding once sessions get long.
 
-## A disclosure-kb MCP server (worth building)
+## The disclosure-kb MCP server (built: `mcp/`)
 
-Use the official `typescript-sdk` and test it with `inspector`. The server would expose:
-- `search_sources(query, category?)`, backed by `sources.json`;
-- `get_notes(category)`;
-- `search_vendor(pattern)`, which runs ripgrep over the synced repos.
-
-Then any agent, in any repo, can ask the knowledge base directly instead of cloning it. It's about 150 lines of code. `git-mcp` already does something similar for a single repo; ours would cover the whole curated set.
+Built on `@modelcontextprotocol/server` 2.x with a stdio transport; see [mcp/README.md](../mcp/README.md). Seven read-only tools (`kb_list_categories`, `kb_search_sources`, `kb_get_source`, `kb_read_doc`, `kb_search_docs`, `kb_vendor_status`, `kb_search_vendor`) plus every document as a `kb://docs/…` resource. Verdicts come from the same `scripts/lib/review.mjs` that writes REVIEW.md. Claude Code loads it from `.mcp.json`; other projects add it with an absolute path.
 
 ## CLI tools
 

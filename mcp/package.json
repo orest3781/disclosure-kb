@@ -1,0 +1,25 @@
+{
+  "name": "disclosure-kb-mcp-server",
+  "version": "1.0.0",
+  "description": "MCP server that lets any agent query the disclosure-kb knowledge base: sources, verdicts, notes, kb docs and synced vendor code",
+  "type": "module",
+  "private": true,
+  "main": "dist/index.js",
+  "bin": { "disclosure-kb-mcp": "dist/index.js" },
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "test": "npm run build && node test/smoke.mjs",
+    "clean": "rm -rf dist"
+  },
+  "engines": { "node": ">=20" },
+  "dependencies": {
+    "@modelcontextprotocol/server": "^2.1.0",
+    "zod": "^4.0.0"
+  },
+  "devDependencies": {
+    "@modelcontextprotocol/client": "^2.1.0",
+    "@types/node": "^22.10.0",
+    "typescript": "^5.7.2"
+  }
+}
