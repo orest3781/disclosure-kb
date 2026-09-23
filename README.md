@@ -10,6 +10,7 @@ the notes we've pulled out of them. It feeds the Disclosure Protocol game on
 | Path | What it is |
 |---|---|
 | [`INDEX.md`](INDEX.md) | Start here: every category, with counts |
+| [`REVIEW.md`](REVIEW.md) | Every source with a verdict (Adopt / Trial / Tool only / Reference / Prototype only / Avoid), licence risk and a short review |
 | [`catalog/`](catalog/) | One page per category: repo, stars, license, what it is, what we take from it |
 | [`notes/`](notes/) | Our own distilled knowledge per category: patterns, decisions, gotchas |
 | `sources.json` | The single source of truth for the catalog. Edit this, not `catalog/` |
@@ -53,7 +54,7 @@ Pass `--mode full` to override the mode for a single run.
      "what": "One line: what it is.", "use": "One line: what we take from it." }
    ```
    Optional fields: `note`, `archived: true`, `stale: true`.
-2. Run `node scripts/build-index.mjs`.
+2. Run `node scripts/build-index.mjs` and `node scripts/build-review.mjs`. To give it a verdict other than the default, add it to the lists at the top of `build-review.mjs`.
 3. Write what you learned in `notes/<category>.md`.
 
 CI runs `build-index.mjs --check`. It fails if `sources.json` is invalid or `catalog/` wasn't regenerated.
