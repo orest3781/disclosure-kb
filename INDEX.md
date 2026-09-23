@@ -2,7 +2,7 @@
 
 # Index
 
-548 source repos across 10 categories. Stars checked 2026-09-23.
+629 source repos across 11 categories. Stars checked 2026-09-23.
 
 | Category | Repos | Covers |
 |---|---:|---|
@@ -16,3 +16,4 @@
 | [Web game engineering](catalog/game-engineering.md) | 83 | WebGPU and performance, procedural environments, multiplayer, playtesting and analytics, testing 3D apps, accessibility/i18n/PWA, and game feel. |
 | [AI asset generation](catalog/ai-assets.md) | 56 | Text/image-to-3D, image generation, audio/SFX/music, NPC voices (TTS), speech-to-text, and ML that runs in the browser. Model weights often carry their own licences; read the notes column. |
 | [Aesthetic & ARG tooling](catalog/aesthetic.md) | 41 | Retro/terminal/CRT UI, open fonts and fictional paperwork, found-footage and signal effects, ciphers and steganography, and storytelling UIs. |
+| [APIs](catalog/apis.md) | 81 | Public data APIs (space, government archives, historic newspapers, knowledge, geo, weather history) and service APIs (LLMs, voice, generative media, backend, payments, notifications, translation). Each row's note gives auth, limits and terms as stated on the provider's own page. |
