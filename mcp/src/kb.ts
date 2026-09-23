@@ -119,7 +119,7 @@ export function listDocs(): { path: string; bytes: number }[] {
 /** Return one markdown section (heading match, case-insensitive) or the whole file. */
 export function readDoc(abs: string, section?: string): { text: string; sections: string[] } {
   const text = readFileSync(abs, "utf8");
-  const lines = text.split("\n");
+  const lines = text.split(/\r?\n/);
   const headings = lines.map((l, i) => ({ i, m: /^(#{1,6})\s+(.*)$/.exec(l) })).filter((h) => h.m) as { i: number; m: RegExpExecArray }[];
   const sections = headings.map((h) => h.m[2].trim());
   if (!section) return { text, sections };
@@ -135,7 +135,7 @@ export function searchDocs(query: string, context: number, maxHits: number): { p
   const re = new RegExp(query.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"), "i");
   const hits: { path: string; line: number; excerpt: string }[] = [];
   for (const d of listDocs()) {
-    const lines = readFileSync(join(ROOT, d.path), "utf8").split("\n");
+    const lines = readFileSync(join(ROOT, d.path), "utf8").split(/\r?\n/);
     for (let i = 0; i < lines.length && hits.length < maxHits; i++) {
       if (!re.test(lines[i])) continue;
       const from = Math.max(0, i - context);
