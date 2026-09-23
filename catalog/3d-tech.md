@@ -113,3 +113,254 @@ Stars checked 2026-09-23. Notes: [notes/3d-tech.md](../notes/3d-tech.md). Sync l
 | [Poly-Haven/polyhavenassets](https://github.com/Poly-Haven/polyhavenassets) | 521 | GPL-3.0 | Blender add-on for Poly Haven assets. | Pull CC0 HDRIs/textures into Blender (add-on GPL, assets CC0). | none |
 | [pmndrs/market](https://github.com/pmndrs/market) | 283 | MIT | Source of market.pmnd.rs (CC0 R3F-ready assets). | Quick CC0 props and HDRIs. | none |
 | [pmndrs/assets](https://github.com/pmndrs/assets) | 109 | CC0-1.0 | Importable CC0 HDRIs, fonts, textures. | Zero-config assets for drei Environment and Text. | none |
+
+### Navigation & movement
+
+| Repo | ★ | License | What it is | What we take from it | Sync |
+|---|---:|---|---|---|---|
+| [donmccurdy/three-pathfinding](https://github.com/donmccurdy/three-pathfinding) | 1.4k | MIT | Navmesh utilities for three.js (A* over a Blender-authored navmesh, zones/groups) | Lightweight click-to-move or NPC routes over a hand-modelled navmesh glTF; also usable to clamp first-person player to walkable areas — _No navmesh generation or crowd avoidance; pair with yuka steering_ | docs |
+| [isaac-mason/recast-navigation-js](https://github.com/isaac-mason/recast-navigation-js) | 428 | MIT | WASM port of Recast/Detour: navmesh generation, pathfinding, crowd simulation, three.js helpers | Bake navmeshes for crash sites/bunkers so guards, recovery teams or creatures patrol and chase the player; DetourCrowd for group movement — _WASM payload adds download weight; bake navmesh offline and load the binary to keep mobile startup cheap_ | docs |
+| [isaac-mason/navcat](https://github.com/isaac-mason/navcat) | 292 | MIT | Pure-JS navmesh construction and querying for 3D floor-based navigation (same author as recast-navigation-js) | No-WASM alternative for NPC pathing in bunkers/labs; simpler to bundle with Next.js — _Young project (created 2025-07); API may still move_ | docs |
+
+### Physics
+
+| Repo | ★ | License | What it is | What we take from it | Sync |
+|---|---:|---|---|---|---|
+| [kripken/ammo.js](https://github.com/kripken/ammo.js) | 4.6k | Zlib | Emscripten port of Bullet physics (soft bodies, vehicles, constraints) | Only if we need Bullet soft bodies (cloth tarps over wreckage); three.js examples use it — _GitHub reports NOASSERTION; LICENSE file is zlib-style (verified). Large build; Rapier/Jolt preferred for new work_ | docs |
+| [lo-th/phy](https://github.com/lo-th/phy) | 741 | MIT | Physics wrapper for three.js over multiple engines (Rapier, Jolt, Ammo, PhysX, Oimo) with ragdoll/vehicle demos | Reference for ragdoll, vehicle and character setups; swap engines behind one API during prototyping — _Vanilla three.js, not R3F; heavy repo (demo assets)_ | docs |
+| [jrouwe/JoltPhysics.js](https://github.com/jrouwe/JoltPhysics.js) | 570 | MIT | Emscripten/WASM port of Jolt Physics (rigid bodies, character controller, vehicles, ragdolls, soft bodies) | Alternative to Rapier if we need robust CharacterVirtual controller, ragdolls for bodies at crash sites, or vehicle rigs — _No official R3F bindings; large WASM; multithreaded build needs COOP/COEP headers on Vercel_ | docs |
+| [isaac-mason/crashcat](https://github.com/isaac-mason/crashcat) | 460 | MIT | Pure TypeScript physics engine built for games and creative sites | Tree-shakeable, no-WASM physics for simple debris/prop interaction on mobile if Rapier WASM cost matters — _New (created 2025-08); smaller community; benchmark against react-three-rapier before switching_ | docs |
+
+### Characters & animation
+
+| Repo | ★ | License | What it is | What we take from it | Sync |
+|---|---:|---|---|---|---|
+| [pixiv/three-vrm](https://github.com/pixiv/three-vrm) | 2.2k | MIT | Load and animate VRM humanoid avatars in three.js (expressions, look-at, spring bones, humanoid retargeting) | Witness/NPC characters with facial expressions and gaze for interrogation scenes; VRM humanoid rig eases Mixamo retargeting — _VRM is anime-leaning; check art direction. Spring-bone cost on mobile_ | docs |
+| [jsantell/THREE.IK](https://github.com/jsantell/THREE.IK) | 586 | MIT | FABRIK inverse kinematics for three.js bone chains | Reference for foot placement / hand-reach-to-evidence IK; three.js core CCDIKSolver is the maintained fallback — _No push since 2023-03_ | docs |
+
+### Text & UI in 3D
+
+| Repo | ★ | License | What it is | What we take from it | Sync |
+|---|---:|---|---|---|---|
+| [protectwise/troika](https://github.com/protectwise/troika) | 2.0k | MIT | Monorepo incl. troika-three-text (SDF text rendered from font files at runtime) and instanced-uniforms mesh | In-world labels, terminal screens, evidence tags and documents in 3D (drei <Text> is built on it) — _Already a transitive dep via drei <Text>; catalogue for direct use and docs_ | docs |
+| [felixmariotto/three-mesh-ui](https://github.com/felixmariotto/three-mesh-ui) | 1.5k | MIT | Flexbox-like UI panels rendered as three.js meshes (VR-oriented) | Diegetic UI on lab terminals or clipboards if pmndrs/uikit falls short — _No push since 2023-12; pmndrs/uikit (already catalogued) is the maintained R3F choice_ | docs |
+
+### Lighting & shadows
+
+| Repo | ★ | License | What it is | What we take from it | Sync |
+|---|---:|---|---|---|---|
+| [marcofugaro/three-projected-material](https://github.com/marcofugaro/three-projected-material) | 712 | MIT | Material that projects a texture onto geometry from a camera (projector/cookie) | Flashlight cookie textures, projected slides/film in briefing rooms, projection-mapped evidence — _No push since 2024-07; three.js SpotLight.map now covers basic light cookies_ | docs |
+| [StrandedKitty/three-csm](https://github.com/StrandedKitty/three-csm) | 343 | MIT | Cascaded shadow maps for three.js directional lights | Moonlit crash-site exteriors with sharp near shadows and wide coverage — _No push since 2023-12; three.js ships an addon CSM based on this; drei has no CSM wrapper. Costly on mobile: 2 cascades max_ | docs |
+| [Ameobea/three-good-godrays](https://github.com/Ameobea/three-good-godrays) | 235 | Zlib | Screen-space raymarched godrays for pmndrs/postprocessing using shadow maps | Volumetric light shafts from UFO searchlights, flashlight through dust, lab vents — _GitHub says NOASSERTION; LICENSE file is zlib-style (verified, adapted from N8python goodGodRays). Raymarch cost: desktop/high tier only_ | docs |
+| [pmndrs/react-three-lightmap](https://github.com/pmndrs/react-three-lightmap) | 156 | MIT | In-browser lightmap + AO baker for R3F/three.js | Bake static lighting for bunker/lab interiors so mobile runs with few dynamic lights — _Low star count; bake at build time/dev only and ship textures_ | docs |
+
+### Geometry & rendering
+
+| Repo | ★ | License | What it is | What we take from it | Sync |
+|---|---:|---|---|---|---|
+| [gkjohnson/three-gpu-pathtracer](https://github.com/gkjohnson/three-gpu-pathtracer) | 1.8k | MIT | Progressive GPU path tracer for three.js scenes | Offline-quality marketing stills and key art straight from game scenes — _Not for real-time gameplay on mobile_ | docs |
+| [gkjohnson/three-bvh-csg](https://github.com/gkjohnson/three-bvh-csg) | 949 | MIT | Fast dynamic CSG (union/subtract/intersect) on top of three-mesh-bvh | Cut breach holes, impact craters and cutaway views of wreckage at runtime or in tooling — _Runtime CSG is CPU-heavy; precompute where possible_ | docs |
+| [gkjohnson/three-edge-projection](https://github.com/gkjohnson/three-edge-projection) | 350 | MIT | Visible edge projection/silhouette extraction to flat lines/SVG via three-mesh-bvh | Generate blueprint/schematic line drawings of craft and bunkers for case-file documents — _Offline/tooling use_ | docs |
+
+### Splats & 3D tiles
+
+| Repo | ★ | License | What it is | What we take from it | Sync |
+|---|---:|---|---|---|---|
+| [playcanvas/supersplat](https://github.com/playcanvas/supersplat) | 10.2k | MIT | Browser-based 3D Gaussian splat editor (crop, clean, export compressed) | Tool: clean and crop captured splats before loading them with Spark — _Tool only, not a runtime dependency (PlayCanvas-based)_ | none |
+| [sparkjsdev/spark](https://github.com/sparkjsdev/spark) | 3.6k | MIT | Advanced 3D Gaussian Splatting renderer for three.js (mixes splats with meshes, many formats) | Render photoreal captured locations (real desert/forest sites) as splat backdrops mixed with gameplay meshes — _Splat sorting/memory heavy on mobile; set point budget per device tier_ | docs |
+| [mkkellogg/GaussianSplats3D](https://github.com/mkkellogg/GaussianSplats3D) | 2.9k | MIT | Three.js Gaussian splat viewer/renderer (.ply/.splat/.ksplat) | Fallback splat renderer; .ksplat compression for web delivery — _Last push 2025-10; Spark is more active_ | docs |
+| [NASA-AMMOS/3DTilesRendererJS](https://github.com/NASA-AMMOS/3DTilesRendererJS) | 2.5k | Apache-2.0 | 3D Tiles renderer for three.js with R3F components (Google Photorealistic Tiles, Cesium Ion, quantized mesh) | Photoreal real-world terrain for map/overview flights to real incident locations — _Google/Cesium tile ToS and attribution apply; streaming bandwidth on mobile_ | docs |
+| [lumalabs/luma-web-examples](https://github.com/lumalabs/luma-web-examples) _(archived)_ | 469 | MIT | Examples for Luma's three.js splat library (LumaSplatsThree) | Reference only for splat/mesh blending tricks — _Archived; last push 2024-03; depends on Luma's hosted captures_ | none |
+
+### Shader & math libraries
+
+| Repo | ★ | License | What it is | What we take from it | Sync |
+|---|---:|---|---|---|---|
+| [pmndrs/lamina](https://github.com/pmndrs/lamina) _(archived)_ | 1.1k | MIT | Layer-based extensible shader material for three.js/R3F | Reference only for layered-material ideas — _Archived; use THREE-CustomShaderMaterial (catalogued) or TSL instead_ | none |
+| [boytchev/tsl-textures](https://github.com/boytchev/tsl-textures) | 268 | MIT | Collection of procedural textures written in TSL (Three Shading Language) for WebGPU/WebGL | Procedural metal, rust, camouflage, and alien-alloy materials without texture downloads — _TSL requires three WebGPURenderer path; check R3F v9 WebGPU setup_ | docs |
+
+### R3F add-ons
+
+| Repo | ★ | License | What it is | What we take from it | Sync |
+|---|---:|---|---|---|---|
+| [pmndrs/react-three-flex](https://github.com/pmndrs/react-three-flex) | 1.7k | MIT | Flexbox (Yoga) layout for R3F | Reference only; pmndrs/uikit (catalogued) supersedes it — _No push since 2022-12; likely incompatible with R3F v9_ | none |
+| [pmndrs/triplex](https://github.com/pmndrs/triplex) | 1.3k | ⚠️ none (all rights reserved — reference only) | Visual editor/workspace for React Three Fiber scenes (VS Code extension and desktop app) | Place evidence, props and lights in R3F scenes visually, writing back to our JSX — _No root LICENSE: apps/electron, apps/vscode and apps/cloud are AGPL-3.0, apps/docs MIT (verified). Dev tool only, never bundle_ | docs |
+| [14islands/r3f-scroll-rig](https://github.com/14islands/r3f-scroll-rig) | 977 | MIT | Sync R3F meshes with DOM elements and smooth scroll (Lenis) | Scroll-driven marketing/landing pages and case-file reading pages with 3D inserts — _React 19/R3F v9 compatibility to confirm_ | docs |
+| [pmndrs/react-three-csg](https://github.com/pmndrs/react-three-csg) | 371 | MIT | Declarative CSG components for R3F (@react-three/csg) on three-bvh-csg | Author cutaway walls/holes in bunker levels in JSX — _Last push 2025-03-02; React 19/R3F v9 compat unknown_ | docs |
+| [RodrigoHamuy/react-three-map](https://github.com/RodrigoHamuy/react-three-map) | 321 | MIT | Render R3F scenes inside Mapbox/MapLibre maps | Case map: 3D markers and craft models over real incident locations — _Pair with MapLibre + PMTiles (catalogued)_ | docs |
+
+### Directories
+
+| Repo | ★ | License | What it is | What we take from it | Sync |
+|---|---:|---|---|---|---|
+| [AxiomeCG/awesome-threejs](https://github.com/AxiomeCG/awesome-threejs) | 989 | CC0-1.0 | Curated list of three.js resources, libraries and tutorials | Discovery index for further add-ons | full |
+| [isaac-mason/sketches](https://github.com/isaac-mason/sketches) | 342 | MIT | Open-source R3F sketches: physics, game AI, navmesh, rendering | Worked R3F examples for navmesh agents, character controllers and effects to copy patterns from | docs |
+
+### Alternative engines
+
+| Repo | ★ | License | What it is | What we take from it | Sync |
+|---|---:|---|---|---|---|
+| [godotengine/godot](https://github.com/godotengine/godot) | 118k | MIT | Full 2D/3D engine with HTML5/WebAssembly export | Escape hatch if R3F hits a wall; compare web-export size and mobile perf on a bunker test scene — _Web export ships a multi-MB wasm runtime; Godot 4 web needs SharedArrayBuffer/COOP-COEP headers (single-threaded export option exists) and is heavier on mobile than three.js (Unverified this session: COOP/COEP header need for web export.)_ | docs |
+| [bevyengine/bevy](https://github.com/bevyengine/bevy) | 48.3k | Apache-2.0 | Rust ECS game engine with wasm/WebGL2/WebGPU targets | Reference for ECS architecture only; not a realistic swap for a React team — _GitHub reports Apache-2.0; project is dual MIT OR Apache-2.0. Rust toolchain and large wasm binaries_ | docs |
+| [defold/defold](https://github.com/defold/defold) | 6.3k | ⚠️ custom — read it | Lightweight Lua engine with small HTML5 builds | Comparison point for small-bundle mobile web builds — _Defold License 1.0 (Apache-2.0-derived with a restriction on redistributing the engine as a competing product); mainly 2D-first though 3D works (Unverified this session: extra restriction in the Defold License.)_ | none |
+| [galacean/engine](https://github.com/galacean/engine) | 5.9k | MIT | TypeScript WebGL engine (2D/3D, physics, glTF-native) | Alternative web engine to benchmark against three.js on mobile — _Docs/community largely Chinese-language_ | docs |
+| [Tresjs/tres](https://github.com/Tresjs/tres) | 3.7k | MIT | Declarative three.js for Vue (R3F equivalent) | Reference only for component patterns; not our stack | none |
+| [threlte/threlte](https://github.com/threlte/threlte) | 3.3k | MIT | Declarative three.js framework for Svelte with Rapier/Theatre integrations | Reference only; its docs on scene-graph/physics patterns map to R3F | none |
+| [needle-tools/needle-engine-support](https://github.com/needle-tools/needle-engine-support) | 609 | ⚠️ none (all rights reserved — reference only) | Support/docs repo for Needle Engine (three.js runtime with Unity/Blender exporters) | Evaluate Blender->web component export workflow as an alternative authoring path on top of three.js — _No licence file in repo; Needle Engine itself is commercially licensed (free tier with limits). Engine source is not in this repo (Unverified this session: commercial licence tiers.)_ | docs |
+| [facebook/immersive-web-sdk](https://github.com/facebook/immersive-web-sdk) | 357 | MIT | Meta IWSDK: three.js-based WebXR framework with ECS, interactions, locomotion, spatial UI | Reference for three.js ECS + input/locomotion patterns; possible WebXR mode later — _WebXR/headset-first; young project (created 2025-08)_ | docs |
+
+### Scene & level editors
+
+| Repo | ★ | License | What it is | What we take from it | Sync |
+|---|---:|---|---|---|---|
+| [TrenchBroom/TrenchBroom](https://github.com/TrenchBroom/TrenchBroom) | 2.8k | GPL-3.0 | Brush-based (Quake .map) level editor | Fast greyboxing of bunkers/labs as .map, convert to glTF via Blender importer — _GPL tool only (output maps are ours). Needs a .map->glTF step; no maintained three.js .map loader found_ | none |
+| [mlt131220/Astral3D](https://github.com/mlt131220/Astral3D) | 2.5k | Apache-2.0 | Vue3 + three.js scene editor/engine (fork lineage of three.js editor) | Reference for a browser-based scene editor if we build an internal level tool — _Vue-based, BIM/CAD focus, Chinese-first docs_ | none |
+| [kaosat-dev/Blenvy](https://github.com/kaosat-dev/Blenvy) | 847 | ⚠️ custom — read it | Blender add-on to author game components/prefabs in Blender and export to glTF | Pattern for a Blender->glTF 'components in extras' pipeline we can mirror for R3F (userData -> React components) — _Dual MIT OR Apache-2.0 (LICENSE.md). Runtime side is Bevy-specific; only the Blender/export half transfers_ | docs |
+| [polygonjs/polygonjs](https://github.com/polygonjs/polygonjs) | 815 | MIT | Node-based procedural WebGL/three.js design tool | Procedural set dressing (debris fields, crash scatter) exported to three.js — _Small maintainer base_ | docs |
+
+### Content creation tools
+
+| Repo | ★ | License | What it is | What we take from it | Sync |
+|---|---:|---|---|---|---|
+| [JannisX11/blockbench](https://github.com/JannisX11/blockbench) | 6.0k | GPL-3.0 | Low-poly 3D model editor with glTF export, runs in browser/desktop | Quick low-poly props/placeholders without Blender — _GPL tool only; exported models are ours_ | none |
+| [RodZill4/material-maker](https://github.com/RodZill4/material-maker) | 5.9k | MIT | Procedural texture/material authoring and 3D painting tool (Godot-based) | Author tileable PBR materials (rusted metal, concrete, scorched ground) for bunkers/crash sites | docs |
+| [armory3d/armorpaint](https://github.com/armory3d/armorpaint) | 5.2k | ⚠️ custom — read it | ArmorPaint/ArmorLab/ArmorForge tool suite (3D PBR texture painting, AI texture tools) | Hand-paint hero props and evidence items — _Source licence file is zlib (armory3d/armortools redirects here); official prebuilt binaries are paid, building from source is free. ArmorLab AI models may carry separate terms (Unverified this session: binaries being paid.)_ | none |
+| [jpcy/xatlas](https://github.com/jpcy/xatlas) | 2.6k | MIT | UV unwrapping/atlas packing library (used by lightmap tools) | Lightmap UV generation for AI-generated meshes lacking UV2 — _Last push 2024-06; wasm ports exist_ | none |
+| [BoundingBoxSoftware/Materialize](https://github.com/BoundingBoxSoftware/Materialize) | 1.8k | GPL-3.0 | Generates PBR maps (normal/height/roughness/AO) from photos | Turn phone photos of real surfaces into PBR materials — _Windows/Unity app; last push 2024-06_ | none |
+| [Naxela/The_Lightmapper](https://github.com/Naxela/The_Lightmapper) | 817 | GPL-3.0 | Blender Cycles lightmap baker add-on | Bake night-time GI/lightmaps for static bunker/lab interiors to keep mobile lighting cheap — _GPL add-on; baked textures are ours_ | docs |
+| [mrven/Blender-Texel-Density-Checker](https://github.com/mrven/Blender-Texel-Density-Checker) | 462 | GPL-3.0 | Blender add-on to measure/set texel density | Keep consistent texel density across AI-generated and hand-made assets for mobile texture budgets | none |
+| [SawyerRensel/Transmogrifier](https://github.com/SawyerRensel/Transmogrifier) | 112 | GPL-3.0 | Blender add-on for batch converting 3D files and textures (to GLB etc.) | Batch-convert AI-generated FBX/OBJ outputs to GLB before gltf-transform | none |
+| [agargaro/octahedral-impostor](https://github.com/agargaro/octahedral-impostor) | 65 | MIT | Octahedral impostor generation/rendering for three.js | Replace distant trees/wreckage with impostors to cut draw calls on mobile — _Marked WIP; last push 2025-11_ | docs |
+
+### Capture & reconstruction
+
+| Repo | ★ | License | What it is | What we take from it | Sync |
+|---|---:|---|---|---|---|
+| [alicevision/Meshroom](https://github.com/alicevision/Meshroom) | 13.0k | ⚠️ custom — read it | Node-based photogrammetry app (AliceVision) | Scan real props (debris, equipment) into meshes for evidence items — _MPL-2.0 (LICENSE-MPL2.md); CUDA recommended_ | docs |
+| [colmap/colmap](https://github.com/colmap/colmap) | 12.8k | ⚠️ custom — read it | Structure-from-Motion / MVS pipeline | Camera poses for photogrammetry and splat training — _New BSD licence (per LICENSE file); dependencies licensed separately_ | docs |
+| [nerfstudio-project/nerfstudio](https://github.com/nerfstudio-project/nerfstudio) | 12.0k | Apache-2.0 | NeRF/Gaussian splat training framework (splatfacto) | Train splats of real locations for backdrops/memory sequences — _Last push 2025-07 (slowing)_ | docs |
+| [freemocap/freemocap](https://github.com/freemocap/freemocap) | 10.2k | AGPL-3.0 | Markerless motion capture from webcams | Capture NPC/cutscene animations cheaply — _AGPL tool only; exported animation data is ours_ | none |
+| [nerfstudio-project/gsplat](https://github.com/nerfstudio-project/gsplat) | 5.7k | Apache-2.0 | CUDA Gaussian splatting rasterization/training library | Core trainer behind nerfstudio splatfacto; use for quality splat captures | docs |
+| [ArthurBrussee/brush](https://github.com/ArthurBrussee/brush) | 5.1k | Apache-2.0 | Cross-platform Gaussian splat trainer/viewer (Rust/WebGPU, runs in browser) | Train splats without CUDA on team laptops | docs |
+| [WebODM/OpenSplat](https://github.com/WebODM/OpenSplat) | 2.2k | AGPL-3.0 | CPU/GPU Gaussian splat trainer (C++) | Run as a standalone tool for splat training — _AGPL: tool only, never bundle_ | none |
+
+### Free asset sources
+
+| Repo | ★ | License | What it is | What we take from it | Sync |
+|---|---:|---|---|---|---|
+| [KenneyNL/Starter-Kit-FPS](https://github.com/KenneyNL/Starter-Kit-FPS) | 990 | MIT | Kenney Godot FPS starter kit bundling Kenney 3D models/sounds | Source of CC0 props/SFX and a reference FPS controller — _Code MIT; bundled assets (sprites, 3D models, SFX) CC0 per README. Kenney's full catalog is on kenney.nl, not GitHub_ | none |
+| [matheowis/HDRI-to-CubeMap](https://github.com/matheowis/HDRI-to-CubeMap) | 534 | MIT | Browser tool converting equirect HDRIs to cubemaps | Prepare night-sky environment maps — _Last push 2023-03_ | none |
+| [grumdrig/jsfxr](https://github.com/grumdrig/jsfxr) | 283 | Unlicense | Browser sfxr port for generating game SFX | Generate UI blips/radio beeps; output is ours — _Last push 2023-05_ | none |
+| [MTG/freesound-python](https://github.com/MTG/freesound-python) | 157 | MIT | Python client for the Freesound API | Search/download ambience and foley with licence metadata — _Freesound sounds are per-file CC0 / CC-BY / CC-BY-NC: filter to CC0/CC-BY and log attribution_ | none |
+| [agmmnn/polydown](https://github.com/agmmnn/polydown) | 105 | MIT | Batch downloader for Poly Haven HDRIs/textures/models | Pull night HDRIs and textures at chosen resolutions — _Assets CC0 (Poly Haven)_ | none |
+| [Poly-Haven/Public-API](https://github.com/Poly-Haven/Public-API) | 60 | AGPL-3.0 | Source/docs of the Poly Haven public API | Script HDRI/texture/model downloads into the asset pipeline — _Code AGPL-3.0 (we only call the API); Poly Haven assets are CC0. API terms ask commercial users to support/credit (Unverified this session: API terms for commercial users.)_ | docs |
+| [struffel/PBR.ONE](https://github.com/struffel/PBR.ONE) | 39 | MIT | three.js previewer for PBR materials/HDRIs (built for ambientCG) | Preview ambientCG/Poly Haven materials before import — _ambientCG assets are CC0; ambientCG has no official asset repo on GitHub_ | none |
+
+### glTF ecosystem
+
+| Repo | ★ | License | What it is | What we take from it | Sync |
+|---|---:|---|---|---|---|
+| [google/model-viewer](https://github.com/google/model-viewer) | 8.3k | Apache-2.0 | <model-viewer> web component for glTF with AR | Lightweight evidence-inspection viewer on site/case-file pages outside the main canvas — _Bundles its own three.js; avoid loading it alongside the game canvas_ | docs |
+| [BinomialLLC/basis_universal](https://github.com/BinomialLLC/basis_universal) | 3.1k | Apache-2.0 | Basis Universal supercompressed GPU texture codec (UASTC/ETC1S) | Encoder behind KTX2 textures for mobile VRAM savings | docs |
+| [CesiumGS/gltf-pipeline](https://github.com/CesiumGS/gltf-pipeline) | 2.1k | Apache-2.0 | glTF optimization CLI (Draco, embed/separate, glTF<->GLB) | Secondary converter; gltf-transform stays primary | docs |
+| [KhronosGroup/glTF-Sample-Viewer](https://github.com/KhronosGroup/glTF-Sample-Viewer) | 1.5k | Apache-2.0 | Reference PBR glTF viewer | Check whether a look bug is ours or the asset's | docs |
+| [GPUOpen-Tools/compressonator](https://github.com/GPUOpen-Tools/compressonator) | 1.5k | ⚠️ none (all rights reserved — reference only) | AMD texture/model compression and analysis suite | Optional visual comparison of texture compression — _No licence detected by GitHub; last push 2024-06_ | none |
+| [KhronosGroup/glTF-Validator](https://github.com/KhronosGroup/glTF-Validator) | 471 | Apache-2.0 | Official glTF 2.0 validator (CLI/npm/web) | CI gate for every GLB in the asset pipeline | docs |
+
+### Spatial audio
+
+| Repo | ★ | License | What it is | What we take from it | Sync |
+|---|---:|---|---|---|---|
+| [ValveSoftware/steam-audio](https://github.com/ValveSoftware/steam-audio) | 3.0k | Apache-2.0 | Steam Audio: physics-based sound propagation, HRTF, reverb baking | Reference only (no official web build); possibly bake IRs offline — _Native C++/game-engine plugins_ | none |
+| [GoogleChrome/omnitone](https://github.com/GoogleChrome/omnitone) | 911 | Apache-2.0 | Ambisonic decoding and binaural rendering for Web Audio | Binaural ambience beds (wind, distant engines) around the player | docs |
+| [chrisguttandin/standardized-audio-context](https://github.com/chrisguttandin/standardized-audio-context) | 779 | MIT | Cross-browser Web Audio API wrapper/polyfill | Smooth over iOS Safari Web Audio quirks on mobile | none |
+| [resonance-audio/resonance-audio](https://github.com/resonance-audio/resonance-audio) _(archived)_ | 543 | Apache-2.0 | Resonance Audio core C++ source | Reference only — _Archived; last push 2022-09_ | none |
+| [resonance-audio/resonance-audio-web-sdk](https://github.com/resonance-audio/resonance-audio-web-sdk) _(archived)_ | 221 | Apache-2.0 | Resonance Audio web SDK: room acoustics + spatialization | Room-model reverb for bunker/lab interiors — _Archived; last push 2022-03. Still usable but unmaintained_ | docs |
+| [polarch/JSAmbisonics](https://github.com/polarch/JSAmbisonics) | 181 | BSD-3-Clause | FOA/HOA ambisonics processing for Web Audio | Alternative ambisonic encoder/decoder with HRTF options | none |
+| [ShanonPearce/ASH-IR-Dataset](https://github.com/ShanonPearce/ASH-IR-Dataset) | 139 | ⚠️ custom — read it | Binaural room impulse response dataset | Do not ship; reference only — _CC-BY-NC-SA-4.0: non-commercial, not usable in a commercial game. Last push 2024-06_ | none |
+
+### Atmospheric & horror games
+
+| Repo | ★ | License | What it is | What we take from it | Sync |
+|---|---:|---|---|---|---|
+| [lferreira457/threejs-psx-shader](https://github.com/lferreira457/threejs-psx-shader) | 66 | MIT | PSX-style shader and effects for three.js (vertex snapping, affine textures, dithering) | Cheap retro/low-fi look plus dithering that hides banding in dark night scenes; can be combined with our camera-mode passes — _Young repo (2026); check it against current three.js_ | full |
+| [UstymUkhman/YetAnotherZombieHorror](https://github.com/UstymUkhman/YetAnotherZombieHorror) _(archived)_ | 32 | MIT | First/third-person zombie survival shooter in three.js | Structure for a mid-sized three.js game: level loading, weapons, audio, pointer lock — _Archived_ | docs |
+| [einncodes/FlooDead-ThreeJS-Horror-Game-](https://github.com/einncodes/FlooDead-ThreeJS-Horror-Game-) | 18 | ⚠️ none (all rights reserved — reference only) | Browser 3D horror survival game in three.js set in a flooded area | Reference for flashlight, fog and enemy tension pacing in vanilla three.js — _No licence: reference only; bugman-007/FlooDead---Three.js-Horror-Game is a copy of the same game_ | none |
+| [pablostanley/vackrooms](https://github.com/pablostanley/vackrooms) | 17 | MIT | Endless first-person Backrooms game presented as a damaged VHS recording; built on Next.js + three.js | Closest stack match to ours: study the Next.js/three integration, VHS/degraded-camera post chain and procedural corridor streaming for bunker interiors — _Low stars, young project; read the code before copying any of it_ | full |
+| [StarKnightt/foggy-pine-trail](https://github.com/StarKnightt/foggy-pine-trail) | 11 | ⚠️ none (all rights reserved — reference only) | First-person walk down a foggy pine trail; every texture, mesh and sound is generated procedurally | Fog, night-forest mood and procedural audio for outdoor crash-site approaches — _No licence: reference only. The same author's jungle-trail is already in the KB_ | none |
+| [lo-th/backroom](https://github.com/lo-th/backroom) | 8 | MIT | Experimental three.js Backrooms interior by lo-th, the author of the phy physics engine | Reference for moody, repetitive interior lighting and fog in plain three.js — _Tiny experimental demo_ | docs |
+| [rameshvarun/feedvid-live](https://github.com/rameshvarun/feedvid-live) | 4 | ⚠️ custom — read it | Horror game with text-adventure-style gameplay, built with three.js and React | Shows how to mix typed or text-driven investigation with a 3D React scene — _Custom non-commercial licence (GitHub reports NOASSERTION): reference only; stale_ | none |
+| [teixeirazeus/signs-harvest-night](https://github.com/teixeirazeus/signs-harvest-night) | 0 | MIT | PSX-style horror FPS prototype: find 5 anomalies in a dark cornfield while a Grey alien stalks you | Closest theme match (alien, night, anomaly hunt); a small readable loop of find-objective plus stalker AI — _0 stars, greybox prototype; use for ideas only_ | docs |
+
+### Investigation & inspection
+
+| Repo | ★ | License | What it is | What we take from it | Sync |
+|---|---:|---|---|---|---|
+| [playcanvas/model-viewer](https://github.com/playcanvas/model-viewer) | 707 | MIT | PlayCanvas glTF and Gaussian-splat model viewer | Reference for inspection UX: framing, turntable, environment lighting; splat viewing if we scan real sites — _PlayCanvas engine, not three.js_ | docs |
+| [silent-sea1119/Escape-room-three.js-React](https://github.com/silent-sea1119/Escape-room-three.js-React) | 15 | ⚠️ none (all rights reserved — reference only) | Escape-room game in three.js + React | Reference for how clickable objects, inventory and puzzle state tie into a React 3D scene — _No licence: reference only; stale; no description_ | none |
+| [itsevin/escape-from-classroom-s444](https://github.com/itsevin/escape-from-classroom-s444) | 1 | MIT | First-person 3D campus-mystery escape-room game (three.js + TypeScript + Vite) | Small TypeScript code base with interaction prompts, clue pickup and puzzle-lock flow we can model ours on — _1 star; README in Chinese_ | full |
+| [sxnmit/escape-room-portfolio](https://github.com/sxnmit/escape-room-portfolio) | 1 | ⚠️ none (all rights reserved — reference only) | Physics-based 3D escape room in R3F where each solved puzzle unlocks part of a resume | R3F puzzle-gating and state flow (puzzle solved leads to reveal), close to evidence-unlocks-next-clue — _No licence: reference only; 1 star; default branch is an AI-generated branch_ | none |
+
+### Well-architected games & starters
+
+| Repo | ★ | License | What it is | What we take from it | Sync |
+|---|---:|---|---|---|---|
+| [coldi/r3f-game-demo](https://github.com/coldi/r3f-game-demo) | 654 | MIT | Tile-based game demo in React + R3F with scene/level management and component architecture | Scene switching, game-object components and level data patterns in React — _Stale (2020) and on older R3F APIs; learn the ideas, not the code_ | docs |
+| [instructa/viber3d](https://github.com/instructa/viber3d) | 623 | MIT | Starter kit for 3D browser games on R3F + three.js (ECS with koota, Rapier physics, Vite) | Reference layout for game state, ECS and physics in R3F; compare with our Next.js app layout — _No push in over 18 months as of scan_ | full |
+| [Sean-Bradley/Three.js-TypeScript-Boilerplate](https://github.com/Sean-Bradley/Three.js-TypeScript-Boilerplate) | 593 | MIT | three.js + TypeScript + Vite boilerplate kept up to date with the sbcode course | Good for vanilla-three spikes of shaders or passes before porting them into R3F | full |
+| [wass08/r3f-vite-starter](https://github.com/wass08/r3f-vite-starter) | 284 | CC0-1.0 | Minimal R3F + Vite boilerplate from the Wawa Sensei courses | Clean baseline for spikes and prototypes outside Next.js — _CC0_ | full |
+| [verekia/manapotion](https://github.com/verekia/manapotion) | 255 | MIT | Toolkit for JS game dev: input, pointer lock, fullscreen, virtual joysticks, game loop (React/Vue/Svelte/vanilla) | Drop-in handling for pointer lock, keyboard, mobile virtual joysticks and resize; saves writing our own input layer — _Author also runs webgamedev.com_ | full |
+| [vibe-stack/ggez](https://github.com/vibe-stack/ggez) | 238 | MIT | Game framework for three.js aimed at AI-assisted (vibe) coding | Compare its scene, entity and lifecycle abstractions against our R3F setup; could inform agent-friendly code conventions — _Unproven; check how active it is_ | docs |
+| [pachoclo/vite-threejs-ts-template](https://github.com/pachoclo/vite-threejs-ts-template) | 169 | ⚠️ none (all rights reserved — reference only) | Vite + three.js + TS starter with lil-gui, stats, orbit controls, resize and loaders | Checklist of the basics a three.js scene needs — _No licence: reference only_ | none |
+| [Mugen87/dive](https://github.com/Mugen87/dive) | 96 | MIT | Shooter AI showcase using Yuka (perception, goal-driven agents, navmesh) with three.js | How to build a stalker or patrol entity on the Yuka library (already in the KB) — _Stale; by three.js maintainer Mugen87_ | docs |
+
+### Demo & example collections
+
+| Repo | ★ | License | What it is | What we take from it | Sync |
+|---|---:|---|---|---|---|
+| [brunosimon/my-room-in-3d](https://github.com/brunosimon/my-room-in-3d) | 4.5k | ⚠️ none (all rights reserved — reference only) | Bruno Simon's baked-lighting room scene (Blender bake plus three.js) | Baked-lighting workflow for detailed interiors (labs, bunkers) that stays cheap on mobile — _No licence: reference only; stale_ | none |
+| [stemkoski/stemkoski.github.com](https://github.com/stemkoski/stemkoski.github.com) | 1.8k | ⚠️ none (all rights reserved — reference only) | Lee Stemkoski's classic three.js examples collection (shaders, particles, UI tricks) | Well-known reference for older technique ideas (glow, selection, textures) — _No licence: reference only; stale and uses old three.js APIs_ | none |
+| [simondevyoutube/Quick_3D_RPG](https://github.com/simondevyoutube/Quick_3D_RPG) | 297 | MIT | SimonDev 3D RPG in three.js: entity-component system, spatial hash grid, animation state machines, quests UI | Entity/component and FSM patterns for interactables and NPCs — _Stale; tutorial code, not production quality_ | docs |
+| [Domenicobrz/R3F-in-practice](https://github.com/Domenicobrz/R3F-in-practice) | 244 | ⚠️ none (all rights reserved — reference only) | Collection of small R3F projects from the R3F-in-practice course | Short, focused examples of R3F techniques (car physics, portals, reflections) — _No licence: reference only; stale_ | none |
+| [pmndrs/examples](https://github.com/pmndrs/examples) | 124 | MIT | Monorepo of the official pmndrs/R3F demos (the examples on r3f docs site) | Canonical, current R3F patterns for loading, instancing, PerformanceMonitor, postprocessing and controls; the first place to look for a technique — _Actively maintained_ | docs |
+| [simondevyoutube/Shaders_Clouds1](https://github.com/simondevyoutube/Shaders_Clouds1) | 111 | MIT | SimonDev volumetric cloud raymarching shader | Night-sky and volumetric fog/beam techniques (UFO light shafts) — _Stale_ | docs |
+| [simondevyoutube/Quick_FPS1](https://github.com/simondevyoutube/Quick_FPS1) | 54 | MIT | SimonDev FPS tutorial code (Ammo physics, FP controller, weapons) | First-person controller, collisions and camera feel beyond the FirstPersonCamera tutorial already in the KB — _Stale_ | docs |
+| [simondevyoutube/ThreeJS_Tutorial_3DSound](https://github.com/simondevyoutube/ThreeJS_Tutorial_3DSound) | 41 | MIT | SimonDev positional 3D audio in three.js | Spatial audio for ambience, radio static and creature cues — _Stale_ | full |
+| [simondevyoutube/ThreeJS_Tutorial_Fog](https://github.com/simondevyoutube/ThreeJS_Tutorial_Fog) | 33 | MIT | SimonDev custom shader fog in three.js (height and noise-based fog) | Directly applicable to night fog in crash sites and forests; port into a TSL/onBeforeCompile fog chunk — _Stale; small and readable_ | full |
+| [simondevyoutube/ThreeJS_Tutorial_PostProcessing](https://github.com/simondevyoutube/ThreeJS_Tutorial_PostProcessing) | 19 | MIT | SimonDev custom post-processing passes in three.js | Base for writing our own FLIR/night-vision passes as custom effects — _Stale; ideas port to pmndrs/postprocessing Effects_ | full |
+
+### Mobile 3D & touch
+
+| Repo | ★ | License | What it is | What we take from it | Sync |
+|---|---:|---|---|---|---|
+| [yoannmoinet/nipplejs](https://github.com/yoannmoinet/nipplejs) | 1.9k | MIT | Virtual joystick library for touch screens | Mobile movement stick for first-person controls; wire it into the ecctrl or our own controller — _De facto standard; MIT_ | full |
+| [EvanBacon/Expo-Crossy-Road](https://github.com/EvanBacon/Expo-Crossy-Road) | 1.2k | MIT | Crossy Road clone in three.js running on iOS, Android and web via Expo | Mobile-first three.js game: touch/gesture input, object pooling and performance on phones — _React Native/Expo, not Next.js_ | docs |
+| [jeromeetienne/virtualjoystick.js](https://github.com/jeromeetienne/virtualjoystick.js) | 432 | MIT | Early virtual joystick library for touch screens | Fallback or reference implementation for a no-dependency joystick — _Stale_ | docs |
+| [elmarti/react-joystick-component](https://github.com/elmarti/react-joystick-component) | 102 | MIT | Small multitouch React joystick component | React-native way to add move and look sticks over the Canvas — _Stale_ | full |
+| [Shirajuki/js-game-rendering-benchmark](https://github.com/Shirajuki/js-game-rendering-benchmark) | 98 | MIT | Benchmark comparing three.js, Babylon, Pixi, Phaser and others | Data for mobile performance budgets and draw-call/instancing decisions — _Mostly 2D sprite stress tests; the three.js numbers are about draw calls_ | docs |
+| [herval/react-three-fpscontrols](https://github.com/herval/react-three-fpscontrols) | 12 | MIT | R3F FPS controls: joystick on mobile, keyboard/mouse on desktop | Pattern for unifying touch-look, touch-move and desktop pointer lock in one R3F component — _Stale, 12 stars; learn from it, do not depend on it_ | docs |
+
+### Game jam entries
+
+| Repo | ★ | License | What it is | What we take from it | Sync |
+|---|---:|---|---|---|---|
+| [proyecto26/awesome-jsgames](https://github.com/proyecto26/awesome-jsgames) | 976 | CC0-1.0 | Curated list of open-source JavaScript games | Place to find more open-source web games to study, including 3D and jam entries — _CC0_ | docs |
+| [SalvatorePreviti/js13k-2022](https://github.com/SalvatorePreviti/js13k-2022) | 154 | MIT | "Dante": 3D game in 13 KB (js13k 2022 winner) with custom WebGL renderer | Extreme optimisation ideas: SDF/CSG level geometry, shader minification, shadow mapping on a budget — _Stale_ | docs |
+| [codyebberson/js13k-battlegrounds](https://github.com/codyebberson/js13k-battlegrounds) | 64 | ⚠️ none (all rights reserved — reference only) | Small PUBG-style 3D game in WebGL/WebAudio (js13k) | Procedural textures and audio synthesis to avoid asset weight — _No licence: reference only; stale_ | docs |
+| [SalvatorePreviti/js13k-2020](https://github.com/SalvatorePreviti/js13k-2020) | 56 | MIT | "Island Not Found": 3D raymarched island exploration game, js13k 2020 | Raymarching/SDF terrain and exploration pacing in a tiny code base — _Stale_ | docs |
+| [roblouie/charon-jr](https://github.com/roblouie/charon-jr) | 41 | ⚠️ none (all rights reserved — reference only) | 13 KB 3D driving game; 6th place in js13k 2022 | Compact WebGL engine patterns in TypeScript (procedural terrain, audio) — _No licence: reference only; stale_ | docs |
+| [roblouie/upyri](https://github.com/roblouie/upyri) | 16 | ⚠️ none (all rights reserved — reference only) | 13 KB 3D adventure-horror game; 5th place in js13k 2023 | Tiny, readable horror loop (dark castle, lighting, audio) in raw WebGL and TypeScript; ideas for atmosphere on a tight budget — _No licence: reference only; stale_ | docs |
+
+### Learning & directories
+
+| Repo | ★ | License | What it is | What we take from it | Sync |
+|---|---:|---|---|---|---|
+| [gfxfundamentals/webgl-fundamentals](https://github.com/gfxfundamentals/webgl-fundamentals) | 5.0k | BSD-3-Clause | WebGL1 lessons from the basics | Companion to webgl2-fundamentals; older but thorough — _GitHub reports NOASSERTION; LICENSE file is BSD-3-Clause text_ | docs |
+| [stackgl/shader-school](https://github.com/stackgl/shader-school) | 4.4k | MIT | Interactive workshop for learning GLSL shaders | Hands-on GLSL training for whoever writes our camera-mode shaders — _GitHub reports NOASSERTION; LICENSE file is MIT; stale_ | docs |
+| [majidmanzarpour/threejs-game-skills](https://github.com/majidmanzarpour/threejs-game-skills) | 2.1k | MIT | Agent skills for building polished three.js browser games (gameplay, visuals, performance) | Can be loaded into our Claude workflow as a checklist for game feel, performance and polish — _Agent prompts, not a runtime library; same author as threejs-procedural-dungeon already in the KB_ | full |
+| [gfxfundamentals/webgl2-fundamentals](https://github.com/gfxfundamentals/webgl2-fundamentals) | 2.0k | BSD-3-Clause | WebGL2 lessons from the basics | Solid grounding for writing custom shaders and passes (thermal, NV, scanlines) — _BSD-3-Clause_ | docs |
+| [sjfricke/awesome-webgl](https://github.com/sjfricke/awesome-webgl) | 1.5k | CC0-1.0 | Curated list of WebGL libraries and resources | Directory for WebGL-level techniques and tools — _CC0_ | docs |
+| [gfxfundamentals/threejsfundamentals](https://github.com/gfxfundamentals/threejsfundamentals) | 1.1k | BSD-3-Clause | three.js fundamentals articles (origin of the threejs.org manual) | Articles on rendering on demand, picking, optimising many objects, and post-processing — _Stale; now continued in the three.js manual_ | docs |
+| [rajput-hemant/threejs-journey](https://github.com/rajput-hemant/threejs-journey) | 213 | MIT | Practice projects with source code following Bruno Simon's Three.js Journey course | Worked examples of the course lessons (haunted house, shaders, baking, loading) — _Course content belongs to Bruno Simon; learn from it, do not copy assets_ | docs |
+| [gsimone/awesome-react-three-fiber](https://github.com/gsimone/awesome-react-three-fiber) | 203 | ⚠️ none (all rights reserved — reference only) | Loose collection of R3F links, people and examples | Pointers to R3F community demos and authors — _No licence: reference only; stale (2021)_ | docs |
+| [verekia/webgamedev](https://github.com/verekia/webgamedev) | 185 | ⚠️ none (all rights reserved — reference only) | webgamedev.com source: guide to making web games (three.js, R3F, Babylon, tooling, performance) | Opinionated, current overview of the R3F game stack (ECS, physics, input, mobile, deployment) — _No licence file: reference only_ | docs |

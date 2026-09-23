@@ -25,6 +25,7 @@ Hopding/pdf-lib katspaugh/wavesurfer.js ggerganov/ggwave russellsamora/scrollama
 anthropics/anthropic-sdk-typescript usnationalarchives/Catalog-API LibraryOfCongress/data-exploration usgpo/api LibraryOfCongress/api.congress.gov
 GSA/api.data.gov better-auth/better-auth upstash/ratelimit-js upstash/redis-js neondatabase/serverless cloudflare/workers-sdk resend/react-email
 livekit/agents-js akrherz/iem wikimedia/wikidata-query-rdf
+yoannmoinet/nipplejs protectwise/troika KhronosGroup/glTF-Validator isaac-mason/recast-navigation-js
 `.split(/\s+/).filter(Boolean));
 
 // Weights or data are non-commercial or research-only: fine for prototyping, never ship the output.
@@ -50,6 +51,10 @@ export const AVOID = new Map([
 export const OVERRIDE = new Map([
   ["ClickHouse/adsb.exposed", ["Reference", "code is CC BY-NC-SA 4.0 (non-commercial): read, don't copy"]],
   ["greensock/GSAP", ["Trial", "not open source: GSAP's free 'standard no-charge license' allows commercial use with restrictions"]],
+  ["ShanonPearce/ASH-IR-Dataset", ["Reference", "impulse responses are CC BY-NC-SA: non-commercial, don't ship them"]],
+  ["rameshvarun/feedvid-live", ["Reference", "custom non-commercial licence: study the game, don't copy"]],
+  ["pmndrs/triplex", ["Tool only", "editor app is AGPL-licensed (no licence detected at repo root): run it as a dev tool, never bundle"]],
+  ["brunosimon/my-room-in-3d", ["Reference", "no licence: study the baked-lighting workflow, don't copy code or assets"]],
 ]);
 
 // Tools we run but never bundle or link into the game (copyleft or heavy apps).

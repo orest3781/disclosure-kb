@@ -36,7 +36,34 @@ Catalog: [catalog/3d-tech.md](../catalog/3d-tech.md)
   - night vision: green phosphor with noise and vignette
   - radar: polar sweep SDF with decaying blips
   - For the noise, use `ashima/webgl-noise`. For CRT/NTSC, use `Cathode-Retro` or `webgl-crt-shader`.
-- **A UFO or mystery 3D web game to learn from.** None with a meaningful star count showed up in the searches, so this niche is open.
+- **A UFO or mystery 3D web game to learn from.** The 2026-09-23 recheck found small examples (below) but nothing polished, so this niche is still open.
+
+## Recheck 2026-09-23
+
+A second pass added 131 sources to the catalogue. What matters for the game:
+
+- **Navigation.** `recast-navigation-js` (Adopt) builds navmeshes in the browser and has R3F helpers; `navcat` is a lighter alternative. Both beat Yuka's hand-made navmesh for anything bigger than a room. Keep Yuka for steering and vision cones.
+- **Physics alternatives.** `JoltPhysics.js` and `crashcat`, if Rapier falls short. Rapier stays the pick.
+- **Characters and text.** `three-vrm` for VRM avatars; `troika-three-text` (Adopt; drei's `<Text>` wraps it) for readable in-world text: case files, signs and terminals.
+- **Lighting.** Bake it: `react-three-lightmap` in the browser, or Blender plus The_Lightmapper. `three-csm` for cascaded shadows outdoors; `three-good-godrays` for volumetric light from a craft (high quality tier only). `brunosimon/my-room-in-3d` shows the baked-room workflow; it has no licence, so read it only.
+- **Geometry and rendering.** `three-bvh-csg` for cutting holes (hatches, crash damage); `three-gpu-pathtracer` for offline promo stills, not runtime.
+- **Gaussian splats and 3D tiles.** `Spark` and `GaussianSplats3D` render splats; `SuperSplat` edits them; `3DTilesRendererJS` streams photogrammetry tiles. A scanned real location as a crime scene is a strong idea, but still an open decision.
+- **Editors and engines.** `pmndrs/triplex` is a visual editor for R3F scenes (Tool only: AGPL app). Godot, Bevy, Needle and IWSDK are catalogued as alternatives we're not taking. `Blenvy` is Bevy-only.
+- **Content creation.** `material-maker` (procedural textures), `blockbench` (low-poly models; GPL, used as a tool), `The_Lightmapper` (Blender bakes).
+- **Capture and reconstruction.** `Meshroom` and `COLMAP` (photogrammetry), `nerfstudio`, `gsplat` and `brush` (splat training), `freemocap` (markerless mocap; AGPL, a tool only).
+- **Assets and glTF.** `Kenney Starter-Kit-FPS` (CC0 assets), `google/model-viewer` for inspecting evidence, `gltf-pipeline`, `glTF-Validator` (Adopt, in the asset CI step), `basis_universal`.
+- **Spatial audio.** `omnitone` and `JSAmbisonics` for ambisonic beds; `Resonance` is archived. `ASH-IR-Dataset` is CC BY-NC-SA, so it's Reference only.
+- **Mobile.** `nipplejs` (Adopt) for a virtual joystick; `verekia/manapotion` for unified input.
+- **Games to study.**
+  - `pablostanley/vackrooms`: a Next.js + three.js VHS Backrooms. It's the closest match to our stack.
+  - `signs-harvest-night`: an alien cornfield game, the closest match to our theme.
+  - `threejs-psx-shader`: the PS1 look.
+  - `Mugen87/dive`: Yuka-driven bot AI, useful for a stalker.
+  - SimonDev's Fog, PostProcessing and 3DSound tutorials.
+  - `pmndrs/examples`, js13k entries and `majidmanzarpour/threejs-game-skills`.
+  - `rameshvarun/feedvid-live` has a non-commercial licence, so it's Reference only.
+- **Still missing.** No good 3D investigation or escape-room game, and no notable vertex-animation-texture, impostor or animation-state-machine library. Kenney, Quaternius and ambientCG aren't officially on GitHub, so download their assets from their own sites.
+- **Unverified.** The notes on `godot`, `needle-engine-support`, `defold`, `Poly-Haven/Public-API` and `armorpaint` weren't checked against the repos.
 
 ## License cautions
 

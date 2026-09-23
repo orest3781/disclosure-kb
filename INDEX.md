@@ -2,11 +2,11 @@
 
 # Index
 
-629 source repos across 11 categories. Stars checked 2026-09-23. For the analysis (stack, features, pipelines, policy) start at [kb/README.md](kb/README.md); for verdicts see [REVIEW.md](REVIEW.md).
+760 source repos across 11 categories. Stars checked 2026-09-23. For the analysis (stack, features, pipelines, policy) start at [kb/README.md](kb/README.md); for verdicts see [REVIEW.md](REVIEW.md).
 
 | Category | Repos | Covers |
 |---|---:|---|
-| [3D game tech](catalog/3d-tech.md) | 78 | Engines, R3F ecosystem, games to learn from, shaders and atmosphere, state/AI/audio, and the asset pipeline. |
+| [3D game tech](catalog/3d-tech.md) | 209 | Engines, R3F ecosystem, games to learn from, shaders and atmosphere, state/AI/audio, and the asset pipeline. |
 | [Mystery game design](catalog/mystery-design.md) | 81 | Dialogue engines, mystery and investigation games, evidence-board UI, ARG/document-game UI, procedural mysteries, design reading, saves and quests. |
 | [UFO / UAP source data](catalog/ufo-data.md) | 43 | Real case files (PURSUE, Blue Book, FOIA), sighting datasets, analysis and evidence UIs, sky reconstruction, and disclosure timelines. Read the data-licensing notes before shipping anything. |
 | [Web starters & frameworks](catalog/web-starters.md) | 16 | Next.js starters, full-stack templates, UI and AI building blocks. |

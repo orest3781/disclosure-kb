@@ -17,6 +17,12 @@ Ground rules that shaped every pick: we run Next.js 16, React 19, Tailwind 4 and
 | Particles | `three.quarks` | three-nebula | Has an editor for authoring beams and trails | proposed |
 | Instancing | `agargaro/instanced-mesh` | raw InstancedMesh | Per-instance culling, BVH raycast and LOD, and instances stay clickable | proposed |
 | Noise | `FastNoiseLite` (CPU + GLSL ports), `webgl-noise` in shaders | simplex-noise | The same noise on CPU and GPU keeps terrain collision and visuals aligned | decided |
+| Navmesh | `recast-navigation-js` (Yuka keeps steering and senses) | `navcat`, Yuka's own navmesh | Builds navmeshes from level geometry in the browser, with R3F debug helpers | proposed |
+| Lighting | Baked lightmaps (Blender + The_Lightmapper, or `react-three-lightmap`), `three-csm` outdoors | real-time shadows everywhere | Baked rooms look better and cost far less on mobile | proposed |
+| Volumetric light | `three-good-godrays`, high tier only | `postprocessing` GodRays | Light shafts from craft and flashlights through dust | proposed |
+| 3D text | `troika-three-text` via drei `<Text>` | canvas textures | Sharp SDF text for in-world documents, signs and terminals | decided |
+| Mobile controls | `nipplejs` | custom touch handler | A tested virtual joystick; pair it with ecctrl's input | proposed |
+| Scanned scenes | `Spark` for Gaussian splats | `GaussianSplats3D`, `3DTilesRendererJS` | A photoscanned real site as a crime scene; weigh file size and mobile cost first | open |
 | WebGPU | Not yet. Ship WebGL; keep TSL effects (`tslfx`) as an experiment | | Tooling (`webgpu_inspector`, `stats-gl`) is ready, but mobile coverage isn't | open |
 
 ## State, story, AI
