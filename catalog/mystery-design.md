@@ -69,6 +69,7 @@ Stars checked 2026-09-23. Notes: [notes/mystery-design.md](../notes/mystery-desi
 | Repo | ★ | License | What it is | What we take from it | Sync |
 |---|---:|---|---|---|---|
 | [mxgmn/WaveFunctionCollapse](https://github.com/mxgmn/WaveFunctionCollapse) | 25.3k | ⚠️ custom — read it | Original WFC algorithm (C#). | Constraint-based crash-site or base layouts. | docs |
+| [pathwaycom/arc-task-gen](https://github.com/pathwaycom/arc-task-gen) | 11.2k | MIT | Generates original ARC-AGI-1-style reasoning tasks. | Abstract 'alien signal' grid puzzles with checkable answers. | docs |
 | [galaxykate/tracery](https://github.com/galaxykate/tracery) | 2.2k | Apache-2.0 | Story-grammar text generator (JS). | Procedural witness reports, redacted memos, radio chatter. | docs |
 | [kchapelier/wavefunctioncollapse](https://github.com/kchapelier/wavefunctioncollapse) | 526 | MIT | JS port of WFC. | In-browser WFC for three.js tile layouts. | docs |
 | [robbestad/Rantjs](https://github.com/robbestad/Rantjs) | 218 | ISC | Seeded procedural text (TS). | Reproducible flavour text for a same-seed daily case. | docs |

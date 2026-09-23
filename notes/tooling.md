@@ -58,3 +58,6 @@ Then any agent, in any repo, can ask the knowledge base directly instead of clon
 - Anti-bot "stealth browser" MCPs (invisible_playwright_mcp, stealth-browser-mcp, SeleniumBase CDP mode). We don't need to get around bot detection, and doing so would break the no-scraping rules in ufo-data.
 - OSINT person-lookup tools (sherlock, maigret). They're out of scope and invasive.
 - General chat front-ends and agent platforms (open-webui, dify, n8n). They don't serve these projects.
+- Watermark strippers (watermarks-remover): these remove AI provenance marks such as C2PA and SynthID. We shouldn't strip provenance from anything we publish.
+- Session exporters (codex-auth-helper): these write logged-in ChatGPT credentials to a local file, which is a credential-leak risk.
+- Face-swap tools that "clone any viral video". Deepfake tooling has no place in these projects.

@@ -2,13 +2,13 @@
 
 # Index
 
-281 source repos across 6 categories. Stars checked 2026-09-23.
+296 source repos across 6 categories. Stars checked 2026-09-23.
 
 | Category | Repos | Covers |
 |---|---:|---|
-| [3D game tech](catalog/3d-tech.md) | 74 | Engines, R3F ecosystem, games to learn from, shaders and atmosphere, state/AI/audio, and the asset pipeline. |
-| [Mystery game design](catalog/mystery-design.md) | 62 | Dialogue engines, mystery and investigation games, evidence-board UI, ARG/document-game UI, procedural mysteries, design reading, saves and quests. |
+| [3D game tech](catalog/3d-tech.md) | 78 | Engines, R3F ecosystem, games to learn from, shaders and atmosphere, state/AI/audio, and the asset pipeline. |
+| [Mystery game design](catalog/mystery-design.md) | 63 | Dialogue engines, mystery and investigation games, evidence-board UI, ARG/document-game UI, procedural mysteries, design reading, saves and quests. |
 | [UFO / UAP source data](catalog/ufo-data.md) | 43 | Real case files (PURSUE, Blue Book, FOIA), sighting datasets, analysis and evidence UIs, sky reconstruction, and disclosure timelines. Read the data-licensing notes before shipping anything. |
 | [Web starters & frameworks](catalog/web-starters.md) | 16 | Next.js starters, full-stack templates, UI and AI building blocks. |
 | [AI decision models (Jev)](catalog/ai-decisions.md) | 37 | TypeSafe AI's Jev System One model (launched 2026-09-15): typed, calibrated decisions in 70–500 ms. Official SDKs, games built on it, open/local alternatives, dev tooling, directories. |
-| [MCP servers & CLI tools](catalog/tooling.md) | 49 | MCP servers and command-line tools for building, debugging and researching: browser/devtools MCPs, code-graph and token savers, Blender/three.js MCPs, document converters for the case files, MCP SDKs, and everyday CLIs. |
+| [MCP servers & CLI tools](catalog/tooling.md) | 59 | MCP servers and command-line tools for building, debugging and researching: browser/devtools MCPs, code-graph and token savers, Blender/three.js MCPs, document converters for the case files, MCP SDKs, and everyday CLIs. |

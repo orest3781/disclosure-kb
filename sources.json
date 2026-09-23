@@ -2855,6 +2855,156 @@
       "sync": "docs",
       "what": "List of modern alternatives to common Unix commands.",
       "use": "Where to find more tools like these."
+    },
+    {
+      "repo": "bilawalsidhu/gods-eye-view",
+      "category": "3d-tech",
+      "group": "Games to learn from",
+      "stars": 41726,
+      "license": "MIT",
+      "sync": "full",
+      "what": "Spy-satellite simulator on a photorealistic 3D Cesium globe, fed live open flight and satellite data.",
+      "use": "Reference for the classified surveillance-console look and real-time tracking in a browser. Check each data/tile provider's terms."
+    },
+    {
+      "repo": "ashemag/human-atlas",
+      "category": "3d-tech",
+      "group": "Games to learn from",
+      "stars": 3825,
+      "license": "MIT",
+      "sync": "full",
+      "what": "3D anatomy explorer: 2,234 selectable meshes, system layers, search, exploded views (React + three.js + shadcn).",
+      "use": "Select/isolate/explode patterns for an 'autopsy table' or evidence-inspection view. Meshes are BodyParts3D, CC BY 4.0: attribute."
+    },
+    {
+      "repo": "MengTo/threeui",
+      "category": "3d-tech",
+      "group": "Shaders & atmosphere",
+      "stars": 6124,
+      "license": "MIT",
+      "sync": "docs",
+      "what": "Catalog of interactive three.js/shader UI components.",
+      "use": "Ready-made WebGL UI pieces for HUDs and menus."
+    },
+    {
+      "repo": "robbietilton/Compositor",
+      "category": "3d-tech",
+      "group": "Assets & pipeline",
+      "stars": 5152,
+      "license": "MIT",
+      "sync": "none",
+      "what": "Open-source Photoshop alternative for Mac (Swift).",
+      "use": "Texture and asset editing without Adobe."
+    },
+    {
+      "repo": "pathwaycom/arc-task-gen",
+      "category": "mystery-design",
+      "group": "Procedural mysteries & text",
+      "stars": 11153,
+      "license": "MIT",
+      "sync": "docs",
+      "what": "Generates original ARC-AGI-1-style reasoning tasks.",
+      "use": "Abstract 'alien signal' grid puzzles with checkable answers."
+    },
+    {
+      "repo": "baidu/Unlimited-OCR",
+      "category": "tooling",
+      "group": "MCP & CLI: research and documents",
+      "stars": 26166,
+      "license": "MIT",
+      "sync": "docs",
+      "what": "One-shot OCR for long documents.",
+      "use": "Another candidate for the PURSUE and Blue Book scans; compare with docling."
+    },
+    {
+      "repo": "firecrawl/anydoc",
+      "category": "tooling",
+      "group": "MCP & CLI: research and documents",
+      "stars": 21962,
+      "license": "MIT",
+      "sync": "docs",
+      "what": "Word/PPT/Excel/ODF/RTF/EPUB/CSV/PDF to clean Markdown; Rust with Node and Python bindings.",
+      "use": "Fast document conversion callable from our JS scripts."
+    },
+    {
+      "repo": "langchain-ai/openwiki",
+      "category": "tooling",
+      "group": "Agent skills & code quality",
+      "stars": 16743,
+      "license": "MIT",
+      "sync": "docs",
+      "what": "CLI that writes and maintains agent documentation for a codebase.",
+      "use": "Generate the missing CLAUDE.md and docs for oresth.com (a STATUS.md to-do)."
+    },
+    {
+      "repo": "cloudflare/security-audit-skill",
+      "category": "tooling",
+      "group": "Agent skills & code quality",
+      "stars": 20721,
+      "license": "MIT",
+      "sync": "docs",
+      "what": "Multi-phase security audit skill with independently verified, machine-readable findings.",
+      "use": "Audit oresth.com's contact route and future Jev/API routes."
+    },
+    {
+      "repo": "dmmulroy/anti-slop",
+      "category": "tooling",
+      "group": "Agent skills & code quality",
+      "stars": 4906,
+      "license": "MIT",
+      "sync": "docs",
+      "what": "Opinionated Oxlint rules rejecting low-evidence TS/JS patterns.",
+      "use": "A lint gate for AI-written code in the game."
+    },
+    {
+      "repo": "DietrichGebert/ponytail",
+      "category": "tooling",
+      "group": "Agent skills & code quality",
+      "stars": 144888,
+      "license": "MIT",
+      "sync": "docs",
+      "what": "Agent skill: think like the laziest senior dev; the best code is code you never wrote.",
+      "use": "Keep agent changes minimal (YAGNI) on our repos."
+    },
+    {
+      "repo": "virgiliojr94/book-to-skill",
+      "category": "tooling",
+      "group": "Agent skills & code quality",
+      "stars": 32119,
+      "license": "MIT",
+      "sync": "docs",
+      "what": "Turns a technical book PDF into a Claude Code skill.",
+      "use": "Turn game-design and three.js books we own into skills."
+    },
+    {
+      "repo": "JustVugg/colibri",
+      "category": "tooling",
+      "group": "Local AI inference",
+      "stars": 37301,
+      "license": "Apache-2.0",
+      "sync": "docs",
+      "what": "Runs frontier MoE models on ordinary hardware by streaming experts from disk; pure C, zero deps.",
+      "use": "Local models without cloud costs (offline NPC text, research)."
+    },
+    {
+      "repo": "antirez/ds4",
+      "category": "tooling",
+      "group": "Local AI inference",
+      "stars": 22662,
+      "license": "MIT",
+      "sync": "docs",
+      "what": "DeepSeek 4 Flash/PRO local inference engine for Metal, CUDA and ROCm.",
+      "use": "Same: strong local model on our own GPU/Mac."
+    },
+    {
+      "repo": "google/artemis",
+      "category": "tooling",
+      "group": "Other notable",
+      "stars": 9502,
+      "license": "Apache-2.0",
+      "sync": "none",
+      "what": "Natural-language Android automation; 99%+ on AndroidWorld.",
+      "use": "Only if the game ships a mobile app that needs automated testing."
     }
   ]
 }

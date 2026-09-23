@@ -42,7 +42,9 @@ Stars checked 2026-09-23. Notes: [notes/3d-tech.md](../notes/3d-tech.md). Sync l
 
 | Repo | ★ | License | What it is | What we take from it | Sync |
 |---|---:|---|---|---|---|
+| [bilawalsidhu/gods-eye-view](https://github.com/bilawalsidhu/gods-eye-view) | 41.7k | MIT | Spy-satellite simulator on a photorealistic 3D Cesium globe, fed live open flight and satellite data. | Reference for the classified surveillance-console look and real-time tracking in a browser. Check each data/tile provider's terms. | full |
 | [brunosimon/folio-2019](https://github.com/brunosimon/folio-2019) | 4.7k | MIT | Drivable 3D portfolio (three.js + cannon). | World structure, loading screen, interaction zones. | full |
+| [ashemag/human-atlas](https://github.com/ashemag/human-atlas) | 3.8k | MIT | 3D anatomy explorer: 2,234 selectable meshes, system layers, search, exploded views (React + three.js + shadcn). | Select/isolate/explode patterns for an 'autopsy table' or evidence-inspection view. Meshes are BodyParts3D, CC BY 4.0: attribute. | full |
 | [mshumer/Claude-of-Duty](https://github.com/mshumer/Claude-of-Duty) | 3.4k | MIT | FPS in three.js built from a single prompt. | First-person feel: sway, pointer lock, HUD, post stack. | full |
 | [pmndrs/racing-game](https://github.com/pmndrs/racing-game) | 2.2k | MIT | Full open-source R3F game (zustand + cannon + drei). | Best reference for R3F game architecture: store, level/HUD split, settings. | full |
 | [brunosimon/folio-2025](https://github.com/brunosimon/folio-2025) | 1.9k | MIT | Bruno Simon's 2025 portfolio game. | Modern three.js (WebGPU/TSL era), day/night cycle, atmosphere. | full |
@@ -65,6 +67,7 @@ Stars checked 2026-09-23. Notes: [notes/3d-tech.md](../notes/3d-tech.md). Sync l
 |---|---:|---|---|---|---|
 | [lettier/3d-game-shaders-for-beginners](https://github.com/lettier/3d-game-shaders-for-beginners) | 19.9k | ⚠️ none (all rights reserved — reference only) | Step-by-step SSAO, DoF, fog, bloom, film grain guide. | GLSL theory for grain, fog, bloom, outlines. Reference only. | docs |
 | [patriciogonzalezvivo/thebookofshaders](https://github.com/patriciogonzalezvivo/thebookofshaders) | 7.0k | ⚠️ custom — read it | Guide to fragment shaders. | Noise, patterns, SDFs for beams, glows, radar sweeps. | docs |
+| [MengTo/threeui](https://github.com/MengTo/threeui) | 6.1k | MIT | Catalog of interactive three.js/shader UI components. | Ready-made WebGL UI pieces for HUDs and menus. | docs |
 | [patriciogonzalezvivo/lygia](https://github.com/patriciogonzalezvivo/lygia) | 3.4k | ⚠️ custom — read it | Multi-language shader function library. | Noise, blur, grading, lighting snippets; check terms before shipping. | docs |
 | [ashima/webgl-noise](https://github.com/ashima/webgl-noise) | 3.0k | MIT | Procedural noise GLSL. | Simplex/Perlin for clouds, static, heat shimmer, hull shimmer. | full |
 | [0beqz/realism-effects](https://github.com/0beqz/realism-effects) | 1.7k | MIT | SSGI, motion blur, TRAA for three.js. | High-end lighting for night interiors. | docs |
@@ -99,6 +102,7 @@ Stars checked 2026-09-23. Notes: [notes/3d-tech.md](../notes/3d-tech.md). Sync l
 | [zeux/meshoptimizer](https://github.com/zeux/meshoptimizer) | 8.4k | MIT | Mesh optimisation and gltfpack. | Simplify and meshopt-compress GLBs. | none |
 | [google/draco](https://github.com/google/draco) | 7.5k | Apache-2.0 | Geometry compression. | Draco GLBs decoded by drei useGLTF. | none |
 | [pmndrs/gltfjsx](https://github.com/pmndrs/gltfjsx) | 5.9k | MIT | glTF to JSX components (--transform). | Every model as a typed R3F component, optimised in one step. | docs |
+| [robbietilton/Compositor](https://github.com/robbietilton/Compositor) | 5.2k | MIT | Open-source Photoshop alternative for Mac (Swift). | Texture and asset editing without Adobe. | none |
 | [donmccurdy/three-gltf-viewer](https://github.com/donmccurdy/three-gltf-viewer) | 2.5k | MIT | Drag-and-drop glTF viewer. | Quick asset QA. | none |
 | [donmccurdy/glTF-Transform](https://github.com/donmccurdy/glTF-Transform) | 2.0k | MIT | glTF SDK and CLI. | Build pipeline: dedupe, prune, resize, KTX2/WebP, Draco/meshopt. | docs |
 | [KhronosGroup/glTF-Blender-IO](https://github.com/KhronosGroup/glTF-Blender-IO) | 1.7k | Apache-2.0 | Blender glTF import/export. | Blender to GLB authoring path. | none |

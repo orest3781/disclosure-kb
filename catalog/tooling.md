@@ -49,6 +49,8 @@ Stars checked 2026-09-23. Notes: [notes/tooling.md](../notes/tooling.md). Sync l
 | [docling-project/docling](https://github.com/docling-project/docling) | 67.7k | MIT | IBM's document converter: PDF, DOCX, tables to Markdown/JSON. | Cleanest licence for converting declassified PDFs into the reading-room text. | docs |
 | [datalab-to/marker](https://github.com/datalab-to/marker) | 39.9k | Apache-2.0 | Fast, accurate PDF to Markdown/JSON. | Alternative converter. Code Apache, model weights OpenRAIL-M (check commercial terms). | docs |
 | [ocrmypdf/OCRmyPDF](https://github.com/ocrmypdf/OCRmyPDF) | 34.9k | MPL-2.0 | Adds a searchable OCR text layer to scanned PDFs (Tesseract). | Make original war.gov scans searchable while keeping the real document look. | docs |
+| [baidu/Unlimited-OCR](https://github.com/baidu/Unlimited-OCR) | 26.2k | MIT | One-shot OCR for long documents. | Another candidate for the PURSUE and Blue Book scans; compare with docling. | docs |
+| [firecrawl/anydoc](https://github.com/firecrawl/anydoc) | 22.0k | MIT | Word/PPT/Excel/ODF/RTF/EPUB/CSV/PDF to clean Markdown; Rust with Node and Python bindings. | Fast document conversion callable from our JS scripts. | docs |
 | [xberg-io/xberg](https://github.com/xberg-io/xberg) | 9.3k | MIT | Extract text, tables, images and metadata from 106 formats; CLI, API and MCP. | One tool for mixed document dumps (PDF, images, office files). | docs |
 | [firecrawl/firecrawl-mcp-server](https://github.com/firecrawl/firecrawl-mcp-server) | 7.5k | MIT | Official Firecrawl MCP: scrape and search the web (hosted API). | Pull war.gov / aaro.mil / congress.gov pages into clean Markdown for notes. | docs |
 
@@ -84,3 +86,26 @@ Stars checked 2026-09-23. Notes: [notes/tooling.md](../notes/tooling.md). Sync l
 | [ibraheemdev/modern-unix](https://github.com/ibraheemdev/modern-unix) | 33.0k | ⚠️ none (all rights reserved — reference only) | List of modern alternatives to common Unix commands. | Where to find more tools like these. | docs |
 | [ffmpegwasm/ffmpeg.wasm](https://github.com/ffmpegwasm/ffmpeg.wasm) | 17.8k | MIT | FFmpeg in the browser via WebAssembly. | In-game 'enhance the footage' effects or player-uploaded clips. | docs |
 | [kucherenko/jscpd](https://github.com/kucherenko/jscpd) | 6.3k | MIT | Copy/paste detector, 220+ languages, with an MCP server. | Catch duplicated game logic in oresth.com. | none |
+
+### Agent skills & code quality
+
+| Repo | ★ | License | What it is | What we take from it | Sync |
+|---|---:|---|---|---|---|
+| [DietrichGebert/ponytail](https://github.com/DietrichGebert/ponytail) | 145k | MIT | Agent skill: think like the laziest senior dev; the best code is code you never wrote. | Keep agent changes minimal (YAGNI) on our repos. | docs |
+| [virgiliojr94/book-to-skill](https://github.com/virgiliojr94/book-to-skill) | 32.1k | MIT | Turns a technical book PDF into a Claude Code skill. | Turn game-design and three.js books we own into skills. | docs |
+| [cloudflare/security-audit-skill](https://github.com/cloudflare/security-audit-skill) | 20.7k | MIT | Multi-phase security audit skill with independently verified, machine-readable findings. | Audit oresth.com's contact route and future Jev/API routes. | docs |
+| [langchain-ai/openwiki](https://github.com/langchain-ai/openwiki) | 16.7k | MIT | CLI that writes and maintains agent documentation for a codebase. | Generate the missing CLAUDE.md and docs for oresth.com (a STATUS.md to-do). | docs |
+| [dmmulroy/anti-slop](https://github.com/dmmulroy/anti-slop) | 4.9k | MIT | Opinionated Oxlint rules rejecting low-evidence TS/JS patterns. | A lint gate for AI-written code in the game. | docs |
+
+### Local AI inference
+
+| Repo | ★ | License | What it is | What we take from it | Sync |
+|---|---:|---|---|---|---|
+| [JustVugg/colibri](https://github.com/JustVugg/colibri) | 37.3k | Apache-2.0 | Runs frontier MoE models on ordinary hardware by streaming experts from disk; pure C, zero deps. | Local models without cloud costs (offline NPC text, research). | docs |
+| [antirez/ds4](https://github.com/antirez/ds4) | 22.7k | MIT | DeepSeek 4 Flash/PRO local inference engine for Metal, CUDA and ROCm. | Same: strong local model on our own GPU/Mac. | docs |
+
+### Other notable
+
+| Repo | ★ | License | What it is | What we take from it | Sync |
+|---|---:|---|---|---|---|
+| [google/artemis](https://github.com/google/artemis) | 9.5k | Apache-2.0 | Natural-language Android automation; 99%+ on AndroidWorld. | Only if the game ships a mobile app that needs automated testing. | none |
