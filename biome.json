@@ -5,6 +5,6 @@
     "includes": ["scripts/**", "mcp/src/**", "mcp/test/**", "*.json", "mcp/*.json", "!sources.json", "!**/package-lock.json"]
   },
   "formatter": { "indentStyle": "space", "indentWidth": 2, "lineWidth": 140 },
-  "linter": { "enabled": true, "rules": { "recommended": true } },
+  "linter": { "enabled": true },
   "assist": { "actions": { "source": { "organizeImports": "on" } } }
 }
