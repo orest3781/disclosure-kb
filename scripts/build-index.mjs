@@ -7,6 +7,7 @@
 import { readFileSync, writeFileSync, mkdirSync, existsSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
+import { validateSources } from "./lib/validate.mjs";
 
 const root = join(dirname(fileURLToPath(import.meta.url)), "..");
 const data = JSON.parse(readFileSync(join(root, "sources.json"), "utf8"));
@@ -14,19 +15,7 @@ const { categories, sources, checkedAt } = data;
 const check = process.argv.includes("--check");
 
 // --- validate -------------------------------------------------------------
-const errors = [];
-const catIds = new Set(categories.map((c) => c.id));
-const seen = new Set();
-for (const [i, s] of sources.entries()) {
-  const at = `sources[${i}] ${s.repo ?? "?"}`;
-  if (!/^[\w.-]+\/[\w.-]+$/.test(s.repo ?? "")) errors.push(`${at}: repo must be owner/name`);
-  if (seen.has(`${s.category}:${s.repo}`)) errors.push(`${at}: duplicate in ${s.category}`);
-  seen.add(`${s.category}:${s.repo}`);
-  if (!catIds.has(s.category)) errors.push(`${at}: unknown category "${s.category}"`);
-  if (!["docs", "full", "none"].includes(s.sync)) errors.push(`${at}: sync must be docs|full|none`);
-  for (const k of ["license", "what", "use"]) if (!s[k]) errors.push(`${at}: missing ${k}`);
-  if (typeof s.stars !== "number") errors.push(`${at}: stars must be a number`);
-}
+const errors = validateSources(data);
 if (errors.length) {
   console.error(errors.join("\n"));
   process.exit(1);
