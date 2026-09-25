@@ -8,9 +8,9 @@ Knowledge base for the 3D UFO-disclosure mystery game: 945 sources in 11 categor
 |---|---|
 | Catalog, REVIEW.md verdicts, kb/ analysis layer, notes/ | ✅ Done |
 | MCP server (`mcp/`, 7 `kb_*` tools) | ✅ Done |
-| Review fixes on branch `fix/review-findings`: LF line endings, `sync --jobs` check, ripgrep per-file cap, stale docs | ✅ Done |
+| Review fixes: LF line endings, `sync --jobs` check, ripgrep per-file cap, stale docs | ✅ Done |
 | `npm run check` (Biome, unit tests, generated-file checks, MCP smoke test), wired into CI | ✅ Done |
-| Merge `fix/review-findings` to `main` and confirm CI passes on GitHub | ⬜ Not started |
+| Review fixes merged to `main`, CI green on GitHub | ✅ Done |
 
 ## Next
 
