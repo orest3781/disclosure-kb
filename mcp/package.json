@@ -10,7 +10,7 @@
     "build": "tsc",
     "start": "node dist/index.js",
     "test": "npm run build && node test/smoke.mjs",
-    "clean": "rm -rf dist"
+    "clean": "node -e \"require('node:fs').rmSync('dist', { recursive: true, force: true })\""
   },
   "engines": { "node": ">=20" },
   "dependencies": {

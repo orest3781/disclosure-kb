@@ -172,7 +172,8 @@ export async function searchVendor(p: VendorSearch): Promise<{ stdout: string; s
   if (repos.length === 0) return { stdout: "", searched: [], tool: "none" };
   const dirs = repos.map((r) => r.dir);
   let tool = "rg";
-  let args = ["-n", "--no-heading", "--color", "never", "--max-count", "5", "--max-columns", "240", "-m", String(p.max_results)];
+  // --max-count is per file; the tool caps the total at max_results.
+  let args = ["-n", "--no-heading", "--color", "never", "--max-count", "5", "--max-columns", "240"];
   if (p.fixed_strings) args.push("-F");
   if (p.glob) args.push("--glob", p.glob);
   args.push("-e", p.pattern, ...dirs);
