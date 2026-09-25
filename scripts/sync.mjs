@@ -8,6 +8,7 @@
 //   node scripts/sync.mjs --repo pmndrs/drei   one repo (repeatable)
 //   node scripts/sync.mjs --mode full          override each source's mode
 //   node scripts/sync.mjs --dry-run            print what would happen
+//   node scripts/sync.mjs --jobs 8             parallel clones (default 4)
 //
 // Modes: "docs" checks out root files plus docs/, doc/, examples/ (sparse);
 // "full" checks out the whole default branch; "none" is index-only.
@@ -28,6 +29,10 @@ const repos = pick("--repo");
 const [modeOverride] = pick("--mode");
 const dryRun = args.includes("--dry-run");
 const concurrency = Number(pick("--jobs")[0] ?? 4);
+if (!Number.isInteger(concurrency) || concurrency < 1) {
+  console.error(`--jobs must be a positive whole number, got "${pick("--jobs")[0]}"`);
+  process.exit(1);
+}
 
 const DOCS_PATTERNS = ["/*", "!/*/", "/docs/", "/doc/", "/examples/"];
 
