@@ -1,4 +1,19 @@
+@A:\DEV\CLAUDE.md
+
 # disclosure-kb
+
+## Stack and commands
+
+| What | Command |
+|---|---|
+| Stack | Node 22+ scripts (`scripts/`, plain ESM) and a TypeScript MCP server (`mcp/`); Biome for lint and format; `node:test` for unit tests |
+| Install | `npm install && npm install --prefix mcp` |
+| Check (lint + typecheck + tests) | `npm run check` |
+| Unit tests only | `npm test` |
+| Format | `npm run format` |
+| Rebuild generated files | `node scripts/build-index.mjs && node scripts/build-review.mjs` |
+
+## Rules
 
 This is the knowledge base for a 3D UFO-disclosure mystery game (Next.js + React + three.js). See `README.md`.
 
