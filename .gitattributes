@@ -1,0 +1,3 @@
+# Keep LF everywhere. The --check scripts compare generated files byte for byte,
+# so a CRLF checkout on Windows made them report "out of date" with no real change.
+* text=auto eol=lf
