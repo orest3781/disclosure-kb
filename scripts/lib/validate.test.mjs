@@ -4,8 +4,14 @@ import { validateSources } from "./validate.mjs";
 
 const categories = [{ id: "3d-tech", title: "3D", description: "d" }];
 const row = (over = {}) => ({
-  repo: "owner/name", category: "3d-tech", stars: 10, license: "MIT", sync: "docs",
-  what: "A thing.", use: "We use it.", ...over,
+  repo: "owner/name",
+  category: "3d-tech",
+  stars: 10,
+  license: "MIT",
+  sync: "docs",
+  what: "A thing.",
+  use: "We use it.",
+  ...over,
 });
 
 test("a well-formed catalog has no errors", () => {

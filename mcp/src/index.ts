@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+
 /**
  * disclosure-kb MCP server (stdio).
  *
@@ -8,10 +9,10 @@
  * Read-only; no network access.
  */
 
-import { McpServer } from "@modelcontextprotocol/server";
-import { serveStdio } from "@modelcontextprotocol/server/stdio";
 import { existsSync } from "node:fs";
 import { join } from "node:path";
+import { McpServer } from "@modelcontextprotocol/server";
+import { serveStdio } from "@modelcontextprotocol/server/stdio";
 import { ROOT } from "./kb.js";
 import { registerAll } from "./tools.js";
 
@@ -21,7 +22,9 @@ Verdicts: Adopt = recommended pick; Trial = permissive and relevant, unproven if
 Stars and licences were checked on the date kb_list_categories reports; nothing has been installed or tested. Never treat a mirror repo's OCR as a verified quote.`;
 
 if (process.argv.includes("--help")) {
-  console.log(`disclosure-kb-mcp: MCP server over stdio for ${ROOT}\nTools: kb_list_categories, kb_search_sources, kb_get_source, kb_read_doc, kb_search_docs, kb_vendor_status, kb_search_vendor\nUsage: node dist/index.js   (add to Claude Code via the repo's .mcp.json)`);
+  console.log(
+    `disclosure-kb-mcp: MCP server over stdio for ${ROOT}\nTools: kb_list_categories, kb_search_sources, kb_get_source, kb_read_doc, kb_search_docs, kb_vendor_status, kb_search_vendor\nUsage: node dist/index.js   (add to Claude Code via the repo's .mcp.json)`,
+  );
   process.exit(0);
 }
 

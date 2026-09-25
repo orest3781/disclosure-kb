@@ -3,11 +3,21 @@
  * All tools are read-only; none touch the network.
  */
 
-import { McpServer, ResourceTemplate } from "@modelcontextprotocol/server";
+import { type McpServer, ResourceTemplate } from "@modelcontextprotocol/server";
 import * as z from "zod";
 import {
-  CHARACTER_LIMIT, findSource, listDocs, listVendor, loadKb, readDoc, resolveDoc,
-  searchDocs, searchSources, searchVendor, sourceToMarkdown, truncate,
+  CHARACTER_LIMIT,
+  findSource,
+  listDocs,
+  listVendor,
+  loadKb,
+  readDoc,
+  resolveDoc,
+  searchDocs,
+  searchSources,
+  searchVendor,
+  sourceToMarkdown,
+  truncate,
 } from "./kb.js";
 
 const READ_ONLY = { readOnlyHint: true, destructiveHint: false, idempotentHint: true, openWorldHint: false } as const;
@@ -33,9 +43,13 @@ Returns markdown: one section per category (id, title, description, counts by ve
         const rows = kb.sources.filter((s) => s.category === c.id);
         const verdicts = VERDICTS.map((v) => [v, rows.filter((r) => r.verdict === v).length] as const).filter(([, n]) => n);
         const groups = [...new Set(rows.map((r) => r.group ?? ""))].filter(Boolean);
-        out.push(`## ${c.id} — ${c.title} (${rows.length})`, c.description,
+        out.push(
+          `## ${c.id} — ${c.title} (${rows.length})`,
+          c.description,
           `- Verdicts: ${verdicts.map(([v, n]) => `${v} ${n}`).join(", ")}`,
-          `- Groups: ${groups.join(" · ")}`, "");
+          `- Groups: ${groups.join(" · ")}`,
+          "",
+        );
       }
       return text(out.join("\n"));
     },
@@ -66,17 +80,19 @@ Examples:
   - "Cheapest way to get historic flight data" -> query="ads-b", category="apis" or "sky-geo"
 
 Errors: returns "No sources match" with the filters echoed when nothing matches; check category ids with kb_list_categories.`,
-      inputSchema: z.object({
-        query: z.string().max(200).optional().describe("Keywords; all must match"),
-        category: z.string().max(40).optional().describe("Category id (see kb_list_categories)"),
-        group: z.string().max(60).optional().describe("Group name within a category"),
-        verdict: z.enum(VERDICTS).optional().describe("Review verdict filter"),
-        license_risk: z.enum(["low", "medium", "high", "check"]).optional().describe("Licence risk filter"),
-        min_stars: z.number().int().min(0).optional().describe("Minimum stars"),
-        limit: z.number().int().min(1).max(100).default(20).describe("Page size"),
-        offset: z.number().int().min(0).default(0).describe("Results to skip"),
-        response_format: z.enum(["markdown", "json"]).default("markdown"),
-      }).strict(),
+      inputSchema: z
+        .object({
+          query: z.string().max(200).optional().describe("Keywords; all must match"),
+          category: z.string().max(40).optional().describe("Category id (see kb_list_categories)"),
+          group: z.string().max(60).optional().describe("Group name within a category"),
+          verdict: z.enum(VERDICTS).optional().describe("Review verdict filter"),
+          license_risk: z.enum(["low", "medium", "high", "check"]).optional().describe("Licence risk filter"),
+          min_stars: z.number().int().min(0).optional().describe("Minimum stars"),
+          limit: z.number().int().min(1).max(100).default(20).describe("Page size"),
+          offset: z.number().int().min(0).default(0).describe("Results to skip"),
+          response_format: z.enum(["markdown", "json"]).default("markdown"),
+        })
+        .strict(),
       annotations: READ_ONLY,
     },
     async (p) => {
@@ -87,10 +103,14 @@ Errors: returns "No sources match" with the filters echoed when nothing matches;
       const all = searchSources(kb.sources, p);
       const page = all.slice(p.offset, p.offset + p.limit);
       if (all.length === 0) {
-        return text(`No sources match ${JSON.stringify({ query: p.query, category: p.category, group: p.group, verdict: p.verdict, license_risk: p.license_risk, min_stars: p.min_stars })}. Try fewer terms, or kb_search_docs for the written notes.`);
+        return text(
+          `No sources match ${JSON.stringify({ query: p.query, category: p.category, group: p.group, verdict: p.verdict, license_risk: p.license_risk, min_stars: p.min_stars })}. Try fewer terms, or kb_search_docs for the written notes.`,
+        );
       }
       const hasMore = p.offset + page.length < all.length;
-      const footer = hasMore ? `\n\n(${all.length} matches; showing ${p.offset + 1}-${p.offset + page.length}. Use offset=${p.offset + page.length} for more.)` : `\n\n(${all.length} matches.)`;
+      const footer = hasMore
+        ? `\n\n(${all.length} matches; showing ${p.offset + 1}-${p.offset + page.length}. Use offset=${p.offset + page.length} for more.)`
+        : `\n\n(${all.length} matches.)`;
       if (p.response_format === "json") {
         const payload = { total: all.length, count: page.length, offset: p.offset, has_more: hasMore, sources: page };
         return text(truncate(JSON.stringify(payload, null, 2), "Lower limit or add filters."));
@@ -118,8 +138,12 @@ Errors: "Not in the catalogue" with up to 5 near matches, so you can pick the ri
       const kb = await loadKb();
       const s = findSource(kb.sources, repo);
       if (!s) {
-        const near = searchSources(kb.sources, { query: repo.split("/").pop() }).slice(0, 5).map((x) => x.repo);
-        return text(`Not in the catalogue: "${repo}".${near.length ? ` Near matches: ${near.join(", ")}.` : " Try kb_search_sources with keywords."}`);
+        const near = searchSources(kb.sources, { query: repo.split("/").pop() })
+          .slice(0, 5)
+          .map((x) => x.repo);
+        return text(
+          `Not in the catalogue: "${repo}".${near.length ? ` Near matches: ${near.join(", ")}.` : " Try kb_search_sources with keywords."}`,
+        );
       }
       const synced = listVendor().some((v) => v.repo === s.repo);
       const extra = [
@@ -145,11 +169,13 @@ Args:
 Returns: the document (or section) text, the list of its headings, and a note if truncated at ${CHARACTER_LIMIT} characters with the offset to continue from.
 
 Read order for questions: kb/ (decisions and policy) → notes/ (findings) → catalog/ and REVIEW.md (per-source facts).`,
-      inputSchema: z.object({
-        path: z.string().max(200).optional().describe("Relative doc path; omit to list"),
-        section: z.string().max(120).optional().describe("Heading substring to return only that section"),
-        offset: z.number().int().min(0).default(0).describe("Character offset"),
-      }).strict(),
+      inputSchema: z
+        .object({
+          path: z.string().max(200).optional().describe("Relative doc path; omit to list"),
+          section: z.string().max(120).optional().describe("Heading substring to return only that section"),
+          offset: z.number().int().min(0).default(0).describe("Character offset"),
+        })
+        .strict(),
       annotations: READ_ONLY,
     },
     async ({ path, section, offset }) => {
@@ -162,7 +188,10 @@ Read order for questions: kb/ (decisions and policy) → notes/ (findings) → c
       const { text: body, sections } = readDoc(abs, section);
       if (section && !body) return text(`No heading in ${path} matches "${section}". Headings: ${sections.join(" | ")}`);
       const slice = body.slice(offset, offset + CHARACTER_LIMIT);
-      const more = offset + CHARACTER_LIMIT < body.length ? `\n\n[${body.length - offset - CHARACTER_LIMIT} more characters; continue with offset=${offset + CHARACTER_LIMIT}]` : "";
+      const more =
+        offset + CHARACTER_LIMIT < body.length
+          ? `\n\n[${body.length - offset - CHARACTER_LIMIT} more characters; continue with offset=${offset + CHARACTER_LIMIT}]`
+          : "";
       const toc = section ? "" : `\n\n---\nHeadings: ${sections.join(" | ")}`;
       return text(`${slice}${more}${toc}`);
     },
@@ -181,11 +210,13 @@ Args:
   - max_hits (number): maximum matches (default 30, max 100).
 
 Returns: markdown list of path:line with the excerpt. Follow up with kb_read_doc for the full section.`,
-      inputSchema: z.object({
-        query: z.string().min(2).max(120).describe("Plain-text search string"),
-        context: z.number().int().min(0).max(5).default(1),
-        max_hits: z.number().int().min(1).max(100).default(30),
-      }).strict(),
+      inputSchema: z
+        .object({
+          query: z.string().min(2).max(120).describe("Plain-text search string"),
+          context: z.number().int().min(0).max(5).default(1),
+          max_hits: z.number().int().min(1).max(100).default(30),
+        })
+        .strict(),
       annotations: READ_ONLY,
     },
     async ({ query, context, max_hits }) => {
@@ -210,7 +241,9 @@ Returns: markdown list of path:line with the excerpt. Follow up with kb_read_doc
       const vendor = listVendor();
       const syncable = kb.sources.filter((s) => s.sync !== "none").length;
       const lines = vendor.map((v) => `- ${v.repo} (${v.category})`);
-      return text(`# vendor/ status\n\n${vendor.length} synced of ${syncable} syncable sources (${kb.sources.length} total).\n\n${lines.join("\n") || "(nothing synced yet)"}\n\nSync one: \`node scripts/sync.mjs --repo owner/name\` · a category: \`--category <id>\` · everything: \`node scripts/sync.mjs\`.`);
+      return text(
+        `# vendor/ status\n\n${vendor.length} synced of ${syncable} syncable sources (${kb.sources.length} total).\n\n${lines.join("\n") || "(nothing synced yet)"}\n\nSync one: \`node scripts/sync.mjs --repo owner/name\` · a category: \`--category <id>\` · everything: \`node scripts/sync.mjs\`.`,
+      );
     },
   );
 
@@ -229,25 +262,37 @@ Args:
   - fixed_strings (boolean): treat pattern as literal text (default false).
 
 Returns: "path:line: text" lines relative to vendor/, the repos searched, and the tool used. Empty result says so and lists what was searched.`,
-      inputSchema: z.object({
-        pattern: z.string().min(1).max(300).describe("Regex or literal pattern"),
-        repo: z.string().max(200).optional().describe("Limit to one synced repo"),
-        glob: z.string().max(100).optional().describe("File glob filter"),
-        max_results: z.number().int().min(1).max(200).default(50),
-        fixed_strings: z.boolean().default(false),
-      }).strict(),
+      inputSchema: z
+        .object({
+          pattern: z.string().min(1).max(300).describe("Regex or literal pattern"),
+          repo: z.string().max(200).optional().describe("Limit to one synced repo"),
+          glob: z.string().max(100).optional().describe("File glob filter"),
+          max_results: z.number().int().min(1).max(200).default(50),
+          fixed_strings: z.boolean().default(false),
+        })
+        .strict(),
       annotations: READ_ONLY,
     },
     async (p) => {
       const r = await searchVendor(p);
       if (r.searched.length === 0) {
-        return text(p.repo
-          ? `"${p.repo}" is not synced into vendor/. Run: node scripts/sync.mjs --repo ${p.repo}. See kb_vendor_status for what is synced.`
-          : "Nothing is synced into vendor/ yet. Run: node scripts/sync.mjs --category <id> (see kb_vendor_status).");
+        return text(
+          p.repo
+            ? `"${p.repo}" is not synced into vendor/. Run: node scripts/sync.mjs --repo ${p.repo}. See kb_vendor_status for what is synced.`
+            : "Nothing is synced into vendor/ yet. Run: node scripts/sync.mjs --category <id> (see kb_vendor_status).",
+        );
       }
-      if (!r.stdout.trim()) return text(`No matches for ${p.fixed_strings ? "literal" : "regex"} "${p.pattern}" in ${r.searched.length} repo(s): ${r.searched.slice(0, 10).join(", ")}${r.searched.length > 10 ? "…" : ""}.`);
+      if (!r.stdout.trim())
+        return text(
+          `No matches for ${p.fixed_strings ? "literal" : "regex"} "${p.pattern}" in ${r.searched.length} repo(s): ${r.searched.slice(0, 10).join(", ")}${r.searched.length > 10 ? "…" : ""}.`,
+        );
       const lines = r.stdout.trimEnd().split("\n").slice(0, p.max_results);
-      return text(truncate(`# ${lines.length} line(s) for "${p.pattern}" (${r.tool}, ${r.searched.length} repo(s))\n\n\`\`\`\n${lines.join("\n")}\n\`\`\``, "Narrow with repo or glob."));
+      return text(
+        truncate(
+          `# ${lines.length} line(s) for "${p.pattern}" (${r.tool}, ${r.searched.length} repo(s))\n\n\`\`\`\n${lines.join("\n")}\n\`\`\``,
+          "Narrow with repo or glob.",
+        ),
+      );
     },
   );
 

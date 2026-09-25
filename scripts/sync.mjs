@@ -14,10 +14,10 @@
 // "full" checks out the whole default branch; "none" is index-only.
 
 import { execFile } from "node:child_process";
-import { promisify } from "node:util";
 import { existsSync, mkdirSync, readFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
+import { promisify } from "node:util";
 
 const root = join(dirname(fileURLToPath(import.meta.url)), "..");
 const { sources } = JSON.parse(readFileSync(join(root, "sources.json"), "utf8"));

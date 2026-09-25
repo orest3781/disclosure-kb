@@ -4,7 +4,7 @@
 //   node scripts/build-index.mjs
 // `--check` exits non-zero if the generated files are out of date (for CI).
 
-import { readFileSync, writeFileSync, mkdirSync, existsSync } from "node:fs";
+import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 import { validateSources } from "./lib/validate.mjs";
@@ -28,10 +28,7 @@ const licenseCell = (l) =>
   l === "none" ? "⚠️ none (all rights reserved — reference only)" : l === "NOASSERTION" ? "⚠️ custom — read it" : l;
 
 function table(rows) {
-  const out = [
-    "| Repo | ★ | License | What it is | What we take from it | Sync |",
-    "|---|---:|---|---|---|---|",
-  ];
+  const out = ["| Repo | ★ | License | What it is | What we take from it | Sync |", "|---|---:|---|---|---|---|"];
   for (const s of [...rows].sort((a, b) => b.stars - a.stars)) {
     const flags = [s.archived && "archived", s.stale && "stale"].filter(Boolean).join(", ");
     out.push(
@@ -47,9 +44,7 @@ const files = new Map();
 for (const c of categories) {
   const rows = sources.filter((s) => s.category === c.id);
   const groups = [...new Set(rows.map((s) => s.group ?? ""))];
-  const body = groups
-    .map((g) => `${g ? `### ${g}\n\n` : ""}${table(rows.filter((s) => (s.group ?? "") === g))}`)
-    .join("\n\n");
+  const body = groups.map((g) => `${g ? `### ${g}\n\n` : ""}${table(rows.filter((s) => (s.group ?? "") === g))}`).join("\n\n");
   files.set(
     `catalog/${c.id}.md`,
     `${header}# ${c.title}\n\n${c.description}\n\nStars checked ${checkedAt}. Notes: [notes/${c.id}.md](../notes/${c.id}.md). Sync locally: \`node scripts/sync.mjs --category ${c.id}\`\n\n${body}\n`,

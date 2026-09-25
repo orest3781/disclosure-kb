@@ -7,7 +7,7 @@
 // explicit picks from notes/*.md, then rules on licence, status and stars.
 // Change a verdict there, not in REVIEW.md.
 
-import { readFileSync, writeFileSync, existsSync } from "node:fs";
+import { existsSync, readFileSync, writeFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 
@@ -79,7 +79,10 @@ for (const c of categories) {
 const out = join(root, "REVIEW.md");
 if (process.argv.includes("--check")) {
   const cur = existsSync(out) ? readFileSync(out, "utf8") : "";
-  if (cur !== md) { console.error("out of date: REVIEW.md"); process.exit(1); }
+  if (cur !== md) {
+    console.error("out of date: REVIEW.md");
+    process.exit(1);
+  }
   console.log("review up to date");
 } else {
   writeFileSync(out, md);

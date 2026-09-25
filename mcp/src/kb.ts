@@ -6,7 +6,7 @@
  */
 
 import { execFile } from "node:child_process";
-import { existsSync, readFileSync, readdirSync, statSync } from "node:fs";
+import { existsSync, readdirSync, readFileSync, statSync } from "node:fs";
 import { dirname, join, normalize, relative, resolve, sep } from "node:path";
 import { fileURLToPath, pathToFileURL } from "node:url";
 import { promisify } from "node:util";
@@ -17,16 +17,36 @@ export const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), "..", "..")
 export const VENDOR_DIR = join(ROOT, "vendor");
 export const CHARACTER_LIMIT = 25_000;
 
-export interface Category { id: string; title: string; description: string }
-export interface Source {
-  repo: string; category: string; group?: string; stars: number; license: string;
-  sync: "docs" | "full" | "none"; what: string; use: string; note?: string;
-  archived?: boolean; stale?: boolean;
+export interface Category {
+  id: string;
+  title: string;
+  description: string;
 }
-export interface Review { verdict: string; risk: string; licText: string; reasons: string[] }
+export interface Source {
+  repo: string;
+  category: string;
+  group?: string;
+  stars: number;
+  license: string;
+  sync: "docs" | "full" | "none";
+  what: string;
+  use: string;
+  note?: string;
+  archived?: boolean;
+  stale?: boolean;
+}
+export interface Review {
+  verdict: string;
+  risk: string;
+  licText: string;
+  reasons: string[];
+}
 export type ReviewedSource = Source & Review & { url: string };
 
-interface ReviewModule { reviewSource(s: Source): Review; ORDER: string[] }
+interface ReviewModule {
+  reviewSource(s: Source): Review;
+  ORDER: string[];
+}
 
 // ---- sources.json, cached on mtime -----------------------------------------
 let cache: { mtime: number; categories: Category[]; sources: ReviewedSource[]; checkedAt: string } | null = null;
@@ -51,8 +71,12 @@ export async function loadKb(): Promise<NonNullable<typeof cache>> {
 
 // ---- search ---------------------------------------------------------------
 export interface SearchFilters {
-  query?: string; category?: string; group?: string; verdict?: string;
-  license_risk?: string; min_stars?: number;
+  query?: string;
+  category?: string;
+  group?: string;
+  verdict?: string;
+  license_risk?: string;
+  min_stars?: number;
 }
 
 /** Token match with field weights; repo name and group count most. */
@@ -68,13 +92,19 @@ export function searchSources(all: ReviewedSource[], f: SearchFilters): Reviewed
     let score = 0;
     if (terms.length) {
       const fields: [string, number][] = [
-        [s.repo.toLowerCase(), 3], [(s.group ?? "").toLowerCase(), 2],
-        [s.what.toLowerCase(), 1], [s.use.toLowerCase(), 1], [(s.note ?? "").toLowerCase(), 0.5],
+        [s.repo.toLowerCase(), 3],
+        [(s.group ?? "").toLowerCase(), 2],
+        [s.what.toLowerCase(), 1],
+        [s.use.toLowerCase(), 1],
+        [(s.note ?? "").toLowerCase(), 0.5],
       ];
       for (const t of terms) {
         let hit = 0;
         for (const [text, w] of fields) if (text.includes(t)) hit += w;
-        if (hit === 0) { score = -1; break; } // every term must match somewhere
+        if (hit === 0) {
+          score = -1;
+          break;
+        } // every term must match somewhere
         score += hit;
       }
       if (score < 0) continue;
@@ -85,7 +115,11 @@ export function searchSources(all: ReviewedSource[], f: SearchFilters): Reviewed
 }
 
 export function findSource(all: ReviewedSource[], repo: string): ReviewedSource | undefined {
-  const key = repo.toLowerCase().replace(/^https?:\/\/github\.com\//, "").replace(/\.git$/, "").replace(/\/$/, "");
+  const key = repo
+    .toLowerCase()
+    .replace(/^https?:\/\/github\.com\//, "")
+    .replace(/\.git$/, "")
+    .replace(/\/$/, "");
   return all.find((s) => s.repo.toLowerCase() === key) ?? all.find((s) => s.repo.toLowerCase().endsWith(`/${key}`));
 }
 
@@ -110,7 +144,10 @@ export function listDocs(): { path: string; bytes: number }[] {
   for (const d of DOC_DIRS) {
     const dir = join(ROOT, d);
     if (!existsSync(dir)) continue;
-    for (const f of readdirSync(dir).filter((x) => x.endsWith(".md")).sort()) out.push({ path: `${d}/${f}`, bytes: statSync(join(dir, f)).size });
+    for (const f of readdirSync(dir)
+      .filter((x) => x.endsWith(".md"))
+      .sort())
+      out.push({ path: `${d}/${f}`, bytes: statSync(join(dir, f)).size });
   }
   for (const f of DOC_FILES) if (existsSync(join(ROOT, f))) out.push({ path: f, bytes: statSync(join(ROOT, f)).size });
   return out;
@@ -148,7 +185,11 @@ export function searchDocs(query: string, context: number, maxHits: number): { p
 }
 
 // ---- vendor/ (synced source repos) ----------------------------------------
-export interface VendorRepo { repo: string; category: string; dir: string }
+export interface VendorRepo {
+  repo: string;
+  category: string;
+  dir: string;
+}
 
 export function listVendor(): VendorRepo[] {
   if (!existsSync(VENDOR_DIR)) return [];
@@ -164,11 +205,19 @@ export function listVendor(): VendorRepo[] {
   return out.sort((a, b) => a.repo.localeCompare(b.repo));
 }
 
-export interface VendorSearch { pattern: string; repo?: string; glob?: string; max_results: number; fixed_strings: boolean }
+export interface VendorSearch {
+  pattern: string;
+  repo?: string;
+  glob?: string;
+  max_results: number;
+  fixed_strings: boolean;
+}
 
 /** ripgrep over vendor/ (falls back to grep -rn). Output is capped by the caller. */
 export async function searchVendor(p: VendorSearch): Promise<{ stdout: string; searched: string[]; tool: string }> {
-  const repos = listVendor().filter((v) => !p.repo || v.repo.toLowerCase() === p.repo.toLowerCase() || v.repo.toLowerCase().endsWith(`/${p.repo.toLowerCase()}`));
+  const repos = listVendor().filter(
+    (v) => !p.repo || v.repo.toLowerCase() === p.repo.toLowerCase() || v.repo.toLowerCase().endsWith(`/${p.repo.toLowerCase()}`),
+  );
   if (repos.length === 0) return { stdout: "", searched: [], tool: "none" };
   const dirs = repos.map((r) => r.dir);
   let tool = "rg";
@@ -198,7 +247,10 @@ export async function searchVendor(p: VendorSearch): Promise<{ stdout: string; s
 }
 
 function trimVendorPaths(s: string): string {
-  return s.split("\n").map((l) => (l.startsWith(VENDOR_DIR) ? l.slice(VENDOR_DIR.length + 1) : l)).join("\n");
+  return s
+    .split("\n")
+    .map((l) => (l.startsWith(VENDOR_DIR) ? l.slice(VENDOR_DIR.length + 1) : l))
+    .join("\n");
 }
 
 // ---- output helpers ---------------------------------------------------------

@@ -2,11 +2,17 @@
 // Rows use made-up repo names so the rules are tested, not the current lists.
 import assert from "node:assert/strict";
 import { test } from "node:test";
-import { ADOPT, AVOID, OVERRIDE, PROTOTYPE_ONLY, licenseRisk, reviewSource } from "./review.mjs";
+import { ADOPT, AVOID, licenseRisk, OVERRIDE, PROTOTYPE_ONLY, reviewSource } from "./review.mjs";
 
 const row = (over = {}) => ({
-  repo: "example/unlisted", category: "3d-tech", stars: 5000, license: "MIT", sync: "docs",
-  what: "A thing.", use: "We use it.", ...over,
+  repo: "example/unlisted",
+  category: "3d-tech",
+  stars: 5000,
+  license: "MIT",
+  sync: "docs",
+  what: "A thing.",
+  use: "We use it.",
+  ...over,
 });
 const first = (collection) => [...collection.keys()][0];
 

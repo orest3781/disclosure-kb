@@ -1,6 +1,7 @@
 // Run: node --test "scripts/**/*.test.mjs". Dry runs only: no network, no vendor/ writes.
-import { spawnSync } from "node:child_process";
+
 import assert from "node:assert/strict";
+import { spawnSync } from "node:child_process";
 import { dirname, join } from "node:path";
 import { test } from "node:test";
 import { fileURLToPath } from "node:url";

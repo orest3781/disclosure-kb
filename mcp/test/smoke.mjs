@@ -1,11 +1,12 @@
 // End-to-end smoke test: starts the built server over stdio with the official
 // client and exercises every tool. Run: npm test (from mcp/).
+
+import assert from "node:assert/strict";
+import { readFileSync } from "node:fs";
+import { dirname, join } from "node:path";
+import { fileURLToPath } from "node:url";
 import { Client } from "@modelcontextprotocol/client";
 import { StdioClientTransport } from "@modelcontextprotocol/client/stdio";
-import assert from "node:assert/strict";
-import { dirname, join } from "node:path";
-import { readFileSync } from "node:fs";
-import { fileURLToPath } from "node:url";
 import { reviewSource } from "../../scripts/lib/review.mjs";
 
 const here = dirname(fileURLToPath(import.meta.url));
@@ -19,7 +20,15 @@ const call = async (name, args = {}) => {
 };
 
 const tools = (await client.listTools()).tools.map((t) => t.name).sort();
-assert.deepEqual(tools, ["kb_get_source", "kb_list_categories", "kb_read_doc", "kb_search_docs", "kb_search_sources", "kb_search_vendor", "kb_vendor_status"]);
+assert.deepEqual(tools, [
+  "kb_get_source",
+  "kb_list_categories",
+  "kb_read_doc",
+  "kb_search_docs",
+  "kb_search_sources",
+  "kb_search_vendor",
+  "kb_vendor_status",
+]);
 
 const cats = await call("kb_list_categories");
 assert.match(cats, /## 3d-tech/);
