@@ -74,7 +74,15 @@ The `mcp/` server exposes the knowledge base over MCP. Claude Code loads it auto
 2. Run `node scripts/build-index.mjs` and `node scripts/build-review.mjs`. To give it a verdict other than the default, add it to the lists at the top of `scripts/lib/review.mjs`.
 3. Write what you learned in `notes/<category>.md`.
 
-CI runs `build-index.mjs --check`. It fails if `sources.json` is invalid or `catalog/` wasn't regenerated.
+## Test it
+
+```bash
+npm install && npm install --prefix mcp   # once
+npm run check                             # everything CI runs
+npm run format                            # fix formatting and import order
+```
+
+`npm run check` runs, cheapest first: Biome (lint + format), the unit tests next to the scripts (`scripts/**/*.test.mjs`), `build-index.mjs --check` and `build-review.mjs --check` (fail if `sources.json` is invalid or a generated file wasn't regenerated), and the MCP server's build and smoke test. CI runs the same command.
 
 ## License rules for using sources in the game
 

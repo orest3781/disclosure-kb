@@ -1,31 +1,20 @@
 name: check
 on: [push, pull_request]
 jobs:
-  index:
+  check:
     runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 22
-      - name: sources.json is valid and the index is regenerated
-        run: node scripts/build-index.mjs --check
-      - name: REVIEW.md is regenerated
-        run: node scripts/build-review.mjs --check
-      - name: sync selects every source (dry run, no network)
-        run: node scripts/sync.mjs --dry-run
-  mcp:
-    runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: mcp
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
           node-version: 22
           cache: npm
-          cache-dependency-path: mcp/package-lock.json
+          cache-dependency-path: |
+            package-lock.json
+            mcp/package-lock.json
       - run: npm ci
-      - name: build and smoke-test the MCP server
-        run: npm test
+      - run: npm ci --prefix mcp
+      - name: lint, unit tests, generated files, MCP smoke test
+        run: npm run check
+      - name: sync selects every source (dry run, no network)
+        run: node scripts/sync.mjs --dry-run
