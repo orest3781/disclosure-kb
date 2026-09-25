@@ -1,0 +1,16 @@
+{
+  "name": "disclosure-kb",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "check": "biome check && node --test \"scripts/**/*.test.mjs\" && node scripts/build-index.mjs --check && node scripts/build-review.mjs --check && npm --prefix mcp test",
+    "format": "biome check --write",
+    "test": "node --test \"scripts/**/*.test.mjs\""
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "2.5.14"
+  }
+}
