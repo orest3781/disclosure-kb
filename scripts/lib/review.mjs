@@ -65,6 +65,13 @@ export const OVERRIDE = new Map([
   ["xesf/agrippa", ["Reference", "needs the original X-Files Game data, which is copyrighted: study the engine only"]],
   ["dariusk/corpora", ["Trial", "GitHub detects no licence, but the README dedicates the data to CC0: confirm per file"]],
   ["brunosimon/my-room-in-3d", ["Reference", "no licence: study the baked-lighting workflow, don't copy code or assets"]],
+  [
+    "AlexZhangji/ufo-pursue-open-atlas",
+    [
+      "Adopt",
+      "LICENSE file is CC0 1.0 (GitHub reports NOASSERTION because the file adds prose; checked 2026-09-25). Image captions are VLM-written and audited, not verified: its data card reports invented names, so check against the page image before quoting",
+    ],
+  ],
 ]);
 
 // Tools we run but never bundle or link into the game (copyleft or heavy apps).

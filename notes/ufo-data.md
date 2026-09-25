@@ -19,7 +19,7 @@ Catalog: [catalog/ufo-data.md](../catalog/ufo-data.md)
 | Use in the game | Source | Licence |
 |---|---|---|
 | Real modern case files | Originals from war.gov (via `toor11/ufo` or the `uap-release-01` mirror) | Public domain |
-| Clean text and image captions of those files | `AlexZhangji/ufo-pursue-open-atlas` | CC0 (per README) |
+| Clean text and image captions of those files | `AlexZhangji/ufo-pursue-open-atlas` | CC0 (LICENSE file, checked 2026-09-25; captions are AI-written, check against the page image) |
 | Case-file master index | `Starmadebydata/pursue-uap-documents-dataset` | CC-BY-4.0: attribute |
 | Historical case text | `Project-BlueBook-AI-OCR-Correction`, checked against NARA scans | Source is public domain; repo has no licence |
 | People, programs and events graph | `noahkarsky/UFOlogyNet` | MIT |
