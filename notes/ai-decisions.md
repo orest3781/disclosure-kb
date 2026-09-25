@@ -80,4 +80,4 @@ res.answers.category.choice;
 - **Build the scripted adapter first**, then the Jev one, behind a single `DecisionEngine` interface as `heist-one` does. Tests use the scripted adapter.
 - **Event-driven, batched, timestamped.** Drop any answer whose state revision is older than the world's current revision.
 - **Local fallback candidates** (unverified claims, test before relying on them): `laya` (Apache-2.0), `von`, `openJev-verdict-2.0` (151M parameters, ONNX/WebGPU, possibly small enough for the browser).
-- **Vendor risk.** The model is one week old and pricing may change, so keep the adapter boundary.
+- **Vendor risk.** The model launched 2026-09-15 and pricing may change, so keep the adapter boundary.

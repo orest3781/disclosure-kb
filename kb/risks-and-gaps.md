@@ -12,7 +12,7 @@ What the knowledge base can't vouch for, what nobody has built, and what could b
 | OpenAI output ownership | terms pages returned 403 | unchecked | Read openai.com terms |
 | Smithsonian, USGS M2M, FAA, Federal Register API details | pages returned 403/503 or bot checks | partial | Retry from a browser |
 | Jev: 70–500 ms, 194× faster, 445× cheaper | TypeSafe's own claims; jev-benchmark measured 0.17–0.2 s; the three.js racer saw 0.8–1 s | vendor claims | Run the roadmap spike with our own timing |
-| Laya, von, kev: local Jev alternatives with sub-15 ms decisions | READMEs, one week old | unverified | Benchmark against Jev on our NPC questions |
+| Laya, von, kev: local Jev alternatives with sub-15 ms decisions | READMEs, about a week old at the 2026-09-23 check | unverified | Benchmark against Jev on our NPC questions |
 | `uap-release-01` mirror size (agent said 338 files / 15 GB; the repo says 132 / 2.4 GB) | mismatch | dropped the numbers | Not needed: use war.gov originals |
 
 ## Unproven sources
@@ -56,7 +56,7 @@ Details per finding are in the notes for each category and in [REVIEW.md](../REV
 
 | Risk | Exposure | Mitigation |
 |---|---|---|
-| Jev is one week old; pricing and API may change | NPC judgment, triage, contact form | `DecisionEngine` interface with a scripted adapter first; local fallbacks (Laya) benchmarked |
+| Jev launched 2026-09-15; pricing and API may change | NPC judgment, triage, contact form | `DecisionEngine` interface with a scripted adapter first; local fallbacks (Laya) benchmarked |
 | PURSUE mirrors disappear or change | Case-file text | Pull originals from war.gov; keep CC0 atlas text versioned in our repo |
 | OpenSky blocks cloud IPs; Open-Meteo free tier is non-commercial | "Was it a plane / the weather?" | Build-time datasets; paid plan or self-host before release |
 | Hosted voice/auth vendors keep our data (ElevenLabs agents, Clerk, Pusher, UploadThing) | Lock-in | Prefer LiveKit, Better Auth, R2, PartyKit-on-Workers |

@@ -50,4 +50,4 @@ Three things the numbers hide:
 
 1. **The niche is empty where it matters most.** No well-known open-source UFO mystery game, no 3D web mystery game, no FLIR/night-vision/radar shaders for three.js. Those are ours to build (see [risks-and-gaps.md](risks-and-gaps.md)).
 2. **The hard constraints are on data, not code.** Most of the code is permissive (see the table). The data (NUFORC, OpenSky, star catalogues, model weights) is where the "never ship this" rules live (see [licensing.md](licensing.md)).
-3. **The newest things are the least proven.** Jev (one week old), the PURSUE mirrors (four months old) and most AI 3D generators have small, fast-moving repos. The roadmap validates them before anything depends on them.
+3. **The newest things are the least proven.** Jev (launched 2026-09-15), the PURSUE mirrors (from May 2026) and most AI 3D generators have small, fast-moving repos. The roadmap validates them before anything depends on them.
