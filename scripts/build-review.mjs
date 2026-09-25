@@ -1,7 +1,8 @@
 #!/usr/bin/env node
-// Generate REVIEW.md: one verdict and short review per source in sources.json.
-//   node scripts/build-review.mjs          write REVIEW.md
-//   node scripts/build-review.mjs --check  exit 1 if REVIEW.md is out of date
+// Generate REVIEW.md (one verdict and short review per source in sources.json)
+// and the corpus-numbers block in kb/README.md.
+//   node scripts/build-review.mjs          write both
+//   node scripts/build-review.mjs --check  exit 1 if either is out of date
 //
 // Verdict logic lives in scripts/lib/review.mjs (shared with the MCP server):
 // explicit picks from notes/*.md, then rules on licence, status and stars.
@@ -14,6 +15,7 @@ import { fileURLToPath } from "node:url";
 const root = join(dirname(fileURLToPath(import.meta.url)), "..");
 const { categories, sources, checkedAt } = JSON.parse(readFileSync(join(root, "sources.json"), "utf8"));
 
+import { renderCorpusNumbers, replaceBlock } from "./lib/numbers.mjs";
 import { ORDER, reviewSource } from "./lib/review.mjs";
 
 const cell = (t) => String(t).replaceAll("|", "\\|").replaceAll("\n", " ");
@@ -76,15 +78,25 @@ for (const c of categories) {
   }
 }
 
-const out = join(root, "REVIEW.md");
-if (process.argv.includes("--check")) {
-  const cur = existsSync(out) ? readFileSync(out, "utf8") : "";
-  if (cur !== md) {
-    console.error("out of date: REVIEW.md");
-    process.exit(1);
+// kb/README.md is written by hand except the marked corpus-numbers block.
+const readmePath = join(root, "kb", "README.md");
+const files = new Map([
+  ["REVIEW.md", md],
+  ["kb/README.md", replaceBlock(readFileSync(readmePath, "utf8"), renderCorpusNumbers(reviewed, categories.length, checkedAt))],
+]);
+
+const check = process.argv.includes("--check");
+let stale = 0;
+for (const [rel, content] of files) {
+  const path = join(root, rel);
+  const cur = existsSync(path) ? readFileSync(path, "utf8") : "";
+  if (cur === content) continue;
+  stale++;
+  if (check) console.error(`out of date: ${rel}`);
+  else {
+    writeFileSync(path, content);
+    console.log(`wrote ${rel}`);
   }
-  console.log("review up to date");
-} else {
-  writeFileSync(out, md);
-  console.log(`wrote REVIEW.md (${reviewed.length} entries)`, all);
 }
+if (check && stale) process.exit(1);
+console.log(stale && !check ? `reviewed ${reviewed.length} entries` : "review up to date", all);
