@@ -138,6 +138,10 @@ export function reviewSource(s) {
   }
   if (s.stale && !reasons.includes("archived")) reasons.push("stale");
   if (risk === "check") reasons.push("licence unclassified by GitHub");
+  // An API is adopted as a service to call; its repo's own licence doesn't make the code copyable.
+  if (s.category === "apis" && verdict.startsWith("Adopt") && (risk === "high" || risk === "check")) {
+    reasons.push("adopt the API, not the code: call the service, but don't copy this repo's code or docs (no open licence)");
+  }
   const note = s.note ?? "";
   if (note && NOTE_FLAGS.test(note) && !AVOID.has(s.repo) && !PROTOTYPE_ONLY.has(s.repo) && !OVERRIDE.has(s.repo)) {
     reasons.push(note.length > 220 ? `${note.slice(0, 217).trimEnd()}…` : note);

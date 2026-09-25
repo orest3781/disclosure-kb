@@ -92,6 +92,17 @@ test("licence risk: permissive low, weak copyleft medium, unclassified check", (
   assert.equal(licenseRisk("none")[0], "high");
 });
 
+test("an adopted API with no open licence says to call it, not copy it", () => {
+  const repo = first(ADOPT);
+  for (const license of ["none", "NOASSERTION"]) {
+    const r = reviewSource(row({ repo, category: "apis", license }));
+    assert.equal(r.verdict, "Adopt", license);
+    assert.match(r.reasons.join(), /adopt the API, not the code/, license);
+  }
+  assert.doesNotMatch(reviewSource(row({ repo, category: "apis" })).reasons.join(), /not the code/);
+  assert.doesNotMatch(reviewSource(row({ repo, category: "3d-tech", license: "none" })).reasons.join(), /not the code/);
+});
+
 test("an unclassified licence adds a caveat to read the LICENSE", () => {
   assert.match(reviewSource(row({ license: "NOASSERTION" })).reasons.join(), /unclassified by GitHub/);
 });
