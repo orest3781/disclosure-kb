@@ -3,7 +3,7 @@
  * disclosure-kb MCP server (stdio).
  *
  * Lets any MCP client (Claude Code, Claude Desktop, other agents) query the
- * knowledge base: search the 600+ catalogued sources with their verdicts and
+ * knowledge base: search the catalogued sources with their verdicts and
  * licence risk, read the kb/ decisions and notes, and grep synced vendor code.
  * Read-only; no network access.
  */

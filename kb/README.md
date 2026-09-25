@@ -25,7 +25,7 @@ notes/*.md ───► per-category findings and recommendations (written)
 kb/*.md ──────► cross-cutting analysis: stack, features, pipelines, policy (written)
 ```
 
-Edit `sources.json` for facts about a source. Edit `notes/` for findings within one area. Edit `kb/` for decisions that cut across areas. `REVIEW.md`'s verdicts live in `scripts/build-review.mjs`.
+Edit `sources.json` for facts about a source. Edit `notes/` for findings within one area. Edit `kb/` for decisions that cut across areas. `REVIEW.md`'s verdicts live in `scripts/lib/review.mjs`.
 
 ## The corpus in numbers
 

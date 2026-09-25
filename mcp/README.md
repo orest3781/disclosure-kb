@@ -26,7 +26,7 @@ claude mcp add disclosure-kb -- node /path/to/disclosure-kb/mcp/dist/index.js
 | Tool | What it answers |
 |---|---|
 | `kb_list_categories` | What categories, groups and verdict counts exist (call first to learn filter values) |
-| `kb_search_sources` | "What do we use for X?" Keyword search over 600+ sources with filters: category, group, verdict, licence risk, min stars; paginated; markdown or JSON |
+| `kb_search_sources` | "What do we use for X?" Keyword search over every catalogued source with filters: category, group, verdict, licence risk, min stars; paginated; markdown or JSON |
 | `kb_get_source` | One source in full: verdict, caveats, the API note (auth, limits, terms), sync state, which notes file covers it |
 | `kb_read_doc` | Read `kb/*.md`, `notes/*.md`, `catalog/*.md`, `REVIEW.md`, `README.md`, `INDEX.md`, `CLAUDE.md`, whole or one section; lists documents when called without a path |
 | `kb_search_docs` | "What did we decide about NUFORC?" Text search across the written documents with context; kb/ and notes/ are searched before generated files |
